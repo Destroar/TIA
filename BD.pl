@@ -1,27 +1,37 @@
 :- dynamic doenca/2.
 :- dynamic tratamento/4.
 
-%doenca(nome, sintomas)
-%medicamento(nome, tratamento, tipomedicamento, medicamento, idadeTratamento, pesotratamento, dose, VezesAoDIA condicaoespecial)
-
-doenca(pneumonia, sintomas(febre, arrepios de frio, tosse com expetoracao, dificuldade respiratoria, dor toracica, dor de cabeca, dor muscular))   
-
-medicamento(pneumonia, administracao de analgesicos e anti inflamatorios, Xarope-suspensao oral, Paracetamol ben-u-ron , +3meses, 
-null, Consultar bula, consultar bula, null)
-
-medicamento(pneumonia,administracao de antibioticos, Amoxicilina,comprimido, null, +40kg, 750mg-3g, 2-3, pessoas com hipersensibilidade a antibioticos beta-lactamicos)
-
-medicamento(pneumonia, administracao de antibioticos, Xarope-suspensao oral,Amoxicilina, +3anos, null, 5ml de 500mg, 8h-8h, 
-pessoas com hipersensibilidade a antibioticos beta-lactamico)
-
-medicamento(pneumonia, administracao de antibioticos, Xarope-suspensao oral,Amoxicilina, null, -6kg, 2.5ml de 250mg, 8h-8h,
-pessoas com hipersensibilidade a antibioticos beta-lactamicos)
-
-medicamento(pneumonia, administracao de analgesicos e anti inflamatorios, comprimido, Paracetamol ben-u-ron , +12, 
-null, 1 a 2 comprimidos de 500mg, 4-6 horas, null)
+Legenda: 
+Tratamento: Administração de analgésicos e anti-inflamatórios - 1
+            Administração de antibióticos - 2
 
 
 
+%medicamento(nome, tratamento, tipomedicamento, medicamento, idadeTratamento, pesotratamento, prescricao, dose, VezesAoDIA, condicaoespecial, limite)
+
+medicamento(pneumonia, 1, Xarope, ParacetamolBen-u-ron , mais3meses, entre3e6kg, entre0.4e0.8ml, 100mgporml, entre4e6horas, doencasfigado, 5pordia)
+
+medicamento(pneumonia, 1, Xarope, ParacetamolBen-u-ron , mais3meses, entre6e9kg, entre0.8e1.1ml, 100mgporml, entre4e6horas, doencasfigado, 5pordia)
+
+medicamento(pneumonia, 1, Xarope, ParacetamolBen-u-ron , mais3meses, entre9e12kg, entre1.1e1.5ml, 100mgporml, entre4e6horas, doencasfigado, 5pordia)
+
+medicamento(pneumonia, 1, Xarope, ParacetamolBen-u-ron , mais3meses, entre12e15kg, entre1.9e1.5ml, 100mgporml, entre4e6horas, doencasfigado, 5pordia)
+
+medicamento(pneumonia, 1, Xarope, ParacetamolBen-u-ron , mais3meses, entre15e20kg, entre2.5e1.9ml, 100mgporml, entre4e6horas, doencasfigado, 5pordia)
+
+medicamento(pneumonia, 2 , Comprimido , Amoxicilina , null , mais40kg, entre250mga1g, null, 2a3vezes , hipersensibilidadeAntibioticosBetaLactamicos, 6gDia)
+
+medicamento(pneumonia, 2 , Xarope , Amoxicilina , mais3anos, null, 5ml, 500mgpor5ml , 8em8horas, hipersensibilidadeAntibioticosBetaLactamicos, null)
+
+medicamento(pneumonia, 2 , Xarope , Amoxicilina , menos3anos, null, 5ml, 250mgpor5ml , 8em8horas, hipersensibilidadeAntibioticosBetaLactamicos, null)
+
+medicamento(pneumonia, 2 , Xarope ,Amoxicilina, null, menos6kg, 2.5ml, 250mgpor5ml, 8em8horas , hipersensibilidadeAntibioticosBetaLactamicos, null)
+
+medicamento(pneumonia, 1 , ComprimidoEferverescente, ParacetamolBen-u-ron , mais12anos , null, 500mg, null, 4a6horas, doencasfigado,null)
+
+medicamento(pneumonia, 1 , Comprimido, ParacetamolBen-u-ron , mais12anos , null, 750mg, null, 2a3vezes, doencasfigado, null)
+
+medicamento(Pneumonia, 1 , Comprimido, Brufenon , mais18anos , null, 700mg, null, 6em6horas, condicao[Gravidez, Amamentacao], 6pordia)
 
 
 
@@ -31,6 +41,21 @@ null, 1 a 2 comprimidos de 500mg, 4-6 horas, null)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------//---------------------------------------------------------------------------------
 
 
 
