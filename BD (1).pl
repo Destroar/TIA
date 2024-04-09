@@ -51,8 +51,8 @@ medicamento(alergiaRespiratoria, 7, comprimido, cetirizina_aurobindo, mais12anos
 medicamento(alergiaRespiratoria, 7, xarope, cetirizina_aurobindo, mais12anos, null, 5a10ml , 120ml, 1vezdia, null).
 medicamento(alergiaRespiratoria, 7, xarope, cetirizina_aurobindo, entre6e11anos, null, 5ml , 120ml, 12em12horas, null).
 medicamento(alergiaRespiratoria, 7, xarope, cetirizina_aurobindo, entre2e5anos, null, 2_5ml , 120ml, 12em12horas, null). 
-medicamento(bronquite, 8, Repouso, null, null, null, null, null, null, null).
-medicamento(bronquite, 8, IngestaoLiquidos, null, null, null, null, null, null, null).
+medicamento(bronquite, 8, repouso, null, null, null, null, null, null, null).
+medicamento(bronquite, 8, ingestaoLiquidos, null, null, null, null, null, null, null).
 medicamento(bronquite, 1, comprimidoEferverescente, aspirinaC, mais12anos, null, 640mg, null, 4a8h, [gravidez, amamentacao]).
 medicamento(bronquite, 1, comprimidoEferverescente, aspirinaC, mais18anos, null, 2comprimidosde640mg, null, 4a8h, [gravidez, amamentacao]).
 medicamento(bronquite, 1, saqueta, aspirinaComplex, mais16anos, null, saqueta530mg, null, 4a8h, [alergias,asma,insuficienciaHepatica, insuficienciaRenal, insuficienciaCardiacaGrave,hipertensaoGrave, doencaArterialCoronaria]).
