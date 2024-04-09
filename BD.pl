@@ -8,21 +8,22 @@
 %             Administração intravenosa - 5
 %             Administração de antiviral - 6 - Apenas alivia os sintomas não trata a doença
 %             Administracao de antihistaminicos - 7
+              Tratamentos de suporte - 8
             
 
 
 
 % medicamento(nome, tratamento, tipomedicamento, medicamento, idadeTratamento, pesotratamento, prescricao, dose, VezesAoDIA, condicaoespecial)
 
-medicamento(pneumonia, 1, xarope, paracetamolBen-u-ron , mais3meses, entre3e6kg, entre0.4e0.8ml, 100mgporml, entre4e6horas, [doencasfigado]).
-medicamento(pneumonia, 1, xarope, paracetamolBen-u-ron , mais3meses, entre6e9kg, entre0.8e1.1ml, 100mgporml, entre4e6horas, [doencasfigado]).
-medicamento(pneumonia, 1, xarope, paracetamolBen-u-ron , mais3meses, entre9e12kg, entre1.1e1.5ml, 100mgporml, entre4e6horas, [doencasfigado]).
-medicamento(pneumonia, 1, xarope, paracetamolBen-u-ron , mais3meses, entre12e15kg, entre1.9e1.5ml, 100mgporml, entre4e6horas, [doencasfigado]).
-medicamento(pneumonia, 1, xarope, paracetamolBen-u-ron , mais3meses, entre15e20kg, entre2.5e1.9ml, 100mgporml, entre4e6horas, [doencasfigado]).
+medicamento(pneumonia, 1, xarope, paracetamolBen-u-ron , mais3meses, entre3e6kg, entre0_4e0_8ml, 100mgporml, entre4e6horas, [doencasfigado]).
+medicamento(pneumonia, 1, xarope, paracetamolBen-u-ron , mais3meses, entre6e9kg, entre0_8e1_1ml, 100mgporml, entre4e6horas, [doencasfigado]).
+medicamento(pneumonia, 1, xarope, paracetamolBen-u-ron , mais3meses, entre9e12kg, entre1_1e1_5ml, 100mgporml, entre4e6horas, [doencasfigado]).
+medicamento(pneumonia, 1, xarope, paracetamolBen-u-ron , mais3meses, entre12e15kg, entre1_9e1_5ml, 100mgporml, entre4e6horas, [doencasfigado]).
+medicamento(pneumonia, 1, xarope, paracetamolBen-u-ron , mais3meses, entre15e20kg, entre1_9e2_5ml, 100mgporml, entre4e6horas, [doencasfigado]).
 medicamento(pneumonia, 2 , comprimido , amoxicilina , null , mais40kg, entre250mga1g, null, 2a3vezes , [hipersensibilidadeAntibioticosBetaLactamicos]).
 medicamento(pneumonia, 2 , xarope , amoxicilina , mais3anos, null, 5ml, 500mgpor5ml , 8em8horas, [hipersensibilidadeAntibioticosBetaLactamicos]).
 medicamento(pneumonia, 2 , xarope , amoxicilina , menos3anos, null, 5ml, 250mgpor5ml , 8em8horas, [hipersensibilidadeAntibioticosBetaLactamicos]).
-medicamento(pneumonia, 2 , xarope ,amoxicilina, null, menos6kg, 2.5ml, 250mgpor5ml, 8em8horas , [hipersensibilidadeAntibioticosBetaLactamicos]).
+medicamento(pneumonia, 2 , xarope ,amoxicilina, null, menos6kg, 2_5ml, 250mgpor5ml, 8em8horas , [hipersensibilidadeAntibioticosBetaLactamicos]).
 medicamento(pneumonia, 1 , comprimidoEferverescente, paracetamolBen-u-ron , mais12anos , null, 500mg, null, 4a6horas, [doencasfigado]).
 medicamento(pneumonia, 1 , comprimido, paracetamolBen-u-ron , mais12anos , null, 750mg, null, 2a3vezes, [doencasfigado]).
 medicamento(pneumonia, 1 , comprimido, brufenon , mais18anos , null, 700mg, null, 6em6horas, [gravidez, amamentacao]).
@@ -33,11 +34,11 @@ medicamento(candidiaseOral, 3, pomada, fluconazol, mais18anos, null, 400mginicia
 medicamento(amigdalite, 2 , comprimido , amoxicilina , null , mais40kg, entre250mga1g, null, 2a3vezes , [hipersensibilidadeAntibioticosBetaLactamicos]).
 medicamento(amigdalite, 2e4 , xarope , amoxicilina , mais3anos, null, 5ml, 500mgpor5ml , 8em8horas, [hipersensibilidadeAntibioticosBetaLactamicos]).
 medicamento(amigdalite, 2e4 , xarope , amoxicilina , menos3anos, null, 5ml, 250mgpor5ml , 8em8horas, [hipersensibilidadeAntibioticosBetaLactamicos]).
-medicamento(amigdalite, 2e4 , xarope , amoxicilina, null, menos6kg, 2.5ml, 250mgpor5ml, 8em8horas , [hipersensibilidadeAntibioticosBetaLactamicos]).
+medicamento(amigdalite, 2e4 , xarope , amoxicilina, null, menos6kg, 2_5ml, 250mgpor5ml, 8em8horas , [hipersensibilidadeAntibioticosBetaLactamicos]).
 medicamento(otite, 2 , comprimido , amoxicilina , null , mais40kg, entre250mga1g, null, 2a3vezes , [hipersensibilidadeAntibioticosBetaLactamicos]).
 medicamento(otite, 2 , xarope , amoxicilina , mais3anos, null, 5ml, 500mgpor5ml , 8em8horas, [hipersensibilidadeAntibioticosBetaLactamicos]).
 medicamento(otite, 2 , xarope , amoxicilina , menos3anos, null, 5ml, 250mgpor5ml , 8em8horas, [hipersensibilidadeAntibioticosBetaLactamicos]).
-medicamento(otite, 2, xarope , amoxicilina, null, menos6kg, 2.5ml, 250mgpor5ml, 8em8horas , [hipersensibilidadeAntibioticosBetaLactamicos]).
+medicamento(otite, 2, xarope , amoxicilina, null, menos6kg, 2_5ml, 250mgpor5ml, 8em8horas , [hipersensibilidadeAntibioticosBetaLactamicos]).
 medicamento(otite, 5, injecao, cefuroxima, mais18anos, null, 750mg, null, 3vezesdia, [gravidez, amamentacao]).
 medicamento(otite, 5, injecao, cefuroxima, mais2meses, null, 30a100mg/kg/dia, null, 3a4vezesdia, [gravidez, amamentacao]).
 medicamento(otite, 5, injecao, cefuroxima, menos2meses, null, 30a100mg/kg/dia, null, 2a3vezesdia, [gravidez, amamentacao]).
@@ -45,11 +46,36 @@ medicamento(zona, 6, comprimido, aciclovir, mais18anos, null, 800mg, null, 4a4ho
 medicamento(alergiaAlimentar, 7, comprimido, cetirizina_aurobindo, mais12anos, null, 10mg,null, 1vezdia, null).
 medicamento(alergiaAlimentar, 7, xarope, cetirizina_aurobindo, mais12anos, null, 5a10ml , 120ml, 1vezdia, null).
 medicamento(alergiaAlimentar, 7, xarope, cetirizina_aurobindo, entre6e11anos, null, 5ml , 120ml, 12em12horas, null).
-medicamento(alergiaAlimentar, 7, xarope, cetirizina_aurobindo, entre2e5anos, null, 2.5ml , 120ml, 12em12horas, null).
+medicamento(alergiaAlimentar, 7, xarope, cetirizina_aurobindo, entre2e5anos, null, 2_5ml , 120ml, 12em12horas, null).
 medicamento(alergiaRespiratoria, 7, comprimido, cetirizina_aurobindo, mais12anos, null, 10mg,null, 1vezdia, null).
 medicamento(alergiaRespiratoria, 7, xarope, cetirizina_aurobindo, mais12anos, null, 5a10ml , 120ml, 1vezdia, null).
 medicamento(alergiaRespiratoria, 7, xarope, cetirizina_aurobindo, entre6e11anos, null, 5ml , 120ml, 12em12horas, null).
-medicamento(alergiaRespiratoria, 7, xarope, cetirizina_aurobindo, entre2e5anos, null, 2.5ml , 120ml, 12em12horas, null).
+medicamento(alergiaRespiratoria, 7, xarope, cetirizina_aurobindo, entre2e5anos, null, 2_5ml , 120ml, 12em12horas, null). 
+medicamento(bronquite, 8, repouso, null, null, null, null, null, null, null).
+medicamento(bronquite, 8, ingestaoLiquidos, null, null, null, null, null, null, null).
+medicamento(bronquite, 1, comprimidoEferverescente, aspirinaC, mais12anos, null, 640mg, null, 4a8h, [gravidez, amamentacao]).
+medicamento(bronquite, 1, comprimidoEferverescente, aspirinaC, mais18anos, null, 2comprimidosde640mg, null, 4a8h, [gravidez, amamentacao]).
+medicamento(bronquite, 1, saqueta, aspirinaComplex, mais16anos, null, saqueta530mg, null, 4a8h, [alergias,asma,insuficienciaHepatica, insuficienciaRenal, insuficienciaCardiacaGrave,hipertensaoGrave, doencaArterialCoronaria]).
+medicamento(bronquite, 1, comprimidoEferverescente, paracetamolBen_u_ron, mais12anos, null, 500mg, null, 3a4vezesdia, [doencasfigado]).
+medicamento(bronquite, 1, comprimido, paracetamolBen_u_ron, mais18anos, null, 750mg, null, 3a5vezesdia, [doencasfigado]).
+medicamento(bronquite, 1, xarope, paracetamolBen-u-ron , mais3meses, entre3e6kg, entre0_4e0_8ml, 100mgporml, entre4e6horas, [doencasfigado]).
+medicamento(bronquite, 1, xarope, paracetamolBen-u-ron , mais3meses, entre6e9kg, entre0_8e1_1ml, 100mgporml, entre4e6horas, [doencasfigado]).
+medicamento(bronquite, 1, xarope, paracetamolBen-u-ron , mais3meses, entre9e12kg, entre1_1e1_5ml, 100mgporml, entre4e6horas, [doencasfigado]).
+medicamento(bronquite, 1, xarope, paracetamolBen-u-ron , mais3meses, entre12e15kg, entre1_9e1_5ml, 100mgporml, entre4e6horas, [doencasfigado]).
+medicamento(bronquite, 1, xarope, paracetamolBen-u-ron , mais3meses, entre15e20kg, entre1_9e2_5ml, 100mgporml, entre4e6horas, [doencasfigado]).
+medicamento(enxaqueca, 8, repouso, null, null, null, null, null, null, null).
+medicamento(enxaqueca, 1, comprimido,ibuprofeno,mais18anos,null, 400mg, null, 6a8horas, [gravidez, amamentacao]).
+medicamento(enxaqueca, 1, comprimido,ibuprofeno,mais18anos,null, 600mg, null, 2a3vezesdia, [gravidez, amamentacao]).
+medicamento(enxaqueca, 1, comprimidoEferverescente, paracetamolBen_u_ron, mais12anos, null, 500mg, null, 3a4vezesdia, [doencasfigado]).
+medicamento(enxaqueca, 1, comprimido, paracetamolBen_u_ron, mais18anos, null, 750mg, null, 3a5vezesdia, [doencasfigado]).
+medicamento(enxaqueca, 1, xarope, paracetamolBen-u-ron , mais3meses, entre3e6kg, entre0_4e0_8ml, 100mgporml, entre4e6horas, [doencasfigado]).
+medicamento(enxaqueca, 1, xarope, paracetamolBen-u-ron , mais3meses, entre6e9kg, entre0_8e1_1ml, 100mgporml, entre4e6horas, [doencasfigado]).
+medicamento(enxaqueca, 1, xarope, paracetamolBen-u-ron , mais3meses, entre9e12kg, entre1_1e1_5ml, 100mgporml, entre4e6horas, [doencasfigado]).
+medicamento(enxaqueca, 1, xarope, paracetamolBen-u-ron , mais3meses, entre12e15kg, entre1_9e1_5ml, 100mgporml, entre4e6horas, [doencasfigado]).
+medicamento(enxaqueca, 1, xarope, paracetamolBen-u-ron , mais3meses, entre15e20kg, entre1_9e2_5ml, 100mgporml, entre4e6horas, [doencasfigado]).
+medicamento(enxaqueca, 1, intravenosa, sumatriptano, mais18anos, null, 6mg, null, apenasUmaDose,[historicoDoencasCardiacas,]).
+medicamento(enxaqueca, 1, comprimido, sumatriptano, mais18anos, null, 50mg, null, apenasUmaDose,[historicoDoencasCardiacas,]).
+
 
 
 
