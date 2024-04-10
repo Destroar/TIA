@@ -9,6 +9,7 @@
 %             Administração de antiviral - 6 - Apenas alivia os sintomas não trata a doença
 %             Administracao de antihistaminicos - 7
               Tratamentos de suporte - 8
+              
             
 
 
@@ -75,19 +76,46 @@ medicamento(enxaqueca, 1, xarope, paracetamolBen-u-ron , mais3meses, entre12e15k
 medicamento(enxaqueca, 1, xarope, paracetamolBen-u-ron , mais3meses, entre15e20kg, entre1_9e2_5ml, '100mgporml', entre4e6horas, [doencasfigado]).
 medicamento(enxaqueca, 1, intravenosa, sumatriptano, mais18anos, null, '6mg', null, apenasUmaDose,[historicoDoencasCardiacas]).
 medicamento(enxaqueca, 1, comprimido, sumatriptano, mais18anos, null, '50mg', null, apenasUmaDose,[historicoDoencasCardiacas]).
-
-
-
-
-
-
-
-
-
-
-
-
-
+medicamento(gripe, 1, comprimidoEferverescente, paracetamolBen_u_ron, mais12anos, null, '500mg', null, '3a4vezesdia', [doencasfigado]).
+medicamento(gripe, 1, comprimido, paracetamolBen_u_ron, mais18anos, null, '750mg', null, '3a5vezesdia', [doencasfigado]).
+medicamento(gripe, 1, xarope, paracetamolBen-u-ron , mais3meses, entre3e6kg, entre0_4e0_8ml, '100mgporml', entre4e6horas, [doencasfigado]).
+medicamento(gripe, 1, xarope, paracetamolBen-u-ron , mais3meses, entre6e9kg, entre0_8e1_1ml, '100mgporml', entre4e6horas, [doencasfigado]).
+medicamento(gripe, 1, xarope, paracetamolBen-u-ron , mais3meses, entre9e12kg, entre1_1e1_5ml, '100mgporml', entre4e6horas, [doencasfigado]).
+medicamento(gripe, 1, xarope, paracetamolBen-u-ron , mais3meses, entre12e15kg, entre1_9e1_5ml, '100mgporml', entre4e6horas, [doencasfigado]).
+medicamento(gripe, 1, xarope, paracetamolBen-u-ron , mais3meses, entre15e20kg, entre1_9e2_5ml, '100mgporml', entre4e6horas, [doencasfigado]).
+medicamento(gripe, 1, comprimido,ibuprofeno,mais18anos,null, '400mg', null, '6a8horas', [gravidez, amamentacao]).
+medicamento(gripe, 1, comprimido,ibuprofeno,mais18anos,null, '600mg', null, '2a3vezesdia', [gravidez, amamentacao]).
+medicamento(gripe, 1, comprimido,dipirona,mais15anos,null, '500mg', null, '6em6horas', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
+medicamento(gripe, 1, comprimido,dipirona,mais15anos,null, '1g', null, '6em6horas', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
+medicamento(gripe, 1, comprimidoEferverescente , dipirona , mais15anos,null, '1g', null, '6em6horas', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
+medicamento(gripe, 1, Xarope , dipirona , '3a11meses' , '5a8kg' , '1.25a2.5ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
+medicamento(gripe, 1, Xarope , dipirona , '1a3anos' , '9a15kg' , '2.5a5ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
+medicamento(gripe, 1, Xarope , dipirona , '4a6anos' , '16a23kg' , '3.75a7.5ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
+medicamento(gripe, 1, Xarope , dipirona , '7a9anos' , '24a30kg' , '5a10ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
+medicamento(gripe, 1, Xarope , dipirona , '10a12anos' , '31a45kg' , '7.5a15ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
+medicamento(gripe, 1, Xarope , dipirona , '13a14anos' , '46a53kg' , '8.75a17.5ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
+medicamento(gripe, 1, Xarope , dipirona , mais15anos , null , '10a20ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
+medicamento(artrite,8,Fisioterapia,null,null,null,null,null,null,null).
+medicamento(artrite, 1, comprimidoEferverescente, paracetamolBen_u_ron, mais12anos, null, '500mg', null, '3a4vezesdia', [doencasfigado]).
+medicamento(artrite, 1, comprimido, paracetamolBen_u_ron, mais18anos, null, '750mg', null, '3a5vezesdia', [doencasfigado]).
+medicamento(artrite, 1, xarope, paracetamolBen-u-ron , mais3meses, entre3e6kg, entre0_4e0_8ml, '100mgporml', entre4e6horas, [doencasfigado]).
+medicamento(artrite, 1, xarope, paracetamolBen-u-ron , mais3meses, entre6e9kg, entre0_8e1_1ml, '100mgporml', entre4e6horas, [doencasfigado]).
+medicamento(artrite, 1, xarope, paracetamolBen-u-ron , mais3meses, entre9e12kg, entre1_1e1_5ml, '100mgporml', entre4e6horas, [doencasfigado]).
+medicamento(artrite, 1, xarope, paracetamolBen-u-ron , mais3meses, entre12e15kg, entre1_9e1_5ml, '100mgporml', entre4e6horas, [doencasfigado]).
+medicamento(artrite, 1, xarope, paracetamolBen-u-ron , mais3meses, entre15e20kg, entre1_9e2_5ml, '100mgporml', entre4e6horas, [doencasfigado]).
+medicamento(artrite, 1, comprimido,ibuprofeno,mais18anos,null, '400mg', null, '6a8horas', [gravidez, amamentacao]).
+medicamento(artrite, 1, comprimido,ibuprofeno,mais18anos,null, '600mg', null, '2a3vezesdia', [gravidez, amamentacao]).
+medicamento(artrite, 1, pomada, cetoprofeno,mais12anos,null,null,'25mgporg','2a3vezesdia',[hipersensibilidadeCetoprofeno, sensibilidadeLuz, sensibilidadeProtetorSolar]).
+medicamento(sinusite, 1, comprimidoEferverescente, paracetamolBen_u_ron, mais12anos, null, '500mg', null, '3a4vezesdia', [doencasfigado]).
+medicamento(sinusite, 1, comprimido, paracetamolBen_u_ron, mais18anos, null, '750mg', null, '3a5vezesdia', [doencasfigado]).
+medicamento(sinusite, 1, xarope, paracetamolBen-u-ron , mais3meses, entre3e6kg, entre0_4e0_8ml, '100mgporml', entre4e6horas, [doencasfigado]).
+medicamento(sinusite, 1, xarope, paracetamolBen-u-ron , mais3meses, entre6e9kg, entre0_8e1_1ml, '100mgporml', entre4e6horas, [doencasfigado]).
+medicamento(sinusite, 1, xarope, paracetamolBen-u-ron , mais3meses, entre9e12kg, entre1_1e1_5ml, '100mgporml', entre4e6horas, [doencasfigado]).
+medicamento(sinusite, 1, xarope, paracetamolBen-u-ron , mais3meses, entre12e15kg, entre1_9e1_5ml, '100mgporml', entre4e6horas, [doencasfigado]).
+medicamento(sinusite, 1, xarope, paracetamolBen-u-ron , mais3meses, entre15e20kg, entre1_9e2_5ml, '100mgporml', entre4e6horas, [doencasfigado]).
+medicamento(artrite, 1, comprimido,ibuprofeno,mais18anos,null, '400mg', null, '6a8horas', [gravidez, amamentacao]).
+medicamento(artrite, 1, comprimido,ibuprofeno,mais18anos,null, '600mg', null, '2a3vezesdia', [gravidez, amamentacao]).
+medicamento(conjuntiviteBacteriana, 2, gotas,'Tobramicina Colirio', mais2meses,null,null,null,'4em4horas', [gravidez, amamentacao, alergiaTobramicina]).
 
 
 
