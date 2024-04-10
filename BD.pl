@@ -8,7 +8,7 @@
 %             Administração intravenosa - 5
 %             Administração de antiviral - 6 - Apenas alivia os sintomas não trata a doença
 %             Administracao de antihistaminicos - 7
-              Tratamentos de suporte - 8
+%              Tratamentos de suporte - 8
               
             
 
@@ -88,14 +88,14 @@ medicamento(gripe, 1, comprimido,ibuprofeno,mais18anos,null, '600mg', null, '2a3
 medicamento(gripe, 1, comprimido,dipirona,mais15anos,null, '500mg', null, '6em6horas', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
 medicamento(gripe, 1, comprimido,dipirona,mais15anos,null, '1g', null, '6em6horas', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
 medicamento(gripe, 1, comprimidoEferverescente , dipirona , mais15anos,null, '1g', null, '6em6horas', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
-medicamento(gripe, 1, Xarope , dipirona , '3a11meses' , '5a8kg' , '1.25a2.5ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
-medicamento(gripe, 1, Xarope , dipirona , '1a3anos' , '9a15kg' , '2.5a5ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
-medicamento(gripe, 1, Xarope , dipirona , '4a6anos' , '16a23kg' , '3.75a7.5ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
-medicamento(gripe, 1, Xarope , dipirona , '7a9anos' , '24a30kg' , '5a10ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
-medicamento(gripe, 1, Xarope , dipirona , '10a12anos' , '31a45kg' , '7.5a15ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
-medicamento(gripe, 1, Xarope , dipirona , '13a14anos' , '46a53kg' , '8.75a17.5ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
-medicamento(gripe, 1, Xarope , dipirona , mais15anos , null , '10a20ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
-medicamento(artrite,8,Fisioterapia,null,null,null,null,null,null,null).
+medicamento(gripe, 1, xarope , dipirona , '3a11meses' , '5a8kg' , '1.25a2.5ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
+medicamento(gripe, 1, xarope , dipirona , '1a3anos' , '9a15kg' , '2.5a5ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
+medicamento(gripe, 1, xarope , dipirona , '4a6anos' , '16a23kg' , '3.75a7.5ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
+medicamento(gripe, 1, xarope , dipirona , '7a9anos' , '24a30kg' , '5a10ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
+medicamento(gripe, 1, xarope , dipirona , '10a12anos' , '31a45kg' , '7.5a15ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
+medicamento(gripe, 1, xarope , dipirona , '13a14anos' , '46a53kg' , '8.75a17.5ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
+medicamento(gripe, 1, xarope , dipirona , mais15anos , null , '10a20ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
+medicamento(artrite,8, fisioterapia,null,null,null,null,null,null,null).
 medicamento(artrite, 1, comprimidoEferverescente, paracetamolBen_u_ron, mais12anos, null, '500mg', null, '3a4vezesdia', [doencasfigado]).
 medicamento(artrite, 1, comprimido, paracetamolBen_u_ron, mais18anos, null, '750mg', null, '3a5vezesdia', [doencasfigado]).
 medicamento(artrite, 1, xarope, paracetamolBen-u-ron , mais3meses, entre3e6kg, entre0_4e0_8ml, '100mgporml', entre4e6horas, [doencasfigado]).
@@ -132,37 +132,37 @@ medicamento(conjuntiviteBacteriana, 2, gotas,'Tobramicina Colirio', mais2meses,n
 
 
 
----------------------------------------------------------------//---------------------------------------------------------------------------------
+% ---------------------------------------------------------------//---------------------------------------------------------------------------------
 
 
 
-doenca(asma, sintomas(pieira, falta de ar, sensacao de aperto no peito, tosse)).
+%doenca(asma, sintomas(pieira, falta de ar, sensacao de aperto no peito, tosse)).
 
-doenca(pneumonia, sintomas(febre, arrepios de frio, tosse com expetoração, dificuldade respiratória, dor tóracica, dor de cabeça, dor muscular)).
+%doenca(pneumonia, sintomas(febre, arrepios de frio, tosse com expetoração, dificuldade respiratória, dor tóracica, dor de cabeça, dor muscular)).
 
-doenca(bronquite, sintomas(tosse, falta de ar, dor no peito, febre, fadiga)).
+%doenca(bronquite, sintomas(tosse, falta de ar, dor no peito, febre, fadiga)).
 
-doenca(enfisema pulmunar, sintomas(dificuldade respiratória, pieira, unhas e lábios coloração azulada ou acinzentada, dificuldade de concentração, 
-aumento da frequência cardíaca, perda de peso)).
+%doenca(enfisema pulmunar, sintomas(dificuldade respiratória, pieira, unhas e lábios coloração azulada ou acinzentada, dificuldade de concentração, 
+%aumento da frequência cardíaca, perda de peso)).
 
-doenca(anafilaxia, sintomas(comichão, urticária, edema dos lábios língua pálpebras, tosse, dificuldade respiratória, pieira, náuseas, vómitos, 
-cólicas abdominais, diarreia, inchaço, urticária, diminuição súbita da pressão arterial, falta de ar, dificuldade em engolir)).
+%doenca(anafilaxia, sintomas(comichão, urticária, edema dos lábios língua pálpebras, tosse, dificuldade respiratória, pieira, náuseas, vómitos, 
+%cólicas abdominais, diarreia, inchaço, urticária, diminuição súbita da pressão arterial, falta de ar, dificuldade em engolir)).
 
-doenca(pneumotórax, sintomas(dor torácica, dificuldade respiratória)).
+%doenca(pneumotórax, sintomas(dor torácica, dificuldade respiratória)).
 
-doenca(fibrose pulmonar, sintomas(tosse seca e crónica, dificuldade respiratórias, desconforto torácico, extremidades frias e arroxeadas, 
-diminuição apetite, perda de peso, dores musculares e articulares)).
+%doenca(fibrose pulmonar, sintomas(tosse seca e crónica, dificuldade respiratórias, desconforto torácico, extremidades frias e arroxeadas, 
+%diminuição apetite, perda de peso, dores musculares e articulares)).
 
 
 
 % tratamento(doenca, tratamento, idade, gravidez).
 
-tratamento(pneumonia, paracetamol ben-u-ron, -18, 0).
-tratamento(pneumonia, brufenon, +18, 0).
-tratamento(bronquite, repouso, 0, 0).
-tratamento(bronquite, ingestão de líquidos em abundância, 0, 0).
-tratamento(bronquite, aspirina c, +12, 1).
-tratamento(bronquite, aspirina complex, +16, 0).
-tratamento(bronquite, parecetamol, 0, 0).
+%tratamento(pneumonia, paracetamol ben-u-ron, -18, 0).
+%tratamento(pneumonia, brufenon, +18, 0).
+%tratamento(bronquite, repouso, 0, 0).
+%tratamento(bronquite, ingestão de líquidos em abundância, 0, 0).
+%tratamento(bronquite, aspirina c, +12, 1).
+%tratamento(bronquite, aspirina complex, +16, 0).
+%tratamento(bronquite, parecetamol, 0, 0).
 
 
