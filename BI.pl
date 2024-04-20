@@ -10,7 +10,7 @@
 % Base de inferencia
 demo:- new_derived_fact( P), !,
 write( 'Doenca: '), write( P), nl,
-assert( fact( P)), medicamento(P,_,X,M,_,_,_,_,_,_), write('tratamento: '), write(X), write(' - '), write(M), nl,
+assert( fact( P)), medicamento(P,_,X,M,_,_,_,_,_,_), write('Tratamento: '), write(X), write(' - '), write(M), nl,
 demo. % Continue
 demo:- write('').
 new_derived_fact( Concl) :-
