@@ -60,7 +60,7 @@ questoesSintomas:-
     read(F),
     write('|Tem dor de cabeca?                                                                                                          |'),nl,
     write('|                                                                                                          |'),nl,
-    read(Ca), ?
+    read(Ca),
     write('|Tem tosse seca?                                                                                           |'),nl,
     read(S),
     write('|                                                                                                          |'),nl,
@@ -107,4 +107,4 @@ questoesSintomas:-
     read(S),
     write('|                                                                                                          |'),nl,
     write('|Tem tosse seca?                                                                                           |'),nl,
-    read(S),
+    read(S).

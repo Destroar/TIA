@@ -82,11 +82,11 @@ medicamento(enxaqueca, 1, comprimido, sumatriptano, mais18anos, null, '50mg', nu
 medicamento(gripe, 1, comprimido, paracetamolBen_u_ron, mais18anos, null, '750mg', null, '3a5vezesdia', [doencasfigado]).
 medicamento(gripe, 1, xarope, paracetamolBen-u-ron , entre3a12meses, null, entre0_4e0_8ml, '100mgporml', entre4e6horas, [doencasfigado]).
 medicamento(gripe, 1, xarope, paracetamolBen-u-ron , entre1a4nos, null, entre1_9e2_5ml, '100mgporml', entre4e6horas, [doencasfigado]).
-medicamento(gripe, 1, xarope , dipirona , 3a12meses , null , '1.25a2.5ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
-medicamento(gripe, 1, xarope , dipirona , 1a4anos , null , '2.5a5ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
-medicamento(gripe, 1, xarope , dipirona , 5a9anos , null , '5a10ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
-medicamento(gripe, 1, xarope , dipirona , 10a13anos , null , '7.5a15ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
-medicamento(gripe, 1, xarope , dipirona , 14a17anos , null , '10a20ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
+medicamento(gripe, 1, xarope , dipirona , entre3a12meses , null , '1.25a2.5ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
+medicamento(gripe, 1, xarope , dipirona , entre1a4anos , null , '2.5a5ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
+medicamento(gripe, 1, xarope , dipirona , entre5a9anos , null , '5a10ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
+medicamento(gripe, 1, xarope , dipirona , entre10a13anos , null , '7.5a15ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
+medicamento(gripe, 1, xarope , dipirona , entre14a17anos , null , '10a20ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
 
 medicamento(artrite,8, fisioterapia,null,null,null,null,null,null,null).
 medicamento(artrite, 1, comprimidoEferverescente, paracetamolBen_u_ron, entre14a17anos, null, '500mg', null, '3a4vezesdia', [doencasfigado]).
