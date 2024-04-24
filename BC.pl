@@ -86,15 +86,15 @@ then d9.
 if dor_cabeca and febre and (erupcoes_cutaneas or calafrios or nauseas or diarreia or dificuldade_em_urinar or dores_formigueiros_picadas_pele) and mais18anos
 then e1.
 
-if coceira_na_boca and (coceira_na_pele or dor_abdominal or diarreia or enjoos or mal_estar_na_garganta or falta_ar or dificuldade_respirar or rouquidao) and entre1a4anos
+if coceira_na_boca and (coceira_na_pele or dor_abdominal or diarreia or nauseas or mal_estar_na_garganta or falta_ar or dificuldade_respirar or rouquidao) and entre1a4anos
 then f1.
-if coceira_na_boca and (coceira_na_pele or dor_abdominal or diarreia or enjoos or mal_estar_na_garganta or falta_ar or dificuldade_respirar or rouquidao) and entre5a9anos
+if coceira_na_boca and (coceira_na_pele or dor_abdominal or diarreia or nauseas or mal_estar_na_garganta or falta_ar or dificuldade_respirar or rouquidao) and entre5a9anos
 then f2.
-if coceira_na_boca and (coceira_na_pele or dor_abdominal or diarreia or enjoos or mal_estar_na_garganta or falta_ar or dificuldade_respirar or rouquidao) and entre10a13anos
+if coceira_na_boca and (coceira_na_pele or dor_abdominal or diarreia or nauseas or mal_estar_na_garganta or falta_ar or dificuldade_respirar or rouquidao) and entre10a13anos
 then f3.
-if coceira_na_boca and (coceira_na_pele or dor_abdominal or diarreia or enjoos or mal_estar_na_garganta or falta_ar or dificuldade_respirar or rouquidao) and entre14a17anos
+if coceira_na_boca and (coceira_na_pele or dor_abdominal or diarreia or nauseas or mal_estar_na_garganta or falta_ar or dificuldade_respirar or rouquidao) and entre14a17anos
 then f4.
-if coceira_na_boca and (coceira_na_pele or dor_abdominal or diarreia or enjoos or mal_estar_na_garganta or falta_ar or dificuldade_respirar or rouquidao) and mais18anos
+if coceira_na_boca and (coceira_na_pele or dor_abdominal or diarreia or nauseas or mal_estar_na_garganta or falta_ar or dificuldade_respirar or rouquidao) and mais18anos
 then f5.
 
 if nariz_entupido and espirros_constantes and (coceira_nariz_olhos_garganta or nariz_vermelho or tosse_seca or dificuldade_respirar or olhos_vermelhos or dor_cabeca) and entre1a4anos
@@ -205,96 +205,96 @@ febre or calafrios or dor_lombar and nauseas and vomitos) and menos6kg
 then n7.
 
 
-doenca(a1, X) :- medicamento(pneumonia, _, _, X, _, menos6kg, _, _, _, _).
-doenca(a2, X) :- medicamento(pneumonia, _, _, X, entre3a12meses, _, _, _, _, _).
-doenca(a3, X) :- medicamento(pneumonia, _, _, X, entre1a4anos, _, _, _, _, _).
-doenca(a4, X) :- medicamento(pneumonia, _, _, X, entre5a9anos, _, _, _, _, _).
-doenca(a5, X) :- medicamento(pneumonia, _, _, X, entre10a13anos, _, _, _, _, _).
-doenca(a6, X) :- medicamento(pneumonia, _, _, X, entre14a17anos, _, _, _, _, _).
-doenca(a7, X) :- medicamento(pneumonia, _, _, X, mais18anos, _, _, _, _, _).
-doenca(a8, X) :- medicamento(pneumonia, _, _, X, _, mais40kg, _, _, _, _).
+doenca(a1, X) :- medicamento(pneumonia, _, T, M, _, menos6kg, P, D, V, C), doente(pneumonia, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(a2, X) :- medicamento(pneumonia, _, T, M, entre3a12meses, _, P, D, V, C), doente(pneumonia, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(a3, X) :- medicamento(pneumonia, _, T, M, entre1a4anos, _, P, D, V, C), doente(pneumonia, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(a4, X) :- medicamento(pneumonia, _, T, M, entre5a9anos, _, P, D, V, C), doente(pneumonia, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(a5, X) :- medicamento(pneumonia, _, T, M, entre10a13anos, _, P, D, V, C), doente(pneumonia, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(a6, X) :- medicamento(pneumonia, _, T, M, entre14a17anos, _, P, D, V, C), doente(pneumonia, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(a7, X) :- medicamento(pneumonia, _, T, M, mais18anos, _, P, D, V, C), doente(pneumonia, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(a8, X) :- medicamento(pneumonia, _, T, M, _, mais40kg, P, D, V, C), doente(pneumonia, Doenca), append([Doenca, T, M, P, D, V, C], X).
 
-doenca(b1, X) :- medicamento(candidiaseOral, _, _, X, _, _, _, _, _, _).
-doenca(b2, X) :- medicamento(candidiaseOral, _, _, X, mais18anos, _, _, _, _, _).
+doenca(b1, X) :- medicamento(candidiaseOral, _, T, M, _, _, P, D, V, C), doente(candidiaseOral, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(b2, X) :- medicamento(candidiaseOral, _, T, M, mais18anos, _, P, D, V, C), doente(candidiaseOral, Doenca), append([Doenca, T, M, P, D, V, C], X).   
 
-doenca(c1, X) :- medicamento(amigdalite, _, _, X, _, mais40kg, _, _, _, _).
-doenca(c2, X) :- medicamento(amigdalite, _, _, X, _, menos6kg, _, _, _, _).
-doenca(c3, X) :- medicamento(amigdalite, _, _, X, menos3meses, _, _, _, _, _).
-doenca(c4, X) :- medicamento(amigdalite, _, _, X, entre3a12meses, _, _, _, _, _).
-doenca(c5, X) :- medicamento(amigdalite, _, _, X, entre1a4anos, _, _, _, _, _).
-doenca(c6, X) :- medicamento(amigdalite, _, _, X, entre5a9anos, _, _, _, _, _).
-doenca(c7, X) :- medicamento(amigdalite, _, _, X, entre10a13anos, _, _, _, _, _).
-doenca(c8, X) :- medicamento(amigdalite, _, _, X, entre14a17anos, _, _, _, _, _).
-doenca(c9, X) :- medicamento(amigdalite, _, _, X, mais18anos, _, _, _, _, _).
+doenca(c1, X) :- medicamento(amigdalite, _, T, M, _, mais40kg, P, D, V, C), doente(amigdalite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(c2, X) :- medicamento(amigdalite, _, T, M, _, menos6kg, P, D, V, C), doente(amigdalite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(c3, X) :- medicamento(amigdalite, _, T, M, menos3meses, _, P, D, V, C), doente(amigdalite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(c4, X) :- medicamento(amigdalite, _, T, M, entre3a12meses, _, P, D, V, C), doente(amigdalite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(c5, X) :- medicamento(amigdalite, _, T, M, entre1a4anos, _, P, D, V, C), doente(amigdalite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(c6, X) :- medicamento(amigdalite, _, T, M, entre5a9anos, _, P, D, V, C), doente(amigdalite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(c7, X) :- medicamento(amigdalite, _, T, M, entre10a13anos, _, P, D, V, C), doente(amigdalite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(c8, X) :- medicamento(amigdalite, _, T, M, entre14a17anos, _, P, D, V, C), doente(amigdalite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(c9, X) :- medicamento(amigdalite, _, T, M, mais18anos, _, P, D, V, C), doente(amigdalite, Doenca), append([Doenca, T, M, P, D, V, C], X).
 
-doenca(d1, X) :- medicamento(otite, _, _, X, _, mais40kg, _, _, _, _).
-doenca(d2, X) :- medicamento(otite, _, _, X, _, menos6kg, _, _, _, _).
-doenca(d3, X) :- medicamento(otite, _, _, X, menos3meses, _, _, _, _, _).
-doenca(d4, X) :- medicamento(otite, _, _, X, entre3a12meses, _, _, _, _, _).
-doenca(d5, X) :- medicamento(otite, _, _, X, entre1a4anos, _, _, _, _, _).
-doenca(d6, X) :- medicamento(otite, _, _, X, entre5a9anos, _, _, _, _, _).
-doenca(d7, X) :- medicamento(otite, _, _, X, entre10a13anos, _, _, _, _, _).
-doenca(d8, X) :- medicamento(otite, _, _, X, entre14a17anos, _, _, _, _, _).
-doenca(d9, X) :- medicamento(otite, _, _, X, mais18anos, _, _, _, _, _).
+doenca(d1, X) :- medicamento(otite, _, T, M, _, mais40kg, P, D, V, C), doente(otite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(d2, X) :- medicamento(otite, _, T, M, _, menos6kg, P, D, V, C), doente(otite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(d3, X) :- medicamento(otite, _, T, M, menos3meses, _, P, D, V, C), doente(otite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(d4, X) :- medicamento(otite, _, T, M, entre3a12meses, _, P, D, V, C), doente(otite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(d5, X) :- medicamento(otite, _, T, M, entre1a4anos, _, P, D, V, C), doente(otite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(d6, X) :- medicamento(otite, _, T, M, entre5a9anos, _, P, D, V, C), doente(otite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(d7, X) :- medicamento(otite, _, T, M, entre10a13anos, _, P, D, V, C), doente(otite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(d8, X) :- medicamento(otite, _, T, M, entre14a17anos, _, P, D, V, C), doente(otite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(d9, X) :- medicamento(otite, _, T, M, mais18anos, _, P, D, V, C), doente(otite, Doenca), append([Doenca, T, M, P, D, V, C], X).
 
-doenca(e1, X) :- medicamento(zona, _, _, X, mais18anos, _, _, _, _, _).
+doenca(e1, X) :- medicamento(zona, _, T, M, mais18anos, _, P, D, V, C), doente(zona, Doenca), append([Doenca, T, M, P, D, V, C], X).
 
-doenca(f1, X) :- medicamento(alergiaAlimentar, _, _, X, entre1a4anos, _, _, _, _, _).
-doenca(f2, X) :- medicamento(alergiaAlimentar, _, _, X, entre5a9anos, _, _, _, _, _).
-doenca(f3, X) :- medicamento(alergiaAlimentar, _, _, X, entre10a13anos, _, _, _, _, _).
-doenca(f4, X) :- medicamento(alergiaAlimentar, _, _, X, entre14a17anos, _, _, _, _, _).
-doenca(f5, X) :- medicamento(alergiaAlimentar, _, _, X, mais18anos, _, _, _, _, _).
+doenca(f1, X) :- medicamento(alergiaAlimentar, _, T, M, entre1a4anos, _, P, D, V, C), doente(alergiaAlimentar, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(f2, X) :- medicamento(alergiaAlimentar, _, T, M, entre5a9anos, _, P, D, V, C), doente(alergiaAlimentar, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(f3, X) :- medicamento(alergiaAlimentar, _, T, M, entre10a13anos, _, P, D, V, C), doente(alergiaAlimentar, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(f4, X) :- medicamento(alergiaAlimentar, _, T, M, entre14a17anos, _, P, D, V, C), doente(alergiaAlimentar, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(f5, X) :- medicamento(alergiaAlimentar, _, T, M, mais18anos, _, P, D, V, C), doente(alergiaAlimentar, Doenca), append([Doenca, T, M, P, D, V, C], X).
 
-doenca(g1, X) :- medicamento(alergiaRespiratoria, _, _, X, entre1a4anos, _, _, _, _, _).
-doenca(g2, X) :- medicamento(alergiaRespiratoria, _, _, X, entre5a9anos, _, _, _, _, _).
-doenca(g3, X) :- medicamento(alergiaRespiratoria, _, _, X, entre10a13anos, _, _, _, _, _).
-doenca(g4, X) :- medicamento(alergiaRespiratoria, _, _, X, entre14a17anos, _, _, _, _, _).
-doenca(g5, X) :- medicamento(alergiaRespiratoria, _, _, X, mais18anos, _, _, _, _, _).
+doenca(g1, X) :- medicamento(alergiaRespiratoria, _, T, M, entre1a4anos, _, P, D, V, C), doente(alergiaRespiratoria, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(g2, X) :- medicamento(alergiaRespiratoria, _, T, M, entre5a9anos, _, P, D, V, C), doente(alergiaRespiratoria, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(g3, X) :- medicamento(alergiaRespiratoria, _, T, M, entre10a13anos, _, P, D, V, C), doente(alergiaRespiratoria, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(g4, X) :- medicamento(alergiaRespiratoria, _, T, M, entre14a17anos, _, P, D, V, C), doente(alergiaRespiratoria, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(g5, X) :- medicamento(alergiaRespiratoria, _, T, M, mais18anos, _, P, D, V, C), doente(alergiaRespiratoria, Doenca), append([Doenca, T, M, P, D, V, C], X).
 
-doenca(h1, X) :- medicamento(bronquite, _, _, X, _, _, _, _, _, _).
-doenca(h2, X) :- medicamento(bronquite, _, _, X, entre3a12meses, _, _, _, _, _).
-doenca(h3, X) :- medicamento(bronquite, _, _, X, entre1a4anos, _, _, _, _, _).
-doenca(h4, X) :- medicamento(bronquite, _, _, X, entre5a9anos, _, _, _, _, _).
-doenca(h5, X) :- medicamento(bronquite, _, _, X, entre10a13anos, _, _, _, _, _).
-doenca(h6, X) :- medicamento(bronquite, _, _, X, entre14a17anos, _, _, _, _, _).
-doenca(h7, X) :- medicamento(bronquite, _, _, X, mais18anos, _, _, _, _, _).
+doenca(h1, X) :- medicamento(bronquite, _, T, M, _, _, P, D, V, C), doente(bronquite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(h2, X) :- medicamento(bronquite, _, T, M, entre3a12meses, _, P, D, V, C), doente(bronquite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(h3, X) :- medicamento(bronquite, _, T, M, entre1a4anos, _, P, D, V, C), doente(bronquite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(h4, X) :- medicamento(bronquite, _, T, M, entre5a9anos, _, P, D, V, C), doente(bronquite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(h5, X) :- medicamento(bronquite, _, T, M, entre10a13anos, _, P, D, V, C), doente(bronquite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(h6, X) :- medicamento(bronquite, _, T, M, entre14a17anos, _, P, D, V, C), doente(bronquite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(h7, X) :- medicamento(bronquite, _, T, M, mais18anos, _, P, D, V, C), doente(bronquite, Doenca), append([Doenca, T, M, P, D, V, C], X).
 
-doenca(i1, X) :- medicamento(enxaqueca, _, _, X, _, _, _, _, _, _).
-doenca(i2, X) :- medicamento(enxaqueca, _, _, X, entre5a9anos, _, _, _, _, _).
-doenca(i3, X) :- medicamento(enxaqueca, _, _, X, entre10a13anos, _, _, _, _, _).
-doenca(i4, X) :- medicamento(enxaqueca, _, _, X, entre14a17anos, _, _, _, _, _).
-doenca(i5, X) :- medicamento(enxaqueca, _, _, X, entre3a12meses, _, _, _, _, _).
-doenca(i6, X) :- medicamento(enxaqueca, _, _, X, entre1a4anos, _, _, _, _, _).
-doenca(i7, X) :- medicamento(enxaqueca, _, _, X, mais18anos, _, _, _, _, _).
+doenca(i1, X) :- medicamento(enxaqueca, _, T, M, _, _, P, D, V, C), doente(enxaqueca, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(i2, X) :- medicamento(enxaqueca, _, T, M, entre5a9anos, _, P, D, V, C), doente(enxaqueca, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(i3, X) :- medicamento(enxaqueca, _, T, M, entre10a13anos, _, P, D, V, C), doente(enxaqueca, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(i4, X) :- medicamento(enxaqueca, _, T, M, entre14a17anos, _, P, D, V, C), doente(enxaqueca, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(i5, X) :- medicamento(enxaqueca, _, T, M, entre3a12meses, _, P, D, V, C), doente(enxaqueca, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(i6, X) :- medicamento(enxaqueca, _, T, M, entre1a4anos, _, P, D, V, C), doente(enxaqueca, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(i7, X) :- medicamento(enxaqueca, _, T, M, mais18anos, _, P, D, V, C), doente(enxaqueca, Doenca), append([Doenca, T, M, P, D, V, C], X).
 
-doenca(j1, X) :- medicamento(gripe, _, _, X, mais18anos, _, _, _, _, _).
-doenca(j2, X) :- medicamento(gripe, _, _, X, entre3a12meses, _, _, _, _, _).
-doenca(j3, X) :- medicamento(gripe, _, _, X, entre1a4anos, _, _, _, _, _).
-doenca(j4, X) :- medicamento(gripe, _, _, X, entre5a9anos, _, _, _, _, _).
-doenca(j5, X) :- medicamento(gripe, _, _, X, entre10a13anos, _, _, _, _, _).
-doenca(j6, X) :- medicamento(gripe, _, _, X, entre14a17anos, _, _, _, _, _).
+doenca(j1, X) :- medicamento(gripe, _, T, M, mais18anos, _, P, D, V, C), doente(gripe, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(j2, X) :- medicamento(gripe, _, T, M, entre3a12meses, _, P, D, V, C), doente(gripe, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(j3, X) :- medicamento(gripe, _, T, M, entre1a4anos, _, P, D, V, C), doente(gripe, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(j4, X) :- medicamento(gripe, _, T, M, entre5a9anos, _, P, D, V, C), doente(gripe, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(j5, X) :- medicamento(gripe, _, T, M, entre10a13anos, _, P, D, V, C), doente(gripe, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(j6, X) :- medicamento(gripe, _, T, M, entre14a17anos, _, P, D, V, C), doente(gripe, Doenca), append([Doenca, T, M, P, D, V, C], X).
 
-doenca(k1, X) :- medicamento(artrite, _, _, X, _, _, _, _, _, _).
-doenca(k2, X) :- medicamento(artrite, _, _, X, entre14a17anos, _, _, _, _, _).
-doenca(k3, X) :- medicamento(artrite, _, _, X, mais18anos, _, _, _, _, _).
-doenca(k4, X) :- medicamento(artrite, _, _, X, entre3a12meses, _, _, _, _, _).
-doenca(k5, X) :- medicamento(artrite, _, _, X, entre1a4anos, _, _, _, _, _).
-doenca(k6, X) :- medicamento(artrite, _, _, X, entre5a9anos, _, _, _, _, _).
-doenca(k7, X) :- medicamento(artrite, _, _, X, entre10a13anos, _, _, _, _, _).
+doenca(k1, X) :- medicamento(artrite, _, T, M, _, _, P, D, V, C), doente(artrite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(k2, X) :- medicamento(artrite, _, T, M, entre14a17anos, _, P, D, V, C), doente(artrite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(k3, X) :- medicamento(artrite, _, T, M, mais18anos, _, P, D, V, C), doente(artrite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(k4, X) :- medicamento(artrite, _, T, M, entre3a12meses, _, P, D, V, C), doente(artrite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(k5, X) :- medicamento(artrite, _, T, M, entre1a4anos, _, P, D, V, C), doente(artrite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(k6, X) :- medicamento(artrite, _, T, M, entre5a9anos, _, P, D, V, C), doente(artrite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(k7, X) :- medicamento(artrite, _, T, M, entre10a13anos, _, P, D, V, C), doente(artrite, Doenca), append([Doenca, T, M, P, D, V, C], X).
 
-doenca(l1, X) :- medicamento(sinusite, _, _, X, entre5a9anos, _, _, _, _, _).
-doenca(l2, X) :- medicamento(sinusite, _, _, X, entre10a13anos, _, _, _, _, _).
-doenca(l3, X) :- medicamento(sinusite, _, _, X, entre14a17anos, _, _, _, _, _).
-doenca(l4, X) :- medicamento(sinusite, _, _, X, mais18anos, _, _, _, _, _).
-doenca(l5, X) :- medicamento(sinusite, _, _, X, entre3a12meses, _, _, _, _, _).
-doenca(l6, X) :- medicamento(sinusite, _, _, X, entre1a4anos, _, _, _, _, _).
+doenca(l1, X) :- medicamento(sinusite, _, T, M, entre5a9anos, _, P, D, V, C), doente(sinusite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(l2, X) :- medicamento(sinusite, _, T, M, entre10a13anos, _, P, D, V, C), doente(sinusite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(l3, X) :- medicamento(sinusite, _, T, M, entre14a17anos, _, P, D, V, C), doente(sinusite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(l4, X) :- medicamento(sinusite, _, T, M, mais18anos, _, P, D, V, C), doente(sinusite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(l5, X) :- medicamento(sinusite, _, T, M, entre3a12meses, _, P, D, V, C), doente(sinusite, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(l6, X) :- medicamento(sinusite, _, T, M, entre1a4anos, _, P, D, V, C), doente(sinusite, Doenca), append([Doenca, T, M, P, D, V, C], X).
 
-doenca(m1, X) :- medicamento(conjuntiviteBacteriana, _, _, X, _, _, _, _, _, _).
+doenca(m1, X) :- medicamento(conjuntiviteBacteriana, _, T, M, _, _, P, D, V, C), doente(conjuntiviteBacteriana, Doenca), append([Doenca, T, M, P, D, V, C], X).
 
-doenca(n1, X) :- medicamento(infecaoUrinaria, _, _, X, _, mais40kg, _, _, _, _).
-doenca(n2, X) :- medicamento(infecaoUrinaria, _, _, X, entre10a13anos, _, _, _, _, _).
-doenca(n3, X) :- medicamento(infecaoUrinaria, _, _, X, entre5a9anos, _, _, _, _, _).
-doenca(n4, X) :- medicamento(infecaoUrinaria, _, _, X, entre1a4nos, _, _, _, _, _).
-doenca(n5, X) :- medicamento(infecaoUrinaria, _, _, X, entre3a12meses, _, _, _, _, _).
-doenca(n6, X) :- medicamento(infecaoUrinaria, _, _, X, menos3meses, _, _, _, _, _).
-doenca(n7, X) :- medicamento(infecaoUrinaria, _, _, X, _, menos6kg, _, _, _, _).
+doenca(n1, X) :- medicamento(infecaoUrinaria, _, T, M, _, mais40kg, P, D, V, C), doente(infecaoUrinaria, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(n2, X) :- medicamento(infecaoUrinaria, _, T, M, entre10a13anos, _, P, D, V, C), doente(infecaoUrinaria, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(n3, X) :- medicamento(infecaoUrinaria, _, T, M, entre5a9anos, _, P, D, V, C), doente(infecaoUrinaria, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(n4, X) :- medicamento(infecaoUrinaria, _, T, M, entre1a4nos, _, P, D, V, C), doente(infecaoUrinaria, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(n5, X) :- medicamento(infecaoUrinaria, _, T, M, entre3a12meses, _, P, D, V, C), doente(infecaoUrinaria, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(n6, X) :- medicamento(infecaoUrinaria, _, T, M, menos3meses, _, P, D, V, C), doente(infecaoUrinaria, Doenca), append([Doenca, T, M, P, D, V, C], X).
+doenca(n7, X) :- medicamento(infecaoUrinaria, _, T, M, _, menos6kg, P, D, V, C), doente(infecaoUrinaria, Doenca), append([Doenca, T, M, P, D, V, C], X).
