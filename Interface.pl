@@ -1,4 +1,5 @@
 :-dynamic(fact/1).
+:-dynamic(doenca/7).
 :- include('BD.pl').
 :- include('BC.pl').
 :- include('BI.pl').
@@ -90,5 +91,5 @@ resultado:-
     demo.
 
 
- escreverResultado(P) :- doenca(Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao), retractall(fact(_)).
+ escreverResultado(P) :- doenca(Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao), retract(fact(P)).
  
