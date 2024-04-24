@@ -31,15 +31,15 @@ questoesIniciais:-
     write('|   2- [+3 meses]                          6- [10-13 anos]                                                 |'),nl,
     write('|   3- [3-12 meses]                        7- [14-17 anos]                                                 |'),nl,
     write('|   4- [1-4 anos]                          8- [+18 anos]                                                   |'),nl,
-    read(I),
-    ((I == 1), assert(fact(menos3meses));
-     (I == 2), assert(fact(mais3meses));
-     (I == 3), assert(fact(entre3a12meses));
-     (I == 4), assert(fact(entre1a4anos));
-     (I == 5), assert(fact(entre5a9anos));
-     (I == 6), assert(fact(entre10a13anos));
-     (I == 7), assert(fact(entre14a17anos));
-     (I == 8), assert(fact(mais18anos))),
+    read(I),
+        ((I == 1), assert(fact(menos3meses));
+        (I == 2), assert(fact(mais3meses));
+        (I == 3), assert(fact(entre3a12meses));
+        (I == 4), assert(fact(entre1a4anos));
+        (I == 5), assert(fact(entre5a9anos));
+        (I == 6), assert(fact(entre10a13anos));
+        (I == 7), assert(fact(entre14a17anos));
+        (I == 8), assert(fact(mais18anos))),
     write('|----------------------------------------------------------------------------------------------------------|'),nl,
     write('|                                                                                                          |'),nl,
     write('|Nome: '),write(N),write('?'),nl,
@@ -47,6 +47,7 @@ questoesIniciais:-
     write('|                                                                                                          |'),nl,
     write('|                   Porfavor confirme os dados fornecidos para podermos iniciar o teste                    |'),nl,
     write('|----------------------------------------------------------------------------------------------------------|'),nl,confirmacao.
+    
 
 confirmacao:-
     write('|                                                                                                          |'),nl,
