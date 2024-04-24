@@ -90,4 +90,5 @@ resultado:-
     demo.
 
 
-escreverResultado(P) :- % tirei isto pq não sei foda-se
+ escreverResultado(P) :- doenca(Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao), retractall(fact(_)).
+ 
