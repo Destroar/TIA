@@ -123,19 +123,19 @@ then h6.
 if (tosse_seca or tosse_expetoracao) and falta_ar and (dor_peito or febre or fadiga) and mais18anos
 then h7.
 
-if dor_cabeca and sensibilidade_luz_ruidos and mal_estar_geral and nauseas and (vomitos or tonturas or formigamento_corpo) 
+if dor_cabeca and (sensibilidade_ruido or sensibilidade_luz) and mal_estar_geral and nauseas and (vomitos or tonturas or formigamento_corpo) 
 then i1.
-if dor_cabeca and sensibilidade_luz_ruidos and mal_estar_geral and nauseas and (vomitos or tonturas or formigamento_corpo) and entre5a9anos
+if dor_cabeca and (sensibilidade_ruido or sensibilidade_luz) and mal_estar_geral and nauseas and (vomitos or tonturas or formigamento_corpo) and entre5a9anos
 then i2.
-if dor_cabeca and sensibilidade_luz_ruidos and mal_estar_geral and nauseas and (vomitos or tonturas or formigamento_corpo) and entre10a13anos
+if dor_cabeca and (sensibilidade_ruido or sensibilidade_luz) and mal_estar_geral and nauseas and (vomitos or tonturas or formigamento_corpo) and entre10a13anos
 then i3.
-if dor_cabeca and sensibilidade_luz_ruidos and mal_estar_geral and nauseas and (vomitos or tonturas or formigamento_corpo) and entre14a17anos
+if dor_cabeca and (sensibilidade_ruido or sensibilidade_luz) and mal_estar_geral and nauseas and (vomitos or tonturas or formigamento_corpo) and entre14a17anos
 then i4.
-if dor_cabeca and sensibilidade_luz_ruidos and mal_estar_geral and nauseas and (vomitos or tonturas or formigamento_corpo) and entre3a12meses
+if dor_cabeca and (sensibilidade_ruido or sensibilidade_luz) and mal_estar_geral and nauseas and (vomitos or tonturas or formigamento_corpo) and entre3a12meses
 then i5.
-if dor_cabeca and sensibilidade_luz_ruidos and mal_estar_geral and nauseas and (vomitos or tonturas or formigamento_corpo) and entre1a4anos
+if dor_cabeca and (sensibilidade_ruido or sensibilidade_luz) and mal_estar_geral and nauseas and (vomitos or tonturas or formigamento_corpo) and entre1a4anos
 then i6.
-if dor_cabeca and sensibilidade_luz_ruidos and mal_estar_geral and nauseas and (vomitos or tonturas or formigamento_corpo) and mais18anos
+if dor_cabeca and (sensibilidade_ruido or sensibilidade_luz) and mal_estar_geral and nauseas and (vomitos or tonturas or formigamento_corpo) and mais18anos
 then i7.
 
 if febre and mal_estar_geral and dor_cabeca and (espirros or tosse_seca or nariz_entupido or dor_muscular or dor_garganta) and mais18anos
@@ -179,7 +179,7 @@ then l5.
 if congestao_nasal and corrimento_nasal and (pressao_facial or perda_olfato or febre or tosse_expetoracao or tosse_seca or fadiga) and entre1a4anos
 then l6.
 
-if vermelhidao_olho and comichao and (laqueacao or sensacao_areia or sensacao_corpo_estranho or inchaco_palpebra or aumento_sensibilidade_luz) and not(menos3meses)
+if olhos_vermelhos and comichao and (laqueacao or sensacao_areia or sensacao_corpo_estranho or inchaco_palpebra or sensibilidade_luz) and not(menos3meses)
 then m1.
 
 if ardor_ou_dor_ao_urinar and vontade_urgente_e_frequente_de_urinar and (eliminacao_de_sangue_na_urina or
