@@ -4,7 +4,7 @@ menu:-
     write('|                                                                                                          |'),nl,
     write('|----------------------------------------------------------------------------------------------------------|'),nl,
     write('|Descubra possíveis doenças e tratamentos através deste teste.                                             |'),nl,menu2.
-    
+
 menu2:-
     write('|                                                                                                          |'),nl,
     write('|1-Iniciar o teste                                                                                         |'),nl,
@@ -22,34 +22,42 @@ opcoes(_):-
 questoesIniciais:-
     write('|----------------------------------------------------------------------------------------------------------|'),nl,
     write('|                                                                                                          |'),nl,
-    write('|Qual o seu Nome?                                                                                          |'),nl,
+    write('|Qual o seu nome? (Por favor coloque entre aspas, ex:"Inês")                                               |'),nl,
     read(N),
     write('|                                                                                                          |'),nl,
-    write('|Qual a sua idade?                                                                                         |'),nl,
-    read(I),
+    write('|Identifique  grupo de idade a que pertence                                                                |'),nl,
     write('|                                                                                                          |'),nl,
-    write('|Qual o seu peso em kg?                                                                                    |'),nl,
-    read(P),
-    write('|                                                                                                          |'),nl,
+    write('|   1- [-3 meses]                          5- [5-9 anos]                                                   |'),nl,
+    write('|   2- [+3 meses]                          6- [10-13 anos]                                                 |'),nl,
+    write('|   3- [3-12 meses]                        7- [14-17 anos]                                                 |'),nl,
+    write('|   4- [1-4 anos]                          8- [+18 anos]                                                   |'),nl,
+    read(I),
+    ((I == 1), assert(fact(menos3meses));
+     (I == 2), assert(fact(mais3meses));
+     (I == 3), assert(fact(entre3a12meses));
+     (I == 4), assert(fact(entre1a4anos));
+     (I == 5), assert(fact(entre5a9anos));
+     (I == 6), assert(fact(entre10a13anos));
+     (I == 7), assert(fact(entre14a17anos));
+     (I == 8), assert(fact(mais18anos))),
     write('|----------------------------------------------------------------------------------------------------------|'),nl,
     write('|                                                                                                          |'),nl,
-    write('|Nome:      ?                                                                                              |'),nl,
-    write('|Idade:      ?                                                                                             |'),nl,
-    write('|Peso:        ?                                                                                            |'),nl,
+    write('|Nome: '),write(N),write('?'),nl,
+    write('|Opção da idade: '),write(I),write('?'),nl,
     write('|                                                                                                          |'),nl,
     write('|                   Porfavor confirme os dados fornecidos para podermos iniciar o teste                    |'),nl,
     write('|----------------------------------------------------------------------------------------------------------|'),nl,confirmacao.
 
 confirmacao:-
     write('|                                                                                                          |'),nl,
-    write('|1-Cofirmado  ??                                                                                           |'),nl,
-    write('|2-Editar / Reintroduzir dados                                                                             |'),nl,
+    write('|1-Cofirmado                                                                                               |'),nl,
+    write('|2-Reintroduzir dados                                                                                      |'),nl,
     read(C),
     opcao(C).
 
-opcoes(1):- questoesSintomas.
-opcoes(2):- questoesIniciais.
-opcoes(_):-
+opcao(1):- questoesSintomas.
+opcao(2):- questoesIniciais.
+opcao(_):-
     write('|Introduza uma opção válida.                                                                               |'),nl,confirmacao.
 
 questoesSintomas:-
