@@ -3,6 +3,8 @@
 :- op( 300, xfy, or).
 :- op( 200, xfy, and).
 :- dynamic medicamento/10.
+:- dynamic doente/2.
+
 
 if tosse_expetoracao and dificuldade_respirar and 
 (febre or arrepios_de_frio or dor_toracica or dor_cabeca or dor_muscular) and menos6kg

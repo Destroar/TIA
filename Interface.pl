@@ -1,3 +1,9 @@
+:-dynamic(fact/1).
+:- include('BD.pl').
+:- include('BC.pl').
+:- include('BI.pl').
+
+
 menu:-
     write(' ----------------------------------------------------------------------------------------------------------'),nl,
     write('|                               Seja Bem-Vindo Ao Teste De Sintomas                                        |'),nl,
@@ -22,9 +28,6 @@ opcoes(_):-
 questoesIniciais:-
     write('|----------------------------------------------------------------------------------------------------------|'),nl,
     write('|                                                                                                          |'),nl,
-    write('|Qual o seu nome? (Por favor coloque entre aspas, ex:"Inês")                                               |'),nl,
-    read(N),
-    write('|                                                                                                          |'),nl,
     write('|Identifique  grupo de idade a que pertence                                                                |'),nl,
     write('|                                                                                                          |'),nl,
     write('|   1- [-3 meses]                          5- [10-13 anos]                                                 |'),nl,
@@ -39,9 +42,9 @@ questoesIniciais:-
         (I == 5), assert(fact(entre10a13anos)), questoesSintomas;
         (I == 6), assert(fact(entre14a17anos)), confirmacaoPeso2;
         (I == 7), assert(fact(mais18anos)), confirmacaoPeso2).
-    
+
 confirmacaoPeso1:-
-    nl, 
+    nl,
     write('|Confirma ter menos de 6kg                                                                                 |'),nl,
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Não                                                                                                     |'),nl,
@@ -50,68 +53,41 @@ confirmacaoPeso1:-
         (O6 == 2), questoesSintomas).
 
 confirmacaoPeso2:-
-    nl, 
+    nl,
     write('|Confirma ter mis de 40kg                                                                                  |'),nl,
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Não                                                                                                     |'),nl,
     read(O6),
         ((O6 == 1), assert(fact(mais40kg)), questoesSintomas;
         (O6 == 2), questoesSintomas).
- 
+
 questoesSintomas:-
     write('|----------------------------------------------------------------------------------------------------------|'),nl,
     write('|                                               SINTOMAS                                                   |'),nl,
     write('|                                                                                                          |'),nl,
     write('|Tem febre?                                                                                                |'),nl,
-    write('|                                                                                                          |'),nl,
-    read(F),
-    write('|Tem dor de cabeca?                                                                                                          |'),nl,
-    write('|                                                                                                          |'),nl,
-    read(Ca),
-    write('|Tem tosse seca?                                                                                           |'),nl,
-    read(S),
-    write('|                                                                                                          |'),nl,
+    write('|1-Sim                                                                                                     |'),nl,
+    write('|2-Não                                                                                                     |'),nl,
+    read(OPF),
+        ((OPF == 1), assert(fact(febre))),
+    nl,
     write('|Tem tosse com expetoração?                                                                                |'),nl,
-    read(E),
-    write('|                                                                                                          |'),nl,
-    write('|Tem dificuldade a respirar?                                                                               |'),nl,
-    read(R),
-    write('|                                                                                                          |'),nl,
-    write('|Tem mal-estar geral?                                                                                      |'),nl,
-    read(S),
-    write('|                                                                                                          |'),nl,
-    write('|Tem náuseas?                                                                                              |'),nl,
-    read(N),
-    write('|                                                                                                          |'),nl,
-    write('|Tem vómitos?                                                                                              |'),nl,
-    read(V),
-    write('|                                                                                                          |'),nl,
-    write('|Tem fadiga?                                                                                               |'),nl,
-    read(F),
-    write('|                                                                                                          |'),nl,
-    write('|Tem calafrios ?                                                                                           |'),nl,
-    read(Cf),
-    write('|                                                                                                          |'),nl,
-    write('|Tem diarreia?                                                                                             |'),nl,
-    read(Di),
-    write('|                                                                                                          |'),nl,
-    write('|Tem dor de garganta?                                                                                      |'),nl,
-    read(G),
-    write('|                                                                                                          |'),nl,
-    write('|Tem dor de ouvidos?                                                                                       |'),nl,
-    read(O),
-    write('|                                                                                                          |'),nl,
-    write('|Tem dores musculares?                                                                                     |'),nl,
-    read(S),
-    write('|                                                                                                          |'),nl,
-    write('|Tem nariz entupido?                                                                                       |'),nl,
-    read(Et),
-    write('|                                                                                                          |'),nl,
-    write('|Tem falta de ar?                                                                                          |'),nl,
-    read(Ar),
-    write('|                                                                                                          |'),nl,
-    write('|Tem vermelhidão nos olhos?                                                                                |'),nl,
-    read(S),
-    write('|                                                                                                          |'),nl,
-    write('|Tem tosse seca?                                                                                           |'),nl,
-    read(S).
+    write('|1-Sim                                                                                                     |'),nl,
+    write('|2-Não                                                                                                     |'),nl,
+    read(OPTE),
+        ((OPTE == 1), assert(fact(tosse_expetoracao))),
+    nl,
+    write('|Tem dificuldade em resprirar?                                                                             |'),nl,
+    write('|1-Sim                                                                                                     |'),nl,
+    write('|2-Não                                                                                                     |'),nl,
+    read(OPDR),
+        ((OPDR == 1), assert(fact(dificuldade_respirar)),resultado).
+
+
+resultado:-
+    write('|----------------------------------------------------------------------------------------------------------|'),nl,
+    write('|                                          RESULTADO OBTIDO                                                |'),nl,
+    demo.
+
+
+escreverResultado(P) :- % tirei isto pq não sei foda-se
