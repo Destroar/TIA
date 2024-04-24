@@ -32,37 +32,55 @@ questoesIniciais:-
     write('|   3- [3-12 meses]                        7- [14-17 anos]                                                 |'),nl,
     write('|   4- [1-4 anos]                          8- [+18 anos]                                                   |'),nl,
     read(I),
-        ((I == 1), assert(fact(menos3meses));
-        (I == 2), assert(fact(mais3meses));
-        (I == 3), assert(fact(entre3a12meses));
-        (I == 4), assert(fact(entre1a4anos));
-        (I == 5), assert(fact(entre5a9anos));
-        (I == 6), assert(fact(entre10a13anos));
-        (I == 7), assert(fact(entre14a17anos));
-        (I == 8), assert(fact(mais18anos))),
-    write('|----------------------------------------------------------------------------------------------------------|'),nl,
-    write('|                                                                                                          |'),nl,
-    write('|Nome: '),write(N),write('?'),nl,
-    write('|Opção da idade: '),write(I),write('?'),nl,
-    write('|                                                                                                          |'),nl,
-    write('|                   Porfavor confirme os dados fornecidos para podermos iniciar o teste                    |'),nl,
-    write('|----------------------------------------------------------------------------------------------------------|'),nl,confirmacao.
-    
+        ((I == 1), assert(fact(menos3meses)), confirmacaoPeso1;
+        (I == 2), assert(fact(mais3meses)), confirmacaoPeso1;
+        (I == 3), assert(fact(entre3a12meses)), confirmacaoPeso1;
+        (I == 4), assert(fact(entre1a4anos)), questoesSintomas;
+        (I == 5), assert(fact(entre5a9anos)), questoesSintomas;
+        (I == 6), assert(fact(entre10a13anos)), questoesSintomas;
+        (I == 7), assert(fact(entre14a17anos)), confirmacaoPeso2;
+        (I == 8), assert(fact(mais18anos)), confirmacaoPeso2).
+    %write('|----------------------------------------------------------------------------------------------------------|'),nl,
+    %write('|                                                                                                          |'),nl,
+    %write('|Nome: '),write(N),write('?'),nl,
+    %write('|Opção da idade: '),write(I),write('?'),nl,
+    %write('|                                                                                                          |'),nl,
+    %write('|                   Porfavor confirme os dados fornecidos para podermos iniciar o teste                    |'),nl,
+    %write('|----------------------------------------------------------------------------------------------------------|'),nl,confirmacao.
 
-confirmacao:-
-    write('|                                                                                                          |'),nl,
-    write('|1-Cofirmado                                                                                               |'),nl,
-    write('|2-Reintroduzir dados                                                                                      |'),nl,
-    read(C),
-    opcao(C).
+confirmacaoPeso1:-
+    nl, 
+    write('|Confirma ter menos de 6kg                                                                                 |'),nl,
+    write('|1-Sim                                                                                                     |'),nl,
+    write('|2-Não                                                                                                     |'),nl,
+    read(O6),
+        ((O6 == 1), assert(fact(menos6kg)), questoesSintomas;
+        (O6 == 2), questoesSintomas).
 
-opcao(1):- questoesSintomas.
-opcao(2):- questoesIniciais.
-opcao(_):-
-    write('|Introduza uma opção válida.                                                                               |'),nl,confirmacao.
+    confirmacaoPeso2:-
+        nl, 
+        write('|Confirma ter mis de 40kg                                                                                  |'),nl,
+        write('|1-Sim                                                                                                     |'),nl,
+        write('|2-Não                                                                                                     |'),nl,
+        read(O6),
+            ((O6 == 1), assert(fact(mais40kg)), questoesSintomas;
+            (O6 == 2), questoesSintomas).
+ 
+%confirmacao:-
+    %write('|                                                                                                          |'),nl,
+    %write('|1-Cofirmado                                                                                               |'),nl,
+    %write('|2-Reintroduzir dados                                                                                      |'),nl,
+    %read(C),
+    %opcao(C).
+
+%opcao(1):- questoesSintomas.
+%opcao(2):- questoesIniciais.
+%opcao(_):-
+    %write('|Introduza uma opção válida.                                                                               |'),nl,confirmacao.
 
 questoesSintomas:-
     write('|----------------------------------------------------------------------------------------------------------|'),nl,
+    write('|                                               SINTOMAS                                                   |'),nl,
     write('|                                                                                                          |'),nl,
     write('|Tem febre?                                                                                                |'),nl,
     write('|                                                                                                          |'),nl,
