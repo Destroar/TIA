@@ -91,5 +91,6 @@ resultado:-
     demo.
 
 
- escreverResultado(P) :- doenca(Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao), retract(fact(P)).
+escreverResultado(P) :- doenca(P, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao), write(P), retractall(fact(P)).
+
  
