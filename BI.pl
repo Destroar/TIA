@@ -13,7 +13,7 @@ demo:-
     escreverResultado(P),nl,
     assert(fact(P)),
     demo. % Continuação
-demo:- write('').
+demo:- write(''), retractall(fact(_)).
 
 new_derived_fact( Concl) :-
     if Cond then Concl,

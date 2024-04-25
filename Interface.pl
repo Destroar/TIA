@@ -639,6 +639,6 @@ resultado:-
     demo.
 
 
-escreverResultado(P) :- imprimir_informacoes(P),retractall(fact(_)).
+escreverResultado(P) :- imprimir_informacoes(P).
 
  
