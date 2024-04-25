@@ -121,3 +121,18 @@ medicamento(infecaoUrinaria, 1, xarope, paracetamolBen-u-ron , entre10a13anos, n
 medicamento(infecaoUrinaria, 1, xarope, paracetamolBen-u-ron , entre5a9anos, null, entre1_9e2_5ml, '100mg por ml', entre4e6horas, [doencasfigado]).
 medicamento(infecaoUrinaria, 1, xarope, paracetamolBen-u-ron , entre1a4nos, null, entre1_9e2_5ml, '100mg por ml', entre4e6horas, [doencasfigado]).
 medicamento(infecaoUrinaria, 1, xarope, paracetamolBen-u-ron , entre3a12meses, null, entre1_9e2_5ml, '100mg por ml', entre4e6horas, [doencasfigado]).
+
+doente(pneumonia, pneumonia).
+doente(candidiaseOral, candidiaseOral).
+doente(amigdalite, amigdalite).
+doente(otite, otite).
+doente(zona, zona).
+doente(alergiaAlimentar, alergiaAlimentar).
+doente(alergiaRespiratoria, alergiaRespiratoria).
+doente(bronquite, bronquite).
+doente(enxaqueca, enxaqueca).
+doente(gripe, gripe).
+doente(artrite, artrite).
+doente(sinusite, sinusite).
+doente(conjuntiviteBacteriana, conjuntiviteBacteriana).
+doente(infecaoUrinaria, infecaoUrinaria).

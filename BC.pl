@@ -4,7 +4,10 @@
 :- op( 200, xfy, and).
 :- dynamic medicamento/10.
 :- dynamic doente/2.
+<<<<<<< Updated upstream
 :- dynamic doenca/7.
+=======
+>>>>>>> Stashed changes
 
 
 if tosse_expetoracao and dificuldade_respirar and 
@@ -208,6 +211,7 @@ febre or calafrios or dor_lombar and nauseas and vomitos) and menos6kg
 then n7.
 
 
+<<<<<<< Updated upstream
 doenca(a1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(pneumonia, _, T, M, _, menos6kg, P, D, V, C), doente(pneumonia, Doenca), append([Doenca, T, M, P, D, V, C], X).
 doenca(a2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(pneumonia, _, T, M, entre3a12meses, _, P, D, V, C), doente(pneumonia, Doenca), append([Doenca, T, M, P, D, V, C], X).
 doenca(a3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(pneumonia, _, T, M, entre1a4anos, _, P, D, V, C), doente(pneumonia, Doenca), append([Doenca, T, M, P, D, V, C], X).
@@ -301,3 +305,98 @@ doenca(n4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medi
 doenca(n5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(infecaoUrinaria, _, T, M, entre3a12meses, _, P, D, V, C), doente(infecaoUrinaria, Doenca), append([Doenca, T, M, P, D, V, C], X).
 doenca(n6, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(infecaoUrinaria, _, T, M, menos3meses, _, P, D, V, C), doente(infecaoUrinaria, Doenca), append([Doenca, T, M, P, D, V, C], X).
 doenca(n7, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(infecaoUrinaria, _, T, M, _, menos6kg, P, D, V, C), doente(infecaoUrinaria, Doenca), append([Doenca, T, M, P, D, V, C], X).
+=======
+doenca(a1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(pneumonia, _, Tipo, Medicamento, _, menos6kg, Prescricao, Dose, Vezes, Condicao), doente(pneumonia, Doenca).
+doenca(a2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(pneumonia, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao), doente(pneumonia, Doenca).
+doenca(a3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(pneumonia, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao), doente(pneumonia, Doenca).
+doenca(a4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(pneumonia, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao), doente(pneumonia, Doenca).
+doenca(a5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(pneumonia, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao), doente(pneumonia, Doenca).
+doenca(a6, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(pneumonia, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao), doente(pneumonia, Doenca).
+doenca(a7, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(pneumonia, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao), doente(pneumonia, Doenca).
+doenca(a8, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(pneumonia, _, Tipo, Medicamento, _, mais40kg, Prescricao, Dose, Vezes, Condicao), doente(pneumonia, Doenca).
+
+doenca(b1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(candidiaseOral, _, Tipo, Medicamento, _, _, Prescricao, Dose, Vezes, Condicao), doente(candidiaseOral, Doenca).
+doenca(b2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(candidiaseOral, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao), doente(candidiaseOral, Doenca).   
+
+doenca(c1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(amigdalite, _, Tipo, Medicamento, _, mais40kg, Prescricao, Dose, Vezes, Condicao), doente(amigdalite, Doenca).
+doenca(c2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(amigdalite, _, Tipo, Medicamento, _, menos6kg, Prescricao, Dose, Vezes, Condicao), doente(amigdalite, Doenca).
+doenca(c3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(amigdalite, _, Tipo, Medicamento, menos3meses, _, Prescricao, Dose, Vezes, Condicao), doente(amigdalite, Doenca).
+doenca(c4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(amigdalite, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao), doente(amigdalite, Doenca).
+doenca(c5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(amigdalite, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao), doente(amigdalite, Doenca).
+doenca(c6, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(amigdalite, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao), doente(amigdalite, Doenca).
+doenca(c7, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(amigdalite, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao), doente(amigdalite, Doenca).
+doenca(c8, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(amigdalite, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao), doente(amigdalite, Doenca).
+doenca(c9, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(amigdalite, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao), doente(amigdalite, Doenca).
+
+doenca(d1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(otite, _, Tipo, Medicamento, _, mais40kg, Prescricao, Dose, Vezes, Condicao), doente(otite, Doenca).
+doenca(d2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(otite, _, Tipo, Medicamento, _, menos6kg, Prescricao, Dose, Vezes, Condicao), doente(otite, Doenca).
+doenca(d3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(otite, _, Tipo, Medicamento, menos3meses, _, Prescricao, Dose, Vezes, Condicao), doente(otite, Doenca).
+doenca(d4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(otite, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao), doente(otite, Doenca).
+doenca(d5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(otite, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao), doente(otite, Doenca).
+doenca(d6, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(otite, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao), doente(otite, Doenca).
+doenca(d7, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(otite, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao), doente(otite, Doenca).
+doenca(d8, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(otite, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao), doente(otite, Doenca).
+doenca(d9, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(otite, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao), doente(otite, Doenca).
+
+doenca(e1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(zona, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao), doente(zona, Doenca).
+
+doenca(f1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(alergiaAlimentar, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao), doente(alergiaAlimentar, Doenca).
+doenca(f2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(alergiaAlimentar, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao), doente(alergiaAlimentar, Doenca).
+doenca(f3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(alergiaAlimentar, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao), doente(alergiaAlimentar, Doenca).
+doenca(f4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(alergiaAlimentar, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao), doente(alergiaAlimentar, Doenca).
+doenca(f5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(alergiaAlimentar, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao), doente(alergiaAlimentar, Doenca).
+
+doenca(g1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(alergiaRespiratoria, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao), doente(alergiaRespiratoria, Doenca).
+doenca(g2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(alergiaRespiratoria, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao), doente(alergiaRespiratoria, Doenca).
+doenca(g3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(alergiaRespiratoria, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao), doente(alergiaRespiratoria, Doenca).
+doenca(g4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(alergiaRespiratoria, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao), doente(alergiaRespiratoria, Doenca).
+doenca(g5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(alergiaRespiratoria, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao), doente(alergiaRespiratoria, Doenca).
+
+doenca(h1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(bronquite, _, Tipo, Medicamento, _, _, Prescricao, Dose, Vezes, Condicao), doente(bronquite, Doenca).
+doenca(h2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(bronquite, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao), doente(bronquite, Doenca).
+doenca(h3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(bronquite, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao), doente(bronquite, Doenca).
+doenca(h4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(bronquite, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao), doente(bronquite, Doenca).
+doenca(h5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(bronquite, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao), doente(bronquite, Doenca).
+doenca(h6, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(bronquite, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao), doente(bronquite, Doenca).
+doenca(h7, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(bronquite, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao), doente(bronquite, Doenca).
+
+doenca(i1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(enxaqueca, _, Tipo, Medicamento, _, _, Prescricao, Dose, Vezes, Condicao), doente(enxaqueca, Doenca).
+doenca(i2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(enxaqueca, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao), doente(enxaqueca, Doenca).
+doenca(i3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(enxaqueca, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao), doente(enxaqueca, Doenca).
+doenca(i4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(enxaqueca, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao), doente(enxaqueca, Doenca).
+doenca(i5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(enxaqueca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao), doente(enxaqueca, Doenca).
+doenca(i6, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(enxaqueca, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao), doente(enxaqueca, Doenca).
+doenca(i7, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(enxaqueca, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao), doente(enxaqueca, Doenca).
+
+doenca(j1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(gripe, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao), doente(gripe, Doenca).
+doenca(j2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(gripe, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao), doente(gripe, Doenca).
+doenca(j3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(gripe, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao), doente(gripe, Doenca).
+doenca(j4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(gripe, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao), doente(gripe, Doenca).
+doenca(j5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(gripe, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao), doente(gripe, Doenca).
+doenca(j6, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(gripe, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao), doente(gripe, Doenca).
+
+doenca(k1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(artrite, _, Tipo, Medicamento, _, _, Prescricao, Dose, Vezes, Condicao), doente(artrite, Doenca).
+doenca(k2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(artrite, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao), doente(artrite, Doenca).
+doenca(k3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(artrite, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao), doente(artrite, Doenca).
+doenca(k4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(artrite, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao), doente(artrite, Doenca).
+doenca(k5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(artrite, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao), doente(artrite, Doenca).
+doenca(k6, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(artrite, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao), doente(artrite, Doenca).
+doenca(k7, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(artrite, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao), doente(artrite, Doenca).
+
+doenca(l1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(sinusite, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao), doente(sinusite, Doenca).
+doenca(l2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(sinusite, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao), doente(sinusite, Doenca).
+doenca(l3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(sinusite, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao), doente(sinusite, Doenca).
+doenca(l4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(sinusite, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao), doente(sinusite, Doenca).
+doenca(l5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(sinusite, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao), doente(sinusite, Doenca).
+doenca(l6, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(sinusite, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao), doente(sinusite, Doenca).
+
+doenca(m1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(conjuntiviteBacteriana, _, Tipo, Medicamento, _, _, Prescricao, Dose, Vezes, Condicao), doente(conjuntiviteBacteriana, Doenca).
+
+doenca(n1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(infecaoUrinaria, _, Tipo, Medicamento, _, mais40kg, Prescricao, Dose, Vezes, Condicao), doente(infecaoUrinaria, Doenca).
+doenca(n2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(infecaoUrinaria, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao), doente(infecaoUrinaria, Doenca).
+doenca(n3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(infecaoUrinaria, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao), doente(infecaoUrinaria, Doenca).
+doenca(n4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(infecaoUrinaria, _, Tipo, Medicamento, entre1a4nos, _, Prescricao, Dose, Vezes, Condicao), doente(infecaoUrinaria, Doenca).
+doenca(n5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(infecaoUrinaria, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao), doente(infecaoUrinaria, Doenca).
+doenca(n6, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(infecaoUrinaria, _, Tipo, Medicamento, menos3meses, _, Prescricao, Dose, Vezes, Condicao), doente(infecaoUrinaria, Doenca).
+doenca(n7, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(infecaoUrinaria, _, Tipo, Medicamento, _, menos6kg, Prescricao, Dose, Vezes, Condicao), doente(infecaoUrinaria, Doenca).
+>>>>>>> Stashed changes
