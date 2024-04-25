@@ -438,7 +438,6 @@ questoesSintomas:-
     read(OPPRF),
         ((OPPRF == 1), assert(fact(pressao_facial))),
     nl,
-    write('| Ultima questão                                                                                           |'),nl,
     write('|Tem perda de olfato?                                                                                      |'),nl,
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Não                                                                                                     |'),nl,
