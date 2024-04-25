@@ -524,7 +524,7 @@ imprimir_informacoes(g5) :-
 
 imprimir_informacoes(h1) :-
     findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
-            (medicamento(Doenca, _, Tipo, Medicamento, _, _, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, paragem, _, Prescricao, Dose, Vezes, Condicao),
              doente(bronquite, Doenca)),
             Lista), nl,
     write('Informações para o perfil '), write('h1'), write(':'), nl,
@@ -580,7 +580,7 @@ imprimir_informacoes(h7) :-
 
 imprimir_informacoes(i1) :-
     findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
-            (medicamento(Doenca, _, Tipo, Medicamento, _, _, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, paragem, _, Prescricao, Dose, Vezes, Condicao),
              doente(enxaqueca, Doenca)),
             Lista), nl,
     write('Informações para o perfil '), write('i1'), write(':'), nl,
@@ -684,7 +684,7 @@ imprimir_informacoes(j6) :-
 
 imprimir_informacoes(k1) :-
     findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
-            (medicamento(Doenca, _, Tipo, Medicamento, _, _, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, paragem, _, Prescricao, Dose, Vezes, Condicao),
              doente(artrite, Doenca)),
             Lista), nl,
     write('Informações para o perfil '), write('k1'), write(':'), nl,

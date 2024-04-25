@@ -63,7 +63,7 @@ medicamento(alergiaRespiratoria, 7, xarope, cetirizina_aurobindo, entre10a13anos
 medicamento(alergiaRespiratoria, 7, xarope, cetirizina_aurobindo, entre5a9anos, null, '5ml' , '120ml', '12em12horas', null).
 medicamento(alergiaRespiratoria, 7, xarope, cetirizina_aurobindo, entre1a4anos, null, '2.5ml' , '120ml', '12em12horas', null).
 
-medicamento(bronquite, 8, repouso, null, null, null, null, null, null, null).
+medicamento(bronquite, 8, repouso, null, null, paragem, null, null, null, null).
 medicamento(bronquite, 8, ingestaoLiquidos, null, null, null, null, null, null, null).
 medicamento(bronquite, 1, comprimidoEferverescente, aspirinaC, entre10a13anos, null, '640mg', null, '4 a 8 horas', [gravidez, amamentacao]).
 medicamento(bronquite, 1, comprimidoEferverescente, aspirinaC, mais18anos, null, '2comprimidosde640mg', null, '4 a 8 horas', [gravidez, amamentacao]).
@@ -74,7 +74,7 @@ medicamento(bronquite, 1, xarope, paracetamolBen-u-ron , entre3a12meses, null, e
 medicamento(bronquite, 1, xarope, paracetamolBen-u-ron , entre1a4anos, null, entre1_9e2_5ml, '100mgporml', entre4e6horas, [doencasfigado]).
 medicamento(bronquite, 1, xarope, paracetamolBen-u-ron , entre5a9anos, null, entre1_9e2_5ml, '100mgporml', entre4e6horas, [doencasfigado]).
 
-medicamento(enxaqueca, 8, repouso, null, null, null, null, null, null, null).
+medicamento(enxaqueca, 8, repouso, null, null, paragem, null, null, null, null).
 medicamento(enxaqueca, 1, comprimidoEferverescente, paracetamolBen_u_ron, entre5a9anos, null, '500mg', null, '3a4vezesdia', [doencasfigado]).
 medicamento(enxaqueca, 1, comprimidoEferverescente, paracetamolBen_u_ron, entre10a13anos, null, '500mg', null, '3a4vezesdia', [doencasfigado]).
 medicamento(enxaqueca, 1, comprimidoEferverescente, paracetamolBen_u_ron, entre14a17anos, null, '500mg', null, '3a4vezesdia', [doencasfigado]).
@@ -91,7 +91,7 @@ medicamento(gripe, 1, xarope , dipirona , entre5a9anos , null , '5a10ml' , '50mg
 medicamento(gripe, 1, xarope , dipirona , entre10a13anos , null , '7.5a15ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
 medicamento(gripe, 1, xarope , dipirona , entre14a17anos , null , '10a20ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
 
-medicamento(artrite,8, fisioterapia,null,null,null,null,null,null,null).
+medicamento(artrite,8, fisioterapia,null,null,paragem,null,null,null,null).
 medicamento(artrite, 1, comprimidoEferverescente, paracetamolBen_u_ron, entre14a17anos, null, '500mg', null, '3a4vezesdia', [doencasfigado]).
 medicamento(artrite, 1, comprimido, paracetamolBen_u_ron, mais18anos, null, '750mg', null, '3a5vezesdia', [doencasfigado]).
 medicamento(artrite, 1, xarope, paracetamolBen-u-ron , entre3a12meses, null, entre0_4e0_8ml, '100mgporml', entre4e6horas, [doencasfigado]).
