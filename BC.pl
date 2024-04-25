@@ -4,7 +4,7 @@
 :- op( 200, xfy, and).
 :- dynamic medicamento/10.
 :- dynamic doente/2.
-:- dynamic doenca/7.
+:- dynamic doenca/8.
 
 
 if tosse_expetoracao and dificuldade_respirar and 
