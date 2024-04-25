@@ -64,7 +64,7 @@ medicamento(alergiaRespiratoria, 7, xarope, cetirizina_aurobindo, entre5a9anos, 
 medicamento(alergiaRespiratoria, 7, xarope, cetirizina_aurobindo, entre1a4anos, null, '2.5ml' , '120ml', '12em12horas', null).
 
 medicamento(bronquite, 8, repouso, null, paragem, null, null, null, null, null).
-medicamento(bronquite, 8, ingestaoLiquidos, null, null, null, null, null, null, null).
+medicamento(bronquite, 8, ingestaoLiquidos, null, paragem, null, null, null, null, null).
 medicamento(bronquite, 1, comprimidoEferverescente, aspirinaC, entre10a13anos, null, '640mg', null, '4 a 8 horas', [gravidez, amamentacao]).
 medicamento(bronquite, 1, comprimidoEferverescente, aspirinaC, mais18anos, null, '2comprimidosde640mg', null, '4 a 8 horas', [gravidez, amamentacao]).
 medicamento(bronquite, 1, saqueta, aspirinaComplex, entre14a17anos, null, saqueta530mg, null, '4 a 8 horas', [alergias,asma,insuficienciaHepatica, insuficienciaRenal, insuficienciaCardiacaGrave,hipertensaoGrave, doencaArterialCoronaria]).
@@ -91,7 +91,7 @@ medicamento(gripe, 1, xarope , dipirona , entre5a9anos , null , '5a10ml' , '50mg
 medicamento(gripe, 1, xarope , dipirona , entre10a13anos , null , '7.5a15ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
 medicamento(gripe, 1, xarope , dipirona , entre14a17anos , null , '10a20ml' , '50mgporml', '4vezesaoDia', [doencasProducaoCelulasSanguineas, alergiasMedicamentosAnalgesicos, intoleranciaDipirona]).
 
-medicamento(artrite,8, fisioterapia,null,null,paragem,null,null,null,null).
+medicamento(artrite,8, fisioterapia,null,paragem,null,null,null,null,null).
 medicamento(artrite, 1, comprimidoEferverescente, paracetamolBen_u_ron, entre14a17anos, null, '500mg', null, '3a4vezesdia', [doencasfigado]).
 medicamento(artrite, 1, comprimido, paracetamolBen_u_ron, mais18anos, null, '750mg', null, '3a5vezesdia', [doencasfigado]).
 medicamento(artrite, 1, xarope, paracetamolBen-u-ron , entre3a12meses, null, entre0_4e0_8ml, '100mgporml', entre4e6horas, [doencasfigado]).
