@@ -4,10 +4,7 @@
 :- op( 200, xfy, and).
 :- dynamic medicamento/10.
 :- dynamic doente/2.
-<<<<<<< Updated upstream
 :- dynamic doenca/7.
-=======
->>>>>>> Stashed changes
 
 
 if tosse_expetoracao and dificuldade_respirar and 
@@ -211,101 +208,6 @@ febre or calafrios or dor_lombar and nauseas and vomitos) and menos6kg
 then n7.
 
 
-<<<<<<< Updated upstream
-doenca(a1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(pneumonia, _, T, M, _, menos6kg, P, D, V, C), doente(pneumonia, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(a2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(pneumonia, _, T, M, entre3a12meses, _, P, D, V, C), doente(pneumonia, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(a3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(pneumonia, _, T, M, entre1a4anos, _, P, D, V, C), doente(pneumonia, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(a4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(pneumonia, _, T, M, entre5a9anos, _, P, D, V, C), doente(pneumonia, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(a5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(pneumonia, _, T, M, entre10a13anos, _, P, D, V, C), doente(pneumonia, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(a6, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(pneumonia, _, T, M, entre14a17anos, _, P, D, V, C), doente(pneumonia, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(a7, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(pneumonia, _, T, M, mais18anos, _, P, D, V, C), doente(pneumonia, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(a8, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(pneumonia, _, T, M, _, mais40kg, P, D, V, C), doente(pneumonia, Doenca), append([Doenca, T, M, P, D, V, C], X).
-
-doenca(b1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(candidiaseOral, _, T, M, _, _, P, D, V, C), doente(candidiaseOral, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(b2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(candidiaseOral, _, T, M, mais18anos, _, P, D, V, C), doente(candidiaseOral, Doenca), append([Doenca, T, M, P, D, V, C], X).   
-
-doenca(c1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(amigdalite, _, T, M, _, mais40kg, P, D, V, C), doente(amigdalite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(c2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(amigdalite, _, T, M, _, menos6kg, P, D, V, C), doente(amigdalite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(c3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(amigdalite, _, T, M, menos3meses, _, P, D, V, C), doente(amigdalite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(c4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(amigdalite, _, T, M, entre3a12meses, _, P, D, V, C), doente(amigdalite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(c5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(amigdalite, _, T, M, entre1a4anos, _, P, D, V, C), doente(amigdalite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(c6, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(amigdalite, _, T, M, entre5a9anos, _, P, D, V, C), doente(amigdalite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(c7, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(amigdalite, _, T, M, entre10a13anos, _, P, D, V, C), doente(amigdalite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(c8, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(amigdalite, _, T, M, entre14a17anos, _, P, D, V, C), doente(amigdalite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(c9, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(amigdalite, _, T, M, mais18anos, _, P, D, V, C), doente(amigdalite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-
-doenca(d1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(otite, _, T, M, _, mais40kg, P, D, V, C), doente(otite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(d2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(otite, _, T, M, _, menos6kg, P, D, V, C), doente(otite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(d3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(otite, _, T, M, menos3meses, _, P, D, V, C), doente(otite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(d4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(otite, _, T, M, entre3a12meses, _, P, D, V, C), doente(otite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(d5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(otite, _, T, M, entre1a4anos, _, P, D, V, C), doente(otite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(d6, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(otite, _, T, M, entre5a9anos, _, P, D, V, C), doente(otite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(d7, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(otite, _, T, M, entre10a13anos, _, P, D, V, C), doente(otite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(d8, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(otite, _, T, M, entre14a17anos, _, P, D, V, C), doente(otite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(d9, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(otite, _, T, M, mais18anos, _, P, D, V, C), doente(otite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-
-doenca(e1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(zona, _, T, M, mais18anos, _, P, D, V, C), doente(zona, Doenca), append([Doenca, T, M, P, D, V, C], X).
-
-doenca(f1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(alergiaAlimentar, _, T, M, entre1a4anos, _, P, D, V, C), doente(alergiaAlimentar, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(f2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(alergiaAlimentar, _, T, M, entre5a9anos, _, P, D, V, C), doente(alergiaAlimentar, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(f3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(alergiaAlimentar, _, T, M, entre10a13anos, _, P, D, V, C), doente(alergiaAlimentar, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(f4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(alergiaAlimentar, _, T, M, entre14a17anos, _, P, D, V, C), doente(alergiaAlimentar, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(f5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(alergiaAlimentar, _, T, M, mais18anos, _, P, D, V, C), doente(alergiaAlimentar, Doenca), append([Doenca, T, M, P, D, V, C], X).
-
-doenca(g1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(alergiaRespiratoria, _, T, M, entre1a4anos, _, P, D, V, C), doente(alergiaRespiratoria, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(g2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(alergiaRespiratoria, _, T, M, entre5a9anos, _, P, D, V, C), doente(alergiaRespiratoria, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(g3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(alergiaRespiratoria, _, T, M, entre10a13anos, _, P, D, V, C), doente(alergiaRespiratoria, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(g4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(alergiaRespiratoria, _, T, M, entre14a17anos, _, P, D, V, C), doente(alergiaRespiratoria, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(g5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(alergiaRespiratoria, _, T, M, mais18anos, _, P, D, V, C), doente(alergiaRespiratoria, Doenca), append([Doenca, T, M, P, D, V, C], X).
-
-doenca(h1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(bronquite, _, T, M, _, _, P, D, V, C), doente(bronquite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(h2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(bronquite, _, T, M, entre3a12meses, _, P, D, V, C), doente(bronquite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(h3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(bronquite, _, T, M, entre1a4anos, _, P, D, V, C), doente(bronquite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(h4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(bronquite, _, T, M, entre5a9anos, _, P, D, V, C), doente(bronquite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(h5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(bronquite, _, T, M, entre10a13anos, _, P, D, V, C), doente(bronquite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(h6, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(bronquite, _, T, M, entre14a17anos, _, P, D, V, C), doente(bronquite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(h7, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(bronquite, _, T, M, mais18anos, _, P, D, V, C), doente(bronquite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-
-doenca(i1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(enxaqueca, _, T, M, _, _, P, D, V, C), doente(enxaqueca, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(i2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(enxaqueca, _, T, M, entre5a9anos, _, P, D, V, C), doente(enxaqueca, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(i3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(enxaqueca, _, T, M, entre10a13anos, _, P, D, V, C), doente(enxaqueca, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(i4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(enxaqueca, _, T, M, entre14a17anos, _, P, D, V, C), doente(enxaqueca, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(i5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(enxaqueca, _, T, M, entre3a12meses, _, P, D, V, C), doente(enxaqueca, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(i6, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(enxaqueca, _, T, M, entre1a4anos, _, P, D, V, C), doente(enxaqueca, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(i7, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(enxaqueca, _, T, M, mais18anos, _, P, D, V, C), doente(enxaqueca, Doenca), append([Doenca, T, M, P, D, V, C], X).
-
-doenca(j1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(gripe, _, T, M, mais18anos, _, P, D, V, C), doente(gripe, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(j2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(gripe, _, T, M, entre3a12meses, _, P, D, V, C), doente(gripe, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(j3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(gripe, _, T, M, entre1a4anos, _, P, D, V, C), doente(gripe, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(j4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(gripe, _, T, M, entre5a9anos, _, P, D, V, C), doente(gripe, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(j5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(gripe, _, T, M, entre10a13anos, _, P, D, V, C), doente(gripe, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(j6, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(gripe, _, T, M, entre14a17anos, _, P, D, V, C), doente(gripe, Doenca), append([Doenca, T, M, P, D, V, C], X).
-
-doenca(k1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(artrite, _, T, M, _, _, P, D, V, C), doente(artrite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(k2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(artrite, _, T, M, entre14a17anos, _, P, D, V, C), doente(artrite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(k3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(artrite, _, T, M, mais18anos, _, P, D, V, C), doente(artrite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(k4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(artrite, _, T, M, entre3a12meses, _, P, D, V, C), doente(artrite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(k5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(artrite, _, T, M, entre1a4anos, _, P, D, V, C), doente(artrite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(k6, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(artrite, _, T, M, entre5a9anos, _, P, D, V, C), doente(artrite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(k7, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(artrite, _, T, M, entre10a13anos, _, P, D, V, C), doente(artrite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-
-doenca(l1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(sinusite, _, T, M, entre5a9anos, _, P, D, V, C), doente(sinusite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(l2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(sinusite, _, T, M, entre10a13anos, _, P, D, V, C), doente(sinusite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(l3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(sinusite, _, T, M, entre14a17anos, _, P, D, V, C), doente(sinusite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(l4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(sinusite, _, T, M, mais18anos, _, P, D, V, C), doente(sinusite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(l5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(sinusite, _, T, M, entre3a12meses, _, P, D, V, C), doente(sinusite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(l6, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(sinusite, _, T, M, entre1a4anos, _, P, D, V, C), doente(sinusite, Doenca), append([Doenca, T, M, P, D, V, C], X).
-
-doenca(m1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(conjuntiviteBacteriana, _, T, M, _, _, P, D, V, C), doente(conjuntiviteBacteriana, Doenca), append([Doenca, T, M, P, D, V, C], X).
-
-doenca(n1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(infecaoUrinaria, _, T, M, _, mais40kg, P, D, V, C), doente(infecaoUrinaria, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(n2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(infecaoUrinaria, _, T, M, entre10a13anos, _, P, D, V, C), doente(infecaoUrinaria, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(n3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(infecaoUrinaria, _, T, M, entre5a9anos, _, P, D, V, C), doente(infecaoUrinaria, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(n4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(infecaoUrinaria, _, T, M, entre1a4nos, _, P, D, V, C), doente(infecaoUrinaria, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(n5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(infecaoUrinaria, _, T, M, entre3a12meses, _, P, D, V, C), doente(infecaoUrinaria, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(n6, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(infecaoUrinaria, _, T, M, menos3meses, _, P, D, V, C), doente(infecaoUrinaria, Doenca), append([Doenca, T, M, P, D, V, C], X).
-doenca(n7, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(infecaoUrinaria, _, T, M, _, menos6kg, P, D, V, C), doente(infecaoUrinaria, Doenca), append([Doenca, T, M, P, D, V, C], X).
-=======
 doenca(a1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(pneumonia, _, Tipo, Medicamento, _, menos6kg, Prescricao, Dose, Vezes, Condicao), doente(pneumonia, Doenca).
 doenca(a2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(pneumonia, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao), doente(pneumonia, Doenca).
 doenca(a3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(pneumonia, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao), doente(pneumonia, Doenca).
@@ -399,4 +301,3 @@ doenca(n4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medi
 doenca(n5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(infecaoUrinaria, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao), doente(infecaoUrinaria, Doenca).
 doenca(n6, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(infecaoUrinaria, _, Tipo, Medicamento, menos3meses, _, Prescricao, Dose, Vezes, Condicao), doente(infecaoUrinaria, Doenca).
 doenca(n7, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(infecaoUrinaria, _, Tipo, Medicamento, _, menos6kg, Prescricao, Dose, Vezes, Condicao), doente(infecaoUrinaria, Doenca).
->>>>>>> Stashed changes
