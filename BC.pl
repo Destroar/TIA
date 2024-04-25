@@ -2,9 +2,10 @@
 :- op( 700, xfx, then).
 :- op( 300, xfy, or).
 :- op( 200, xfy, and).
-:- dynamic medicamento/10.
-:- dynamic doente/2.
-:- dynamic doenca/8.
+:- dynamic (medicamento/10).
+:- dynamic (imprimir_informacoes/1).
+:- dynamic (imprimir_lista/1).
+:- dynamic (doente/2).
 
 
 if tosse_expetoracao and dificuldade_respirar and 
@@ -208,96 +209,665 @@ febre or calafrios or dor_lombar and nauseas and vomitos) and menos6kg
 then n7.
 
 
-doenca(a1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(pneumonia, _, Tipo, Medicamento, _, menos6kg, Prescricao, Dose, Vezes, Condicao), doente(pneumonia, Doenca).
-doenca(a2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(pneumonia, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao), doente(pneumonia, Doenca).
-doenca(a3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(pneumonia, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao), doente(pneumonia, Doenca).
-doenca(a4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(pneumonia, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao), doente(pneumonia, Doenca).
-doenca(a5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(pneumonia, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao), doente(pneumonia, Doenca).
-doenca(a6, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(pneumonia, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao), doente(pneumonia, Doenca).
-doenca(a7, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(pneumonia, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao), doente(pneumonia, Doenca).
-doenca(a8, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(pneumonia, _, Tipo, Medicamento, _, mais40kg, Prescricao, Dose, Vezes, Condicao), doente(pneumonia, Doenca).
+% Predicado para imprimir uma lista com informações para uma determinada doença
+imprimir_informacoes(a1) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, _, menos6kg, Prescricao, Dose, Vezes, Condicao),
+             doente(pneumonia, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('a1'), write(':'), nl,
+    imprimir_lista(Lista).
 
-doenca(b1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(candidiaseOral, _, Tipo, Medicamento, _, _, Prescricao, Dose, Vezes, Condicao), doente(candidiaseOral, Doenca).
-doenca(b2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(candidiaseOral, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao), doente(candidiaseOral, Doenca).   
+imprimir_informacoes(a2) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(pneumonia, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('a2'), write(':'), nl,
+    imprimir_lista(Lista).
 
-doenca(c1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(amigdalite, _, Tipo, Medicamento, _, mais40kg, Prescricao, Dose, Vezes, Condicao), doente(amigdalite, Doenca).
-doenca(c2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(amigdalite, _, Tipo, Medicamento, _, menos6kg, Prescricao, Dose, Vezes, Condicao), doente(amigdalite, Doenca).
-doenca(c3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(amigdalite, _, Tipo, Medicamento, menos3meses, _, Prescricao, Dose, Vezes, Condicao), doente(amigdalite, Doenca).
-doenca(c4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(amigdalite, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao), doente(amigdalite, Doenca).
-doenca(c5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(amigdalite, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao), doente(amigdalite, Doenca).
-doenca(c6, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(amigdalite, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao), doente(amigdalite, Doenca).
-doenca(c7, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(amigdalite, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao), doente(amigdalite, Doenca).
-doenca(c8, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(amigdalite, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao), doente(amigdalite, Doenca).
-doenca(c9, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(amigdalite, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao), doente(amigdalite, Doenca).
+imprimir_informacoes(a3) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(pneumonia, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('a3'), write(':'), nl,
+    imprimir_lista(Lista).
 
-doenca(d1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(otite, _, Tipo, Medicamento, _, mais40kg, Prescricao, Dose, Vezes, Condicao), doente(otite, Doenca).
-doenca(d2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(otite, _, Tipo, Medicamento, _, menos6kg, Prescricao, Dose, Vezes, Condicao), doente(otite, Doenca).
-doenca(d3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(otite, _, Tipo, Medicamento, menos3meses, _, Prescricao, Dose, Vezes, Condicao), doente(otite, Doenca).
-doenca(d4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(otite, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao), doente(otite, Doenca).
-doenca(d5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(otite, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao), doente(otite, Doenca).
-doenca(d6, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(otite, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao), doente(otite, Doenca).
-doenca(d7, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(otite, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao), doente(otite, Doenca).
-doenca(d8, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(otite, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao), doente(otite, Doenca).
-doenca(d9, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(otite, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao), doente(otite, Doenca).
+imprimir_informacoes(a4) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(pneumonia, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('a4'), write(':'), nl,
+    imprimir_lista(Lista).
 
-doenca(e1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(zona, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao), doente(zona, Doenca).
+imprimir_informacoes(a5) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(pneumonia, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('a5'), write(':'), nl,
+    imprimir_lista(Lista).
 
-doenca(f1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(alergiaAlimentar, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao), doente(alergiaAlimentar, Doenca).
-doenca(f2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(alergiaAlimentar, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao), doente(alergiaAlimentar, Doenca).
-doenca(f3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(alergiaAlimentar, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao), doente(alergiaAlimentar, Doenca).
-doenca(f4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(alergiaAlimentar, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao), doente(alergiaAlimentar, Doenca).
-doenca(f5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(alergiaAlimentar, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao), doente(alergiaAlimentar, Doenca).
+imprimir_informacoes(a6) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(pneumonia, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('a6'), write(':'), nl,
+    imprimir_lista(Lista).
 
-doenca(g1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(alergiaRespiratoria, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao), doente(alergiaRespiratoria, Doenca).
-doenca(g2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(alergiaRespiratoria, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao), doente(alergiaRespiratoria, Doenca).
-doenca(g3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(alergiaRespiratoria, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao), doente(alergiaRespiratoria, Doenca).
-doenca(g4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(alergiaRespiratoria, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao), doente(alergiaRespiratoria, Doenca).
-doenca(g5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(alergiaRespiratoria, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao), doente(alergiaRespiratoria, Doenca).
+imprimir_informacoes(a7) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(pneumonia, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('a7'), write(':'), nl,
+    imprimir_lista(Lista).
 
-doenca(h1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(bronquite, _, Tipo, Medicamento, _, _, Prescricao, Dose, Vezes, Condicao), doente(bronquite, Doenca).
-doenca(h2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(bronquite, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao), doente(bronquite, Doenca).
-doenca(h3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(bronquite, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao), doente(bronquite, Doenca).
-doenca(h4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(bronquite, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao), doente(bronquite, Doenca).
-doenca(h5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(bronquite, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao), doente(bronquite, Doenca).
-doenca(h6, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(bronquite, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao), doente(bronquite, Doenca).
-doenca(h7, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(bronquite, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao), doente(bronquite, Doenca).
+imprimir_informacoes(a8) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(pneumonia, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('a8'), write(':'), nl,
+    imprimir_lista(Lista).
 
-doenca(i1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(enxaqueca, _, Tipo, Medicamento, _, _, Prescricao, Dose, Vezes, Condicao), doente(enxaqueca, Doenca).
-doenca(i2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(enxaqueca, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao), doente(enxaqueca, Doenca).
-doenca(i3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(enxaqueca, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao), doente(enxaqueca, Doenca).
-doenca(i4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(enxaqueca, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao), doente(enxaqueca, Doenca).
-doenca(i5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(enxaqueca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao), doente(enxaqueca, Doenca).
-doenca(i6, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(enxaqueca, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao), doente(enxaqueca, Doenca).
-doenca(i7, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(enxaqueca, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao), doente(enxaqueca, Doenca).
+imprimir_informacoes(b1) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(candidiaseOral, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('b1'), write(':'), nl,
+    imprimir_lista(Lista).
 
-doenca(j1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(gripe, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao), doente(gripe, Doenca).
-doenca(j2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(gripe, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao), doente(gripe, Doenca).
-doenca(j3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(gripe, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao), doente(gripe, Doenca).
-doenca(j4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(gripe, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao), doente(gripe, Doenca).
-doenca(j5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(gripe, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao), doente(gripe, Doenca).
-doenca(j6, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(gripe, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao), doente(gripe, Doenca).
+imprimir_informacoes(b2) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(candidiaseOral, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('b2'), write(':'), nl,
+    imprimir_lista(Lista).
 
-doenca(k1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(artrite, _, Tipo, Medicamento, _, _, Prescricao, Dose, Vezes, Condicao), doente(artrite, Doenca).
-doenca(k2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(artrite, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao), doente(artrite, Doenca).
-doenca(k3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(artrite, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao), doente(artrite, Doenca).
-doenca(k4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(artrite, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao), doente(artrite, Doenca).
-doenca(k5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(artrite, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao), doente(artrite, Doenca).
-doenca(k6, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(artrite, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao), doente(artrite, Doenca).
-doenca(k7, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(artrite, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao), doente(artrite, Doenca).
+imprimir_informacoes(c1) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(amigdalite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('c1'), write(':'), nl,
+    imprimir_lista(Lista).
 
-doenca(l1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(sinusite, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao), doente(sinusite, Doenca).
-doenca(l2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(sinusite, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao), doente(sinusite, Doenca).
-doenca(l3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(sinusite, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao), doente(sinusite, Doenca).
-doenca(l4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(sinusite, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao), doente(sinusite, Doenca).
-doenca(l5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(sinusite, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao), doente(sinusite, Doenca).
-doenca(l6, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(sinusite, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao), doente(sinusite, Doenca).
+imprimir_informacoes(c2) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(amigdalite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('c2'), write(':'), nl,
+    imprimir_lista(Lista).
 
-doenca(m1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(conjuntiviteBacteriana, _, Tipo, Medicamento, _, _, Prescricao, Dose, Vezes, Condicao), doente(conjuntiviteBacteriana, Doenca).
+imprimir_informacoes(c3) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(amigdalite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('c3'), write(':'), nl,
+    imprimir_lista(Lista).
 
-doenca(n1, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(infecaoUrinaria, _, Tipo, Medicamento, _, mais40kg, Prescricao, Dose, Vezes, Condicao), doente(infecaoUrinaria, Doenca).
-doenca(n2, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(infecaoUrinaria, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao), doente(infecaoUrinaria, Doenca).
-doenca(n3, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(infecaoUrinaria, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao), doente(infecaoUrinaria, Doenca).
-doenca(n4, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(infecaoUrinaria, _, Tipo, Medicamento, entre1a4nos, _, Prescricao, Dose, Vezes, Condicao), doente(infecaoUrinaria, Doenca).
-doenca(n5, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(infecaoUrinaria, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao), doente(infecaoUrinaria, Doenca).
-doenca(n6, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(infecaoUrinaria, _, Tipo, Medicamento, menos3meses, _, Prescricao, Dose, Vezes, Condicao), doente(infecaoUrinaria, Doenca).
-doenca(n7, Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) :- medicamento(infecaoUrinaria, _, Tipo, Medicamento, _, menos6kg, Prescricao, Dose, Vezes, Condicao), doente(infecaoUrinaria, Doenca).
+imprimir_informacoes(c4) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(amigdalite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('c4'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(c5) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(amigdalite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('c5'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(c6) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(amigdalite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('c6'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(c7) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(amigdalite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('c7'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(c8) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(amigdalite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('c8'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(c9) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(amigdalite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('c9'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(d1) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(otite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('d1'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(d2) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(otite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('d2'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(d3) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(otite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('d3'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(d4) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(otite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('d4'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(d5) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(otite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('d5'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(d6) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(otite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('d6'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(d7) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(otite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('d7'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(d8) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(otite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('d8'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(d9) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(otite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('d9'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(e1) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(zona, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('e1'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(f1) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(alergiaAlimentar, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('f1'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(f2) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(alergiaAlimentar, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('f2'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(f3) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(alergiaAlimentar, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('f3'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(f4) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(alergiaAlimentar, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('f4'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(f5) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(alergiaAlimentar, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('f5'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(g1) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(alergiaRespiratoria, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('g1'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(g2) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(alergiaRespiratoria, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('g2'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(g3) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(alergiaRespiratoria, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('g3'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(g4) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(alergiaRespiratoria, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('g4'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(g5) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(alergiaRespiratoria, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('g5'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(h1) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(bronquite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('h1'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(h2) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(bronquite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('h2'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(h3) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(bronquite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('h3'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(h4) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(bronquite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('h4'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(h4) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(bronquite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('h4'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(h5) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(bronquite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('h5'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(h6) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(bronquite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('h6'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(h7) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(bronquite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('h7'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(i1) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(enxaqueca, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('i1'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(i2) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(enxaqueca, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('i2'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(i3) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(enxaqueca, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('i3'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(i4) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(enxaqueca, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('i4'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(i5) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(enxaqueca, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('i5'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(i6) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(enxaqueca, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('i6'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(i7) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(enxaqueca, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('i7'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(j1) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(gripe, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('j1'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(j2) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(gripe, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('j2'), write(':'), nl,
+    imprimir_lista(Lista).    
+
+imprimir_informacoes(j3) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(gripe, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('j3'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(j4) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(gripe, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('j4'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(j5) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+            doente(gripe, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('j5'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(j6) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(gripe, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('j6'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(k1) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(artrite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('k1'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(k2) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(artrite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('k2'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(k3) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(artrite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('k3'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(k4) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(artrite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('k4'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(k5) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(artrite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('k5'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(k6) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(artrite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('k6'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(k7) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(artrite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('k7'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(l1) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(sinusite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('l1'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(l2) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(sinusite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('l2'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(l3) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(sinusite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('l3'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(l4) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(sinusite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('l4'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(l5) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(sinusite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('l5'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(l6) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(sinusite, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('l6'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(m1) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(conjuntiviteBacteriana, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('m1'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(n1) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(infecaoUrinaria, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('n1'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(n2) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(infecaoUrinaria, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('n2'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(n3) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(infecaoUrinaria, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('n3'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(n4) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(infecaoUrinaria, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('n4'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(n5) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(infecaoUrinaria, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('n5'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(n6) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(infecaoUrinaria, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('n6'), write(':'), nl,
+    imprimir_lista(Lista).
+
+imprimir_informacoes(n7) :-
+    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
+            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
+             doente(infecaoUrinaria, Doenca)),
+            Lista), nl,
+    write('Informações para o perfil '), write('n7'), write(':'), nl,
+    imprimir_lista(Lista).
+
+
+% Predicado para imprimir os elementos da lista
+imprimir_lista([]).
+imprimir_lista([(Doenca,Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) | Resto]) :-
+    nl,
+    write('Doenca: '), write(Doenca),nl,
+    write('Tipo: '), write(Tipo),nl,
+    write('Medicamento: '), write(Medicamento),nl,
+    write('Prescrição: '), write(Prescricao),nl,
+    write('Dose: '), write(Dose),nl,
+    write('Vezes: '), write(Vezes),nl,
+    write('Condição: '), write(Condicao), nl,
+    imprimir_lista(Resto).

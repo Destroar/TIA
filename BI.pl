@@ -2,8 +2,8 @@
 :- op( 700, xfx, then).
 :- op( 300, xfy, or).
 :- op( 200, xfy, and).
-:- dynamic fact/1.
-:- dynamic escreverResultado/1.
+:- dynamic (fact/1).
+:- dynamic (escreverResultado/1).
 :- include('BC.pl').
 
 
@@ -13,7 +13,7 @@ demo:-
     escreverResultado(P),nl,
     assert(fact(P)),
     demo. % Continuação
-demo:- nl, write('As melhoras!').
+demo:- write('').
 
 new_derived_fact( Concl) :-
     if Cond then Concl,
@@ -30,15 +30,3 @@ composed_fact( Cond1 and Cond2) :-
 composed_fact( Cond1 or Cond2) :-
     composed_fact( Cond1);
     composed_fact( Cond2).
-
-%fact(tosse_com_expetoracao).
-%fact(dificuldade_respiratoria).
-%fact(arrepios_de_frio).
-%fact(febre).
-
-%demo:- 
-    %new_derived_fact( P), !,
-    %write( 'Doenca: '), write( P), nl,
-    %assert( fact( P)), medicamento(P,_,X,M,_,_,_,_,_,_), write('Tratamento: '), write(X), write(' - '), write(M), nl,
-    %demo. % Continuação
-%demo:- write('').
