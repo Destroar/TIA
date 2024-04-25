@@ -1,5 +1,5 @@
 :-dynamic(fact/1).
-:-dynamic(doenca/7).
+:-dynamic(doenca/8).
 :- include('BD.pl').
 :- include('BC.pl').
 :- include('BI.pl').
