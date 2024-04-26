@@ -56,7 +56,7 @@ confirmacaoPeso1:-
 
 confirmacaoPeso2:-
     nl,
-    write('|Confirma ter mis de 40kg                                                                                  |'),nl,
+    write('|Confirma ter mais de 40kg                                                                                  |'),nl,
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Não                                                                                                     |'),nl,
     read(O6),
