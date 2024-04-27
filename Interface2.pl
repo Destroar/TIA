@@ -2,7 +2,7 @@
 :-dynamic (imprimir_informacoes/1).
 :-dynamic (imprimir_lista/1).
 :- include('BD.pl').
-:- include('BC.pl').
+:- include('BC2.pl').
 :- include('BI.pl').
 
 
@@ -164,7 +164,7 @@ continuacao19:-
 
 continuacao28:-
     nl,
-    write('|Tem erupções cutâneas?                                                                                    |'),nl,
+    write('|Tem erupções cutâneas na pele?                                                                                    |'),nl,
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Não                                                                                                     |'),nl,
     read(OPEC),
