@@ -8,35 +8,35 @@
 :- dynamic (doente/2).
 
 
-if tosse_expetoracao and dificuldade_respirar and 
+if tosse_expetoracao and dificuldade_respirar and
 (febre or arrepios_de_frio or dor_toracica or dor_cabeca or dor_muscular) and menos6kg
 then a1.
-if tosse_expetoracao and dificuldade_respirar and 
+if tosse_expetoracao and dificuldade_respirar and
 (febre or arrepios_de_frio or dor_toracica or dor_cabeca or dor_muscular) and entre3a12meses
 then a2.
-if tosse_expetoracao and dificuldade_respirar and 
+if tosse_expetoracao and dificuldade_respirar and
 (febre or arrepios_de_frio or dor_toracica or dor_cabeca or dor_muscular) and entre1a4anos
 then a3.
-if tosse_expetoracao and dificuldade_respirar and 
+if tosse_expetoracao and dificuldade_respirar and
 (febre or arrepios_de_frio or dor_toracica or dor_cabeca or dor_muscular) and entre5a9anos
 then a4.
-if tosse_expetoracao and dificuldade_respirar and 
+if tosse_expetoracao and dificuldade_respirar and
 (febre or arrepios_de_frio or dor_toracica or dor_cabeca or dor_muscular) and entre10a13anos
 then a5.
-if tosse_expetoracao and dificuldade_respirar and 
+if tosse_expetoracao and dificuldade_respirar and
 (febre or arrepios_de_frio or dor_toracica or dor_cabeca or dor_muscular) and entre14a17anos
 then a6.
-if tosse_expetoracao and dificuldade_respirar and 
+if tosse_expetoracao and dificuldade_respirar and
 (febre or arrepios_de_frio or dor_toracica or dor_cabeca or dor_muscular) and mais18anos
 then a7.
-if tosse_expetoracao and dificuldade_respirar and 
+if tosse_expetoracao and dificuldade_respirar and
 (febre or arrepios_de_frio or dor_toracica or dor_cabeca or dor_muscular) and mais40kg
 then a8.
 
-if placas_de_uma_substancia_cremosa_na_boca and aparecimento_aftas_lingua_ou_bochecha and 
-(sensacao_algodao_boca or camada_esbranquicada_na_boca) 
+if placas_de_uma_substancia_cremosa_na_boca and aparecimento_aftas_lingua_ou_bochecha and
+(sensacao_algodao_boca or camada_esbranquicada_na_boca)
 then b1.
-if placas_de_uma_substancia_cremosa_na_boca and aparecimento_aftas_lingua_ou_bochecha and 
+if placas_de_uma_substancia_cremosa_na_boca and aparecimento_aftas_lingua_ou_bochecha and
 (sensacao_algodao_boca or camada_esbranquicada_na_boca) and mais18anos
 then b2.
 
@@ -127,7 +127,7 @@ then h6.
 if (tosse_seca or tosse_expetoracao) and falta_ar and (dor_peito or febre or fadiga) and mais18anos
 then h7.
 
-if dor_cabeca and (sensibilidade_ruido or sensibilidade_luz) and mal_estar_geral and nauseas and (vomitos or tonturas or formigamento_corpo) 
+if dor_cabeca and (sensibilidade_ruido or sensibilidade_luz) and mal_estar_geral and nauseas and (vomitos or tonturas or formigamento_corpo)
 then i1.
 if dor_cabeca and (sensibilidade_ruido or sensibilidade_luz) and mal_estar_geral and nauseas and (vomitos or tonturas or formigamento_corpo) and entre5a9anos
 then i2.
@@ -155,7 +155,7 @@ then j5.
 if febre and mal_estar_geral and dor_cabeca and (espirros or tosse_seca or nariz_entupido or dor_muscular or dor_garganta) and entre14a17anos
 then j6.
 
-if dor_articulacao and atrofia_muscular and vermelhidao_articulacao and (inchaco_articulacao or deformacao_articulacao) 
+if dor_articulacao and atrofia_muscular and vermelhidao_articulacao and (inchaco_articulacao or deformacao_articulacao)
 then k1.
 if dor_articulacao and atrofia_muscular and vermelhidao_articulacao and (inchaco_articulacao or deformacao_articulacao) and entre14a17anos
 then k2.
@@ -215,7 +215,7 @@ imprimir_informacoes(a1) :-
             (medicamento(Doenca, _, Tipo, Medicamento, _, menos6kg, Prescricao, Dose, Vezes, Condicao),
              doente(pneumonia, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('a1'), write(':'), nl,
+    write('Informações para o perfil '), write('a1'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(a2) :-
@@ -223,7 +223,7 @@ imprimir_informacoes(a2) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
              doente(pneumonia, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('a2'), write(':'), nl,
+    write('Informações para o perfil '), write('a2'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(a3) :-
@@ -231,7 +231,7 @@ imprimir_informacoes(a3) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(pneumonia, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('a3'), write(':'), nl,
+    write('Informações para o perfil '), write('a3'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(a4) :-
@@ -239,7 +239,7 @@ imprimir_informacoes(a4) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(pneumonia, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('a4'), write(':'), nl,
+    write('Informações para o perfil '), write('a4'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(a5) :-
@@ -247,7 +247,7 @@ imprimir_informacoes(a5) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(pneumonia, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('a5'), write(':'), nl,
+    write('Informações para o perfil '), write('a5'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(a6) :-
@@ -255,7 +255,7 @@ imprimir_informacoes(a6) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(pneumonia, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('a6'), write(':'), nl,
+    write('Informações para o perfil '), write('a6'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(a7) :-
@@ -263,7 +263,7 @@ imprimir_informacoes(a7) :-
             (medicamento(Doenca, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(pneumonia, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('a7'), write(':'), nl,
+    write('Informações para o perfil '), write('a7'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(a8) :-
@@ -271,7 +271,7 @@ imprimir_informacoes(a8) :-
             (medicamento(Doenca, _, Tipo, Medicamento, _, mais40kg, Prescricao, Dose, Vezes, Condicao),
              doente(pneumonia, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('a8'), write(':'), nl,
+    write('Informações para o perfil '), write('a8'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(b1) :-
@@ -279,7 +279,7 @@ imprimir_informacoes(b1) :-
             (medicamento(Doenca, _, Tipo, Medicamento, X, _, Prescricao, Dose, Vezes, Condicao),
              doente(candidiaseOral, Doenca), X \= mais18anos),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('b1'), write(':'), nl,
+    write('Informações para o perfil '), write('b1'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(b2) :-
@@ -287,7 +287,7 @@ imprimir_informacoes(b2) :-
             (medicamento(Doenca, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(candidiaseOral, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('b2'), write(':'), nl,
+    write('Informações para o perfil '), write('b2'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(c1) :-
@@ -295,7 +295,7 @@ imprimir_informacoes(c1) :-
             (medicamento(Doenca, _, Tipo, Medicamento, _, mais40kg, Prescricao, Dose, Vezes, Condicao),
              doente(amigdalite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('c1'), write(':'), nl,
+    write('Informações para o perfil '), write('c1'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(c2) :-
@@ -303,7 +303,7 @@ imprimir_informacoes(c2) :-
             (medicamento(Doenca, _, Tipo, Medicamento, menos6kg, _, Prescricao, Dose, Vezes, Condicao),
              doente(amigdalite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('c2'), write(':'), nl,
+    write('Informações para o perfil '), write('c2'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(c3) :-
@@ -311,7 +311,7 @@ imprimir_informacoes(c3) :-
             (medicamento(Doenca, _, Tipo, Medicamento, menos3meses, _, Prescricao, Dose, Vezes, Condicao),
              doente(amigdalite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('c3'), write(':'), nl,
+    write('Informações para o perfil '), write('c3'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(c4) :-
@@ -319,7 +319,7 @@ imprimir_informacoes(c4) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
              doente(amigdalite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('c4'), write(':'), nl,
+    write('Informações para o perfil '), write('c4'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(c5) :-
@@ -327,7 +327,7 @@ imprimir_informacoes(c5) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(amigdalite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('c5'), write(':'), nl,
+    write('Informações para o perfil '), write('c5'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(c6) :-
@@ -335,7 +335,7 @@ imprimir_informacoes(c6) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(amigdalite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('c6'), write(':'), nl,
+    write('Informações para o perfil '), write('c6'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(c7) :-
@@ -343,7 +343,7 @@ imprimir_informacoes(c7) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(amigdalite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('c7'), write(':'), nl,
+    write('Informações para o perfil '), write('c7'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(c8) :-
@@ -351,7 +351,7 @@ imprimir_informacoes(c8) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(amigdalite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('c8'), write(':'), nl,
+    write('Informações para o perfil '), write('c8'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(c9) :-
@@ -359,7 +359,7 @@ imprimir_informacoes(c9) :-
             (medicamento(Doenca, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(amigdalite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('c9'), write(':'), nl,
+    write('Informações para o perfil '), write('c9'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(d1) :-
@@ -367,7 +367,7 @@ imprimir_informacoes(d1) :-
             (medicamento(Doenca, _, Tipo, Medicamento, _, mais40kg, Prescricao, Dose, Vezes, Condicao),
              doente(otite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('d1'), write(':'), nl,
+    write('Informações para o perfil '), write('d1'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(d2) :-
@@ -375,7 +375,7 @@ imprimir_informacoes(d2) :-
             (medicamento(Doenca, _, Tipo, Medicamento, _, menos6kg, Prescricao, Dose, Vezes, Condicao),
              doente(otite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('d2'), write(':'), nl,
+    write('Informações para o perfil '), write('d2'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(d3) :-
@@ -383,7 +383,7 @@ imprimir_informacoes(d3) :-
             (medicamento(Doenca, _, Tipo, Medicamento, menos3meses, _, Prescricao, Dose, Vezes, Condicao),
              doente(otite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('d3'), write(':'), nl,
+    write('Informações para o perfil '), write('d3'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(d4) :-
@@ -391,7 +391,7 @@ imprimir_informacoes(d4) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
              doente(otite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('d4'), write(':'), nl,
+    write('Informações para o perfil '), write('d4'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(d5) :-
@@ -399,7 +399,7 @@ imprimir_informacoes(d5) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(otite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('d5'), write(':'), nl,
+    write('Informações para o perfil '), write('d5'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(d6) :-
@@ -407,7 +407,7 @@ imprimir_informacoes(d6) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(otite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('d6'), write(':'), nl,
+    write('Informações para o perfil '), write('d6'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(d7) :-
@@ -415,7 +415,7 @@ imprimir_informacoes(d7) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(otite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('d7'), write(':'), nl,
+    write('Informações para o perfil '), write('d7'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(d8) :-
@@ -423,7 +423,7 @@ imprimir_informacoes(d8) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(otite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('d8'), write(':'), nl,
+    write('Informações para o perfil '), write('d8'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(d9) :-
@@ -431,7 +431,7 @@ imprimir_informacoes(d9) :-
             (medicamento(Doenca, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(otite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('d9'), write(':'), nl,
+    write('Informações para o perfil '), write('d9'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(e1) :-
@@ -439,7 +439,7 @@ imprimir_informacoes(e1) :-
             (medicamento(Doenca, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(zona, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('e1'), write(':'), nl,
+    write('Informações para o perfil '), write('e1'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(f1) :-
@@ -447,7 +447,7 @@ imprimir_informacoes(f1) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(alergiaAlimentar, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('f1'), write(':'), nl,
+    write('Informações para o perfil '), write('f1'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(f2) :-
@@ -455,7 +455,7 @@ imprimir_informacoes(f2) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(alergiaAlimentar, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('f2'), write(':'), nl,
+    write('Informações para o perfil '), write('f2'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(f3) :-
@@ -463,7 +463,7 @@ imprimir_informacoes(f3) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(alergiaAlimentar, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('f3'), write(':'), nl,
+    write('Informações para o perfil '), write('f3'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(f4) :-
@@ -471,7 +471,7 @@ imprimir_informacoes(f4) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(alergiaAlimentar, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('f4'), write(':'), nl,
+    write('Informações para o perfil '), write('f4'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(f5) :-
@@ -479,7 +479,7 @@ imprimir_informacoes(f5) :-
             (medicamento(Doenca, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(alergiaAlimentar, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('f5'), write(':'), nl,
+    write('Informações para o perfil '), write('f5'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(g1) :-
@@ -487,7 +487,7 @@ imprimir_informacoes(g1) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(alergiaRespiratoria, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('g1'), write(':'), nl,
+    write('Informações para o perfil '), write('g1'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(g2) :-
@@ -495,7 +495,7 @@ imprimir_informacoes(g2) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(alergiaRespiratoria, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('g2'), write(':'), nl,
+    write('Informações para o perfil '), write('g2'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(g3) :-
@@ -503,7 +503,7 @@ imprimir_informacoes(g3) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(alergiaRespiratoria, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('g3'), write(':'), nl,
+    write('Informações para o perfil '), write('g3'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(g4) :-
@@ -511,7 +511,7 @@ imprimir_informacoes(g4) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(alergiaRespiratoria, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('g4'), write(':'), nl,
+    write('Informações para o perfil '), write('g4'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(g5) :-
@@ -519,7 +519,7 @@ imprimir_informacoes(g5) :-
             (medicamento(Doenca, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(alergiaRespiratoria, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('g5'), write(':'), nl,
+    write('Informações para o perfil '), write('g5'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(h1) :-
@@ -527,7 +527,7 @@ imprimir_informacoes(h1) :-
             (medicamento(Doenca, _, Tipo, Medicamento, paragem, _, Prescricao, Dose, Vezes, Condicao),
              doente(bronquite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('h1'), write(':'), nl,
+    write('Informações para o perfil '), write('h1'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(h2) :-
@@ -535,7 +535,7 @@ imprimir_informacoes(h2) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
              doente(bronquite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('h2'), write(':'), nl,
+    write('Informações para o perfil '), write('h2'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(h3) :-
@@ -543,7 +543,7 @@ imprimir_informacoes(h3) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(bronquite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('h3'), write(':'), nl,
+    write('Informações para o perfil '), write('h3'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(h4) :-
@@ -551,7 +551,7 @@ imprimir_informacoes(h4) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(bronquite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('h4'), write(':'), nl,
+    write('Informações para o perfil '), write('h4'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(h5) :-
@@ -559,7 +559,7 @@ imprimir_informacoes(h5) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(bronquite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('h5'), write(':'), nl,
+    write('Informações para o perfil '), write('h5'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(h6) :-
@@ -567,7 +567,7 @@ imprimir_informacoes(h6) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(bronquite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('h6'), write(':'), nl,
+    write('Informações para o perfil '), write('h6'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(h7) :-
@@ -575,7 +575,7 @@ imprimir_informacoes(h7) :-
             (medicamento(Doenca, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(bronquite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('h7'), write(':'), nl,
+    write('Informações para o perfil '), write('h7'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(i1) :-
@@ -583,7 +583,7 @@ imprimir_informacoes(i1) :-
             (medicamento(Doenca, _, Tipo, Medicamento, paragem, _, Prescricao, Dose, Vezes, Condicao),
              doente(enxaqueca, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('i1'), write(':'), nl,
+    write('Informações para o perfil '), write('i1'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(i2) :-
@@ -591,7 +591,7 @@ imprimir_informacoes(i2) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(enxaqueca, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('i2'), write(':'), nl,
+    write('Informações para o perfil '), write('i2'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(i3) :-
@@ -599,7 +599,7 @@ imprimir_informacoes(i3) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(enxaqueca, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('i3'), write(':'), nl,
+    write('Informações para o perfil '), write('i3'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(i4) :-
@@ -607,7 +607,7 @@ imprimir_informacoes(i4) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(enxaqueca, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('i4'), write(':'), nl,
+    write('Informações para o perfil '), write('i4'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(i5) :-
@@ -615,7 +615,7 @@ imprimir_informacoes(i5) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
              doente(enxaqueca, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('i5'), write(':'), nl,
+    write('Informações para o perfil '), write('i5'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(i6) :-
@@ -623,7 +623,7 @@ imprimir_informacoes(i6) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(enxaqueca, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('i6'), write(':'), nl,
+    write('Informações para o perfil '), write('i6'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(i7) :-
@@ -631,7 +631,7 @@ imprimir_informacoes(i7) :-
             (medicamento(Doenca, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(enxaqueca, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('i7'), write(':'), nl,
+    write('Informações para o perfil '), write('i7'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(j1) :-
@@ -639,7 +639,7 @@ imprimir_informacoes(j1) :-
             (medicamento(Doenca, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(gripe, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('j1'), write(':'), nl,
+    write('Informações para o perfil '), write('j1'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(j2) :-
@@ -647,15 +647,15 @@ imprimir_informacoes(j2) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
              doente(gripe, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('j2'), write(':'), nl,
-    imprimir_lista(Lista).    
+    write('Informações para o perfil '), write('j2'), write(':'), nl,
+    imprimir_lista(Lista).
 
 imprimir_informacoes(j3) :-
     findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
             (medicamento(Doenca, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(gripe, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('j3'), write(':'), nl,
+    write('Informações para o perfil '), write('j3'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(j4) :-
@@ -663,7 +663,7 @@ imprimir_informacoes(j4) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(gripe, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('j4'), write(':'), nl,
+    write('Informações para o perfil '), write('j4'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(j5) :-
@@ -671,7 +671,7 @@ imprimir_informacoes(j5) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao),
             doente(gripe, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('j5'), write(':'), nl,
+    write('Informações para o perfil '), write('j5'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(j6) :-
@@ -679,7 +679,7 @@ imprimir_informacoes(j6) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(gripe, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('j6'), write(':'), nl,
+    write('Informações para o perfil '), write('j6'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(k1) :-
@@ -687,7 +687,7 @@ imprimir_informacoes(k1) :-
             (medicamento(Doenca, _, Tipo, Medicamento, paragem, _, Prescricao, Dose, Vezes, Condicao),
              doente(artrite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('k1'), write(':'), nl,
+    write('Informações para o perfil '), write('k1'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(k2) :-
@@ -695,7 +695,7 @@ imprimir_informacoes(k2) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(artrite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('k2'), write(':'), nl,
+    write('Informações para o perfil '), write('k2'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(k3) :-
@@ -703,7 +703,7 @@ imprimir_informacoes(k3) :-
             (medicamento(Doenca, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(artrite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('k3'), write(':'), nl,
+    write('Informações para o perfil '), write('k3'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(k4) :-
@@ -711,7 +711,7 @@ imprimir_informacoes(k4) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
              doente(artrite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('k4'), write(':'), nl,
+    write('Informações para o perfil '), write('k4'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(k5) :-
@@ -719,7 +719,7 @@ imprimir_informacoes(k5) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(artrite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('k5'), write(':'), nl,
+    write('Informações para o perfil '), write('k5'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(k6) :-
@@ -727,7 +727,7 @@ imprimir_informacoes(k6) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(artrite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('k6'), write(':'), nl,
+    write('Informações para o perfil '), write('k6'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(k7) :-
@@ -735,7 +735,7 @@ imprimir_informacoes(k7) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(artrite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('k7'), write(':'), nl,
+    write('Informações para o perfil '), write('k7'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(l1) :-
@@ -743,7 +743,7 @@ imprimir_informacoes(l1) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(sinusite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('l1'), write(':'), nl,
+    write('Informações para o perfil '), write('l1'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(l2) :-
@@ -751,7 +751,7 @@ imprimir_informacoes(l2) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(sinusite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('l2'), write(':'), nl,
+    write('Informações para o perfil '), write('l2'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(l3) :-
@@ -759,7 +759,7 @@ imprimir_informacoes(l3) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(sinusite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('l3'), write(':'), nl,
+    write('Informações para o perfil '), write('l3'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(l4) :-
@@ -767,7 +767,7 @@ imprimir_informacoes(l4) :-
             (medicamento(Doenca, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(sinusite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('l4'), write(':'), nl,
+    write('Informações para o perfil '), write('l4'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(l5) :-
@@ -775,7 +775,7 @@ imprimir_informacoes(l5) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
              doente(sinusite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('l5'), write(':'), nl,
+    write('Informações para o perfil '), write('l5'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(l6) :-
@@ -783,7 +783,7 @@ imprimir_informacoes(l6) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(sinusite, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('l6'), write(':'), nl,
+    write('Informações para o perfil '), write('l6'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(m1) :-
@@ -791,7 +791,7 @@ imprimir_informacoes(m1) :-
             (medicamento(Doenca, _, Tipo, Medicamento, X, _, Prescricao, Dose, Vezes, Condicao),
              doente(conjuntiviteBacteriana, Doenca), X \= menos3meses),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('m1'), write(':'), nl,
+    write('Informações para o perfil '), write('m1'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(n1) :-
@@ -799,7 +799,7 @@ imprimir_informacoes(n1) :-
             (medicamento(Doenca, _, Tipo, Medicamento, _, mais40kg, Prescricao, Dose, Vezes, Condicao),
              doente(infecaoUrinaria, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('n1'), write(':'), nl,
+    write('Informaçõess para o perfil '), write('n1'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(n2) :-
@@ -807,7 +807,7 @@ imprimir_informacoes(n2) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(infecaoUrinaria, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('n2'), write(':'), nl,
+    write('Informações para o perfil '), write('n2'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(n3) :-
@@ -815,7 +815,7 @@ imprimir_informacoes(n3) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(infecaoUrinaria, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('n3'), write(':'), nl,
+    write('Informações para o perfil '), write('n3'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(n4) :-
@@ -823,7 +823,7 @@ imprimir_informacoes(n4) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre1a4nos, _, Prescricao, Dose, Vezes, Condicao),
              doente(infecaoUrinaria, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('n4'), write(':'), nl,
+    write('Informações para o perfil '), write('n4'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(n5) :-
@@ -831,7 +831,7 @@ imprimir_informacoes(n5) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
              doente(infecaoUrinaria, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('n5'), write(':'), nl,
+    write('Informações para o perfil '), write('n5'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(n6) :-
@@ -839,7 +839,7 @@ imprimir_informacoes(n6) :-
             (medicamento(Doenca, _, Tipo, Medicamento, menos3meses, _, Prescricao, Dose, Vezes, Condicao),
              doente(infecaoUrinaria, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('n6'), write(':'), nl,
+    write('Informações para o perfil '), write('n6'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(n7) :-
@@ -847,7 +847,7 @@ imprimir_informacoes(n7) :-
             (medicamento(Doenca, _, Tipo, Medicamento, _, menos6kg, Prescricao, Dose, Vezes, Condicao),
              doente(infecaoUrinaria, Doenca)),
             Lista), nl,
-    write('InformaÃ§Ãµes para o perfil '), write('n7'), write(':'), nl,
+    write('Informações para o perfil '), write('n7'), write(':'), nl,
     imprimir_lista(Lista).
 
 
@@ -858,8 +858,8 @@ imprimir_lista([(Doenca,Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao) | 
     write('Doenca: '), write(Doenca),nl,
     write('Tipo: '), write(Tipo),nl,
     write('Medicamento: '), write(Medicamento),nl,
-    write('PrescriÃ§Ã£o: '), write(Prescricao),nl,
+    write('Prescrição: '), write(Prescricao),nl,
     write('Dose: '), write(Dose),nl,
     write('Vezes: '), write(Vezes),nl,
-    write('CondiÃ§Ã£o: '), write(Condicao), nl,
+    write('Condição: '), write(Condicao), nl,
     imprimir_lista(Resto).
