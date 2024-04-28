@@ -11,7 +11,7 @@ menu:-
     write('|                               Seja Bem-Vindo Ao Teste De Sintomas                                        |'),nl,
     write('|                                                                                                          |'),nl,
     write('|----------------------------------------------------------------------------------------------------------|'),nl,
-    write('|Descubra possíveis doenças e tratamentos através deste teste.                                             |'),nl,menu2.
+    write('|Descubra possiveis doencas e tratamentos atraves deste teste.                                             |'),nl,menu2.
 
 menu2:-
     write('|                                                                                                          |'),nl,
@@ -24,7 +24,7 @@ opcoes(1):- questoesIniciais.
 opcoes(2):-
     write('|Obrigada.                                                                                                 |'),halt.
 opcoes(_):-
-    write('|Introduza uma opção válida.                                                                               |'),nl,menu2.
+    write('|Introduza uma opcao valida.                                                                               |'),nl,menu2.
 
 
 questoesIniciais:-
@@ -46,19 +46,19 @@ questoesIniciais:-
         (I == 7), assert(fact(mais18anos)), confirmacaoPeso2).
 
 confirmacaoPeso1:-
-    nl,
+    write('|                                                                                                          |'),nl,
     write('|Confirma ter menos de 6kg                                                                                 |'),nl,
     write('|1-Sim                                                                                                     |'),nl,
-    write('|2-Não                                                                                                     |'),nl,
+    write('|2-Nao                                                                                                     |'),nl,
     read(O6),
         ((O6 == 1), assert(fact(menos6kg)), questoesSintomas;
         (O6 == 2), questoesSintomas).
 
 confirmacaoPeso2:-
-    nl,
-    write('|Confirma ter mais de 40kg                                                                                  |'),nl,
+    write('|                                                                                                          |'),nl,
+    write('|Confirma ter mais de 40kg                                                                                 |'),nl,
     write('|1-Sim                                                                                                     |'),nl,
-    write('|2-Não                                                                                                     |'),nl,
+    write('|2-Nao                                                                                                     |'),nl,
     read(O6),
         ((O6 == 1), assert(fact(mais40kg)), questoesSintomas;
         (O6 == 2), questoesSintomas).
@@ -69,172 +69,141 @@ questoesSintomas:-
     write('|                                                                                                          |'),nl,
     write('|Tem febre?                                                                                                |'),nl,
     write('|1-Sim                                                                                                     |'),nl,
-    write('|2-Não                                                                                                     |'),nl,
+    write('|2-Nao                                                                                                     |'),nl,
     read(OPF),
         ((OPF == 1), assert(fact(febre)),continuacao1;
          (OPF == 2), continuacao1).
 
 continuacao1:-
-    nl,
-    write('|Tem dor de cabeça?                                                                                        |'),nl,
+    write('|                                                                                                          |'),nl,
+    write('|Tem dor de cabeca?                                                                                        |'),nl,
     write('|1-Sim                                                                                                     |'),nl,
-    write('|2-Não                                                                                                     |'),nl,
+    write('|2-Nao                                                                                                     |'),nl,
     read(OPDC),
         ((OPDC == 1), assert(fact(dor_cabeca)),continuacao2;
          (OPDC == 2), continuacao2).
 
-
-
 continuacao2:-
-    nl,
-    write('|Tem dificuldade em respirar?                                                                             |'),nl,
+    write('|                                                                                                          |'),nl,
+    write('|Tem dificuldade em respirar?                                                                              |'),nl,
     write('|1-Sim                                                                                                     |'),nl,
-    write('|2-Não                                                                                                     |'),nl,
+    write('|2-Nao                                                                                                     |'),nl,
     read(OPDR),
-        ((OPDR == 1), assert(fact(dificuldade_respirar)),continuacao5;
-         (OPDR == 2), continuacao5).
+        ((OPDR == 1), assert(fact(dificuldade_respirar)),continuacao3;
+         (OPDR == 2), continuacao3).
 
-
-continuacao5:-
-    nl,
-    write('|Está a sofrer de mal estar geral?                                                                         |'),nl,
+continuacao3:-
+    write('|                                                                                                          |'),nl,
+    write('|Esta a sofrer de mal estar geral?                                                                         |'),nl,
     write('|1-Sim                                                                                                     |'),nl,
-    write('|2-Não                                                                                                     |'),nl,
+    write('|2-Nao                                                                                                     |'),nl,
     read(OPMEG),
-        ((OPMEG == 1), assert(fact(mal_estar_geral)),continuacao8;
-         (OPMEG == 2), continuacao8).
+        ((OPMEG == 1), assert(fact(mal_estar_geral)),continuacao4;
+         (OPMEG == 2), continuacao4).
 
-continuacao8:-
-    nl,
+continuacao4:-
+    write('|                                                                                                          |'),nl,
     write('|Tem dor de garganta?                                                                                      |'),nl,
     write('|1-Sim                                                                                                     |'),nl,
-    write('|2-Não                                                                                                     |'),nl,
+    write('|2-Nao                                                                                                     |'),nl,
     read(OPDG),
-        ((OPDG == 1), assert(fact(dor_garganta)),continuacao9;
-         (OPDG == 2), continuacao9).
+        ((OPDG == 1), assert(fact(dor_garganta)),continuacao5;
+         (OPDG == 2), continuacao5).
 
-
-
-
-
-continuacao9:-
-    nl,
+continuacao5:-
+    write('|                                                                                                          |'),nl,
     write('|Tem dor de ouvidos?                                                                                       |'),nl,
     write('|1-Sim                                                                                                     |'),nl,
-    write('|2-Não                                                                                                     |'),nl,
+    write('|2-Nao                                                                                                     |'),nl,
     read(OPDO),
-        ((OPDO == 1), assert(fact(dor_ouvido)),continuacao13;
-         (OPDO == 2), continuacao13).
+        ((OPDO == 1), assert(fact(dor_ouvido)),continuacao6;
+         (OPDO == 2), continuacao6).
 
-
-
-
-continuacao13:-
-    nl,
+continuacao6:-
+    write('|                                                                                                          |'),nl,
     write('|Tem falta de ar?                                                                                          |'),nl,
     write('|1-Sim                                                                                                     |'),nl,
-    write('|2-Não                                                                                                     |'),nl,
+    write('|2-Nao                                                                                                     |'),nl,
     read(OPFA),
-        ((OPFA == 1), assert(fact(falta_ar)),continuacao14;
-         (OPFA == 2), continuacao14).
+        ((OPFA == 1), assert(fact(falta_ar)),continuacao7;
+         (OPFA == 2), continuacao7).
 
-continuacao14:-
-    nl,
+continuacao7:-
+    write('|                                                                                                          |'),nl,
     write('|Tem o nariz entupido?                                                                                     |'),nl,
     write('|1-Sim                                                                                                     |'),nl,
-    write('|2-Não                                                                                                     |'),nl,
+    write('|2-Nao                                                                                                     |'),nl,
     read(OPNE),
-        ((OPNE == 1), assert(fact(nariz_entupido)),continuacao19;
-         (OPNE == 2), continuacao19).
+        ((OPNE == 1), assert(fact(nariz_entupido)),continuacao8;
+         (OPNE == 2), continuacao8).
 
-
-
-
-
-continuacao19:-
-    nl,
-    write('|Sente placas de uma substância cremosa na boca?                                                           |'),nl,
+continuacao8:-
+    write('|                                                                                                          |'),nl,
+    write('|Sente placas de uma substancia cremosa na boca?                                                           |'),nl,
     write('|1-Sim                                                                                                     |'),nl,
-    write('|2-Não                                                                                                     |'),nl,
+    write('|2-Nao                                                                                                     |'),nl,
     read(OPPSCB),
-        ((OPPSCB == 1), assert(fact(placas_de_uma_substancia_cremosa_na_boca)),continuacao28;
-         (OPPSCB == 2), continuacao28).
+        ((OPPSCB == 1), assert(fact(placas_de_uma_substancia_cremosa_na_boca)),continuacao9;
+         (OPPSCB == 2), continuacao9).
 
-
-
-continuacao28:-
-    nl,
-    write('|Tem erupções cutâneas na pele?                                                                                    |'),nl,
+continuacao9:-
+    write('|                                                                                                          |'),nl,
+    write('|Tem erupcoes cutaneas na pele?                                                                            |'),nl,
     write('|1-Sim                                                                                                     |'),nl,
-    write('|2-Não                                                                                                     |'),nl,
+    write('|2-Nao                                                                                                     |'),nl,
     read(OPEC),
-        ((OPEC == 1), assert(fact(erupcoes_cutaneas)),continuacao31;
-         (OPEC == 2), continuacao31).
+        ((OPEC == 1), assert(fact(erupcoes_cutaneas)),continuacao10;
+         (OPEC == 2), continuacao10).
 
-
-
-continuacao31:-
-    nl,
+continuacao10:-
+    write('|                                                                                                          |'),nl,
     write('|Sente ardor ou dor ao urinar?                                                                             |'),nl,
     write('|1-Sim                                                                                                     |'),nl,
-    write('|2-Não                                                                                                     |'),nl,
+    write('|2-Nao                                                                                                     |'),nl,
     read(OPADU),
-        ((OPADU == 1), assert(fact(ardor_ou_dor_ao_urinar)),continuacao35;
-         (OPADU == 2), continuacao35).
+        ((OPADU == 1), assert(fact(ardor_ou_dor_ao_urinar)),continuacao11;
+         (OPADU == 2), continuacao11).
 
-
-
-
-continuacao35:-
-    nl,
+continuacao11:-
+    write('|                                                                                                          |'),nl,
     write('|Tem coceira na boca?                                                                                      |'),nl,
     write('|1-Sim                                                                                                     |'),nl,
-    write('|2-Não                                                                                                     |'),nl,
+    write('|2-Nao                                                                                                     |'),nl,
     read(OPCB),
-        ((OPCB == 1), assert(fact(coceira_na_boca)),continuacao49;
-         (OPCB == 2), continuacao49).
+        ((OPCB == 1), assert(fact(coceira_na_boca)),continuacao12;
+         (OPCB == 2), continuacao12).
 
-
-
-continuacao49:-
-    nl,
-    write('|Tem dor nas articulações?                                                                                   |'),nl,
+continuacao12:-
+    write('|                                                                                                          |'),nl,
+    write('|Tem dor nas articulacoes?                                                                                 |'),nl,
     write('|1-Sim                                                                                                     |'),nl,
-    write('|2-Não                                                                                                     |'),nl,
+    write('|2-Nao                                                                                                     |'),nl,
     read(OPDAO),
-        ((OPDAO == 1), assert(fact(dor_articulacao)),continuacao54;
-         (OPDAO == 2), continuacao54).
+        ((OPDAO == 1), assert(fact(dor_articulacao)),continuacao13;
+         (OPDAO == 2), continuacao13).
 
-
-
-
-continuacao54:-
-    nl,
-    write('|Tem comichão nos olhos?                                                                                             |'),nl,
+continuacao13:-
+    write('|                                                                                                          |'),nl,
+    write('|Tem comichao nos olhos?                                                                                   |'),nl,
     write('|1-Sim                                                                                                     |'),nl,
-    write('|2-Não                                                                                                     |'),nl,
+    write('|2-Nao                                                                                                     |'),nl,
     read(OPCAO),
-        ((OPCAO == 1), assert(fact(comichao)),continuacao59;
-         (OPCAO == 2), continuacao59).
+        ((OPCAO == 1), assert(fact(comichao)),continuacao14;
+         (OPCAO == 2), continuacao14).
 
-
-
-continuacao59:-
-    nl,
-    write('|Tem congestão nasal?                                                                                      |'),nl,
+continuacao14:-
+    write('|                                                                                                          |'),nl,
+    write('|Tem congestao nasal?                                                                                      |'),nl,
     write('|1-Sim                                                                                                     |'),nl,
-    write('|2-Não                                                                                                     |'),nl,
+    write('|2-Nao                                                                                                     |'),nl,
     read(OPCN),
         ((OPCN == 1), assert(fact(congestao_nasal)),resultado;
          (OPCN == 2), resultado).
-
-
 
 resultado:-
     write('|----------------------------------------------------------------------------------------------------------|'),nl,
     write('|                                          RESULTADO OBTIDO                                                |'),nl,
     demo.
-
 
 escreverResultado(P) :- imprimir_informacoes(P).
 
