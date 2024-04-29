@@ -9,36 +9,29 @@
 
 
 if tosse_expetoracao and dificuldade_respirar and
-(febre or arrepios_de_frio or dor_toracica or dor_cabeca or dor_muscular) and menos6kg
+(febre or calafrios or dor_peito or dor_cabeca or dor_muscular) and menos6kg
 then a1.
 if tosse_expetoracao and dificuldade_respirar and
-(febre or arrepios_de_frio or dor_toracica or dor_cabeca or dor_muscular) and entre3a12meses
+(febre or calafrios or dor_peito or dor_cabeca or dor_muscular) and entre3a12meses
 then a2.
 if tosse_expetoracao and dificuldade_respirar and
-(febre or arrepios_de_frio or dor_toracica or dor_cabeca or dor_muscular) and entre1a4anos
+(febre or calafrios or dor_peito or dor_cabeca or dor_muscular) and entre1a4anos
 then a3.
 if tosse_expetoracao and dificuldade_respirar and
-(febre or arrepios_de_frio or dor_toracica or dor_cabeca or dor_muscular) and entre5a9anos
+(febre or calafrios or dor_peito or dor_cabeca or dor_muscular) and entre5a9anos
 then a4.
 if tosse_expetoracao and dificuldade_respirar and
-(febre or arrepios_de_frio or dor_toracica or dor_cabeca or dor_muscular) and entre10a13anos
+(febre or calafrios or dor_peito or dor_cabeca or dor_muscular) and entre10a13anos
 then a5.
 if tosse_expetoracao and dificuldade_respirar and
-(febre or arrepios_de_frio or dor_toracica or dor_cabeca or dor_muscular) and entre14a17anos
+(febre or calafrios or dor_peito or dor_cabeca or dor_muscular) and entre14a17anos
 then a6.
 if tosse_expetoracao and dificuldade_respirar and
-(febre or arrepios_de_frio or dor_toracica or dor_cabeca or dor_muscular) and mais18anos
+(febre or calafrios or dor_peito or dor_cabeca or dor_muscular) and mais18anos
 then a7.
 if tosse_expetoracao and dificuldade_respirar and
-(febre or arrepios_de_frio or dor_toracica or dor_cabeca or dor_muscular) and mais40kg
+(febre or calafrios or dor_peito or dor_cabeca or dor_muscular) and mais40kg
 then a8.
-
-if placas_de_uma_substancia_cremosa_na_boca and aparecimento_aftas_lingua_ou_bochecha and
-(sensacao_algodao_boca or camada_esbranquicada_na_boca)
-then b1.
-if placas_de_uma_substancia_cremosa_na_boca and aparecimento_aftas_lingua_ou_bochecha and
-(sensacao_algodao_boca or camada_esbranquicada_na_boca) and mais18anos
-then b2.
 
 if dor_garganta and (febre or dificuldade_engolir or dor_ouvido or mal_estar_geral) and mais40kg
 then c1.
@@ -59,57 +52,57 @@ then c8.
 if dor_garganta and (febre or dificuldade_engolir or dor_ouvido or mal_estar_geral) and mais18anos
 then c9.
 
-if dor_ouvido and (dificuldade_em_dormir or choro_superior_ao_normal or dificuldades_audicao or febre
+if dor_ouvido and (dificuldade_em_dormir or dificuldades_audicao or febre
 or falta_apetite or dor_cabeca) and mais40kg
 then d1.
-if dor_ouvido and (dificuldade_em_dormir or choro_superior_ao_normal or dificuldades_audicao or febre
+if dor_ouvido and (dificuldade_em_dormir or dificuldades_audicao or febre
 or falta_apetite or dor_cabeca) and menos6kg
 then d2.
-if dor_ouvido and (dificuldade_em_dormir or choro_superior_ao_normal or dificuldades_audicao or febre
+if dor_ouvido and (dificuldade_em_dormir or dificuldades_audicao or febre
 or falta_apetite or dor_cabeca) and menos3meses
 then d3.
-if dor_ouvido and (dificuldade_em_dormir or choro_superior_ao_normal or dificuldades_audicao or febre
+if dor_ouvido and (dificuldade_em_dormir or dificuldades_audicao or febre
 or falta_apetite or dor_cabeca) and entre3a12meses
 then d4.
-if dor_ouvido and (dificuldade_em_dormir or choro_superior_ao_normal or dificuldades_audicao or febre
+if dor_ouvido and (dificuldade_em_dormir or dificuldades_audicao or febre
 or falta_apetite or dor_cabeca) and entre1a4anos
 then d5.
-if dor_ouvido and (dificuldade_em_dormir or choro_superior_ao_normal or dificuldades_audicao or febre
+if dor_ouvido and (dificuldade_em_dormir or dificuldades_audicao or febre
 or falta_apetite or dor_cabeca) and entre5a9anos
 then d6.
-if dor_ouvido and (dificuldade_em_dormir or choro_superior_ao_normal or dificuldades_audicao or febre
+if dor_ouvido and (dificuldade_em_dormir or dificuldades_audicao or febre
 or falta_apetite or dor_cabeca) and entre10a13anos
 then d7.
-if dor_ouvido and (dificuldade_em_dormir or choro_superior_ao_normal or dificuldades_audicao or febre
+if dor_ouvido and (dificuldade_em_dormir or dificuldades_audicao or febre
 or falta_apetite or dor_cabeca) and entre14a17anos
 then d8.
-if dor_ouvido and (dificuldade_em_dormir or choro_superior_ao_normal or dificuldades_audicao or febre
+if dor_ouvido and (dificuldade_em_dormir or dificuldades_audicao or febre
 or falta_apetite or dor_cabeca) and mais18anos
 then d9.
 
-if dor_cabeca and febre and (erupcoes_cutaneas or calafrios or nauseas or diarreia or dificuldade_em_urinar or dores_formigueiros_picadas_pele) and mais18anos
+if dor_cabeca and febre and (erupcoes_cutaneas or calafrios or nauseas or diarreia or ardor_ou_dor_ao_urinar or formigamento_corpo) and mais18anos
 then e1.
 
-if coceira_na_boca and (coceira_na_pele or dor_abdominal or diarreia or nauseas or mal_estar_na_garganta or falta_ar or dificuldade_respirar or rouquidao) and entre1a4anos
+if coceira_na_boca and (comichao or dor_abdominal or diarreia or nauseas or mal_estar_na_garganta or falta_ar or dificuldade_respirar or rouquidao) and entre1a4anos
 then f1.
-if coceira_na_boca and (coceira_na_pele or dor_abdominal or diarreia or nauseas or mal_estar_na_garganta or falta_ar or dificuldade_respirar or rouquidao) and entre5a9anos
+if coceira_na_boca and (comichao or dor_abdominal or diarreia or nauseas or mal_estar_na_garganta or falta_ar or dificuldade_respirar or rouquidao) and entre5a9anos
 then f2.
-if coceira_na_boca and (coceira_na_pele or dor_abdominal or diarreia or nauseas or mal_estar_na_garganta or falta_ar or dificuldade_respirar or rouquidao) and entre10a13anos
+if coceira_na_boca and (comichao or dor_abdominal or diarreia or nauseas or mal_estar_na_garganta or falta_ar or dificuldade_respirar or rouquidao) and entre10a13anos
 then f3.
-if coceira_na_boca and (coceira_na_pele or dor_abdominal or diarreia or nauseas or mal_estar_na_garganta or falta_ar or dificuldade_respirar or rouquidao) and entre14a17anos
+if coceira_na_boca and (comichao or dor_abdominal or diarreia or nauseas or mal_estar_na_garganta or falta_ar or dificuldade_respirar or rouquidao) and entre14a17anos
 then f4.
-if coceira_na_boca and (coceira_na_pele or dor_abdominal or diarreia or nauseas or mal_estar_na_garganta or falta_ar or dificuldade_respirar or rouquidao) and mais18anos
+if coceira_na_boca and (comichao or dor_abdominal or diarreia or nauseas or mal_estar_na_garganta or falta_ar or dificuldade_respirar or rouquidao) and mais18anos
 then f5.
 
-if nariz_entupido and espirros_constantes and (coceira_nariz_olhos_garganta or nariz_vermelho or tosse_seca or dificuldade_respirar or olhos_vermelhos or dor_cabeca) and entre1a4anos
+if congestao_nasal and espirros_constantes and (coceira_nariz_olhos_garganta or nariz_vermelho or tosse_seca or dificuldade_respirar or olhos_vermelhos or dor_cabeca) and entre1a4anos
 then g1.
-if nariz_entupido and espirros_constantes and (coceira_nariz_olhos_garganta or nariz_vermelho or tosse_seca or dificuldade_respirar or olhos_vermelhos or dor_cabeca) and entre5a9anos
+if congestao_nasal and espirros_constantes and (coceira_nariz_olhos_garganta or nariz_vermelho or tosse_seca or dificuldade_respirar or olhos_vermelhos or dor_cabeca) and entre5a9anos
 then g2.
-if nariz_entupido and espirros_constantes and (coceira_nariz_olhos_garganta or nariz_vermelho or tosse_seca or dificuldade_respirar or olhos_vermelhos or dor_cabeca) and entre10a13anos
+if congestao_nasal and espirros_constantes and (coceira_nariz_olhos_garganta or nariz_vermelho or tosse_seca or dificuldade_respirar or olhos_vermelhos or dor_cabeca) and entre10a13anos
 then g3.
-if nariz_entupido and espirros_constantes and (coceira_nariz_olhos_garganta or nariz_vermelho or tosse_seca or dificuldade_respirar or olhos_vermelhos or dor_cabeca) and entre14a17anos
+if congestao_nasal and espirros_constantes and (coceira_nariz_olhos_garganta or nariz_vermelho or tosse_seca or dificuldade_respirar or olhos_vermelhos or dor_cabeca) and entre14a17anos
 then g4.
-if nariz_entupido and espirros_constantes and (coceira_nariz_olhos_garganta or nariz_vermelho or tosse_seca or dificuldade_respirar or olhos_vermelhos or dor_cabeca) and mais18anos
+if congestao_nasal and espirros_constantes and (coceira_nariz_olhos_garganta or nariz_vermelho or tosse_seca or dificuldade_respirar or olhos_vermelhos or dor_cabeca) and mais18anos
 then g5.
 
 if (tosse_seca or tosse_expetoracao) and falta_ar and (dor_peito or febre or fadiga)
@@ -127,85 +120,70 @@ then h6.
 if (tosse_seca or tosse_expetoracao) and falta_ar and (dor_peito or febre or fadiga) and mais18anos
 then h7.
 
-if dor_cabeca and (sensibilidade_ruido or sensibilidade_luz) and mal_estar_geral and nauseas and (vomitos or tonturas or formigamento_corpo)
+if dor_cabeca and (sensibilidade_ruido or sensibilidade_luz) and mal_estar_geral and nauseas and (tonturas or formigamento_corpo)
 then i1.
-if dor_cabeca and (sensibilidade_ruido or sensibilidade_luz) and mal_estar_geral and nauseas and (vomitos or tonturas or formigamento_corpo) and entre5a9anos
+if dor_cabeca and (sensibilidade_ruido or sensibilidade_luz) and mal_estar_geral and nauseas and (tonturas or formigamento_corpo) and entre5a9anos
 then i2.
-if dor_cabeca and (sensibilidade_ruido or sensibilidade_luz) and mal_estar_geral and nauseas and (vomitos or tonturas or formigamento_corpo) and entre10a13anos
+if dor_cabeca and (sensibilidade_ruido or sensibilidade_luz) and mal_estar_geral and nauseas and (tonturas or formigamento_corpo) and entre10a13anos
 then i3.
-if dor_cabeca and (sensibilidade_ruido or sensibilidade_luz) and mal_estar_geral and nauseas and (vomitos or tonturas or formigamento_corpo) and entre14a17anos
+if dor_cabeca and (sensibilidade_ruido or sensibilidade_luz) and mal_estar_geral and nauseas and (tonturas or formigamento_corpo) and entre14a17anos
 then i4.
-if dor_cabeca and (sensibilidade_ruido or sensibilidade_luz) and mal_estar_geral and nauseas and (vomitos or tonturas or formigamento_corpo) and entre3a12meses
+if dor_cabeca and (sensibilidade_ruido or sensibilidade_luz) and mal_estar_geral and nauseas and (tonturas or formigamento_corpo) and entre3a12meses
 then i5.
-if dor_cabeca and (sensibilidade_ruido or sensibilidade_luz) and mal_estar_geral and nauseas and (vomitos or tonturas or formigamento_corpo) and entre1a4anos
+if dor_cabeca and (sensibilidade_ruido or sensibilidade_luz) and mal_estar_geral and nauseas and (tonturas or formigamento_corpo) and entre1a4anos
 then i6.
-if dor_cabeca and (sensibilidade_ruido or sensibilidade_luz) and mal_estar_geral and nauseas and (vomitos or tonturas or formigamento_corpo) and mais18anos
+if dor_cabeca and (sensibilidade_ruido or sensibilidade_luz) and mal_estar_geral and nauseas and (tonturas or formigamento_corpo) and mais18anos
 then i7.
 
-if febre and mal_estar_geral and dor_cabeca and (espirros or tosse_seca or nariz_entupido or dor_muscular or dor_garganta) and mais18anos
+if febre and mal_estar_geral and dor_cabeca and (espirros or tosse_seca or congestao_nasal or dor_muscular or dor_garganta) and mais18anos
 then j1.
-if febre and mal_estar_geral and dor_cabeca and (espirros or tosse_seca or nariz_entupido or dor_muscular or dor_garganta) and entre3a12meses
+if febre and mal_estar_geral and dor_cabeca and (espirros or tosse_seca or congestao_nasal or dor_muscular or dor_garganta) and entre3a12meses
 then j2.
-if febre and mal_estar_geral and dor_cabeca and (espirros or tosse_seca or nariz_entupido or dor_muscular or dor_garganta) and entre1a4anos
+if febre and mal_estar_geral and dor_cabeca and (espirros or tosse_seca or congestao_nasal or dor_muscular or dor_garganta) and entre1a4anos
 then j3.
-if febre and mal_estar_geral and dor_cabeca and (espirros or tosse_seca or nariz_entupido or dor_muscular or dor_garganta) and entre5a9anos
+if febre and mal_estar_geral and dor_cabeca and (espirros or tosse_seca or congestao_nasal or dor_muscular or dor_garganta) and entre5a9anos
 then j4.
-if febre and mal_estar_geral and dor_cabeca and (espirros or tosse_seca or nariz_entupido or dor_muscular or dor_garganta) and entre10a13anos
+if febre and mal_estar_geral and dor_cabeca and (espirros or tosse_seca or congestao_nasal or dor_muscular or dor_garganta) and entre10a13anos
 then j5.
-if febre and mal_estar_geral and dor_cabeca and (espirros or tosse_seca or nariz_entupido or dor_muscular or dor_garganta) and entre14a17anos
+if febre and mal_estar_geral and dor_cabeca and (espirros or tosse_seca or congestao_nasal or dor_muscular or dor_garganta) and entre14a17anos
 then j6.
 
-if dor_articulacao and atrofia_muscular and vermelhidao_articulacao and (inchaco_articulacao or deformacao_articulacao)
-then k1.
-if dor_articulacao and atrofia_muscular and vermelhidao_articulacao and (inchaco_articulacao or deformacao_articulacao) and entre14a17anos
-then k2.
-if dor_articulacao and atrofia_muscular and vermelhidao_articulacao and (inchaco_articulacao or deformacao_articulacao) and mais18anos
-then k3.
-if dor_articulacao and atrofia_muscular and vermelhidao_articulacao and (inchaco_articulacao or deformacao_articulacao) and entre3a12meses
-then k4.
-if dor_articulacao and atrofia_muscular and vermelhidao_articulacao and (inchaco_articulacao or deformacao_articulacao) and entre1a4anos
-then k5.
-if dor_articulacao and atrofia_muscular and vermelhidao_articulacao and (inchaco_articulacao or deformacao_articulacao) and entre5a9anos
-then k6.
-if dor_articulacao and atrofia_muscular and vermelhidao_articulacao and (inchaco_articulacao or deformacao_articulacao) and entre10a13anos
-then k7.
-
-if congestao_nasal and corrimento_nasal and (pressao_facial or perda_olfato or febre or tosse_expetoracao or tosse_seca or fadiga) and entre5a9anos
+if congestao_nasal and corrimento_nasal and fadiga and (pressao_facial or perda_olfato or febre or tosse_expetoracao or tosse_seca) and entre5a9anos
 then l1.
-if congestao_nasal and corrimento_nasal and (pressao_facial or perda_olfato or febre or tosse_expetoracao or tosse_seca or fadiga) and entre10a13anos
+if congestao_nasal and corrimento_nasal and fadiga and (pressao_facial or perda_olfato or febre or tosse_expetoracao or tosse_seca) and entre10a13anos
 then l2.
-if congestao_nasal and corrimento_nasal and (pressao_facial or perda_olfato or febre or tosse_expetoracao or tosse_seca or fadiga) and entre14a17anos
+if congestao_nasal and corrimento_nasal and fadiga and (pressao_facial or perda_olfato or febre or tosse_expetoracao or tosse_seca) and entre14a17anos
 then l3.
-if congestao_nasal and corrimento_nasal and (pressao_facial or perda_olfato or febre or tosse_expetoracao or tosse_seca or fadiga) and mais18anos
+if congestao_nasal and corrimento_nasal and fadiga and (pressao_facial or perda_olfato or febre or tosse_expetoracao or tosse_seca) and mais18anos
 then l4.
-if congestao_nasal and corrimento_nasal and (pressao_facial or perda_olfato or febre or tosse_expetoracao or tosse_seca or fadiga) and entre3a12meses
+if congestao_nasal and corrimento_nasal and fadiga and (pressao_facial or perda_olfato or febre or tosse_expetoracao or tosse_seca) and entre3a12meses
 then l5.
-if congestao_nasal and corrimento_nasal and (pressao_facial or perda_olfato or febre or tosse_expetoracao or tosse_seca or fadiga) and entre1a4anos
+if congestao_nasal and corrimento_nasal and fadiga and (pressao_facial or perda_olfato or febre or tosse_expetoracao or tosse_seca) and entre1a4anos
 then l6.
 
-if olhos_vermelhos and comichao and (laqueacao or sensacao_areia or sensacao_corpo_estranho or inchaco_palpebra or sensibilidade_luz)
+if olhos_vermelhos and inchaco_palpebra and (sensacao_areia or coceira_nariz_olhos_garganta or sensibilidade_luz)
 then m1.
 
 if ardor_ou_dor_ao_urinar and vontade_urgente_e_frequente_de_urinar and (eliminacao_de_sangue_na_urina or
-febre or calafrios or dor_lombar and nauseas and vomitos) and mais40kg
+febre or calafrios or dor_lombar and nauseas) and mais40kg
 then n1.
 if ardor_ou_dor_ao_urinar and vontade_urgente_e_frequente_de_urinar and (eliminacao_de_sangue_na_urina or
-febre or calafrios or dor_lombar and nauseas and vomitos) and entre10a13anos
+febre or calafrios or dor_lombar and nauseas) and entre10a13anos
 then n2.
 if ardor_ou_dor_ao_urinar and vontade_urgente_e_frequente_de_urinar and (eliminacao_de_sangue_na_urina or
-febre or calafrios or dor_lombar and nauseas and vomitos) and entre5a9anos
+febre or calafrios or dor_lombar and nauseas) and entre5a9anos
 then n3.
 if ardor_ou_dor_ao_urinar and vontade_urgente_e_frequente_de_urinar and (eliminacao_de_sangue_na_urina or
-febre or calafrios or dor_lombar and nauseas and vomitos) and entre1a4nos
+febre or calafrios or dor_lombar and nauseas) and entre1a4nos
 then n4.
 if ardor_ou_dor_ao_urinar and vontade_urgente_e_frequente_de_urinar and (eliminacao_de_sangue_na_urina or
-febre or calafrios or dor_lombar and nauseas and vomitos) and entre3a12meses
+febre or calafrios or dor_lombar and nauseas) and entre3a12meses
 then n5.
 if ardor_ou_dor_ao_urinar and vontade_urgente_e_frequente_de_urinar and (eliminacao_de_sangue_na_urina or
-febre or calafrios or dor_lombar and nauseas and vomitos) and menos3meses
+febre or calafrios or dor_lombar and nauseas) and menos3meses
 then n6.
 if ardor_ou_dor_ao_urinar and vontade_urgente_e_frequente_de_urinar and (eliminacao_de_sangue_na_urina or
-febre or calafrios or dor_lombar and nauseas and vomitos) and menos6kg
+febre or calafrios or dor_lombar and nauseas) and menos6kg
 then n7.
 
 
@@ -272,22 +250,6 @@ imprimir_informacoes(a8) :-
              doente(pneumonia, Doenca)),
             Lista), nl,
     write('Informacoes para o perfil '), write('a8'), write(':'), nl,
-    imprimir_lista(Lista).
-
-imprimir_informacoes(b1) :-
-    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
-            (medicamento(Doenca, _, Tipo, Medicamento, X, _, Prescricao, Dose, Vezes, Condicao),
-             doente(candidiaseOral, Doenca), X \= mais18anos),
-            Lista), nl,
-    write('Informacoes para o perfil '), write('b1'), write(':'), nl,
-    imprimir_lista(Lista).
-
-imprimir_informacoes(b2) :-
-    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
-            (medicamento(Doenca, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao),
-             doente(candidiaseOral, Doenca)),
-            Lista), nl,
-    write('Informacoes para o perfil '), write('b2'), write(':'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(c1) :-
@@ -680,63 +642,7 @@ imprimir_informacoes(j6) :-
              doente(gripe, Doenca)),
             Lista), nl,
     write('Informacoes para o perfil '), write('j6'), write(':'), nl,
-    imprimir_lista(Lista).
-
-imprimir_informacoes(k1) :-
-    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
-            (medicamento(Doenca, _, Tipo, Medicamento, paragem, _, Prescricao, Dose, Vezes, Condicao),
-             doente(artrite, Doenca)),
-            Lista), nl,
-    write('Informacoes para o perfil '), write('k1'), write(':'), nl,
-    imprimir_lista(Lista).
-
-imprimir_informacoes(k2) :-
-    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
-            (medicamento(Doenca, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao),
-             doente(artrite, Doenca)),
-            Lista), nl,
-    write('Informacoes para o perfil '), write('k2'), write(':'), nl,
-    imprimir_lista(Lista).
-
-imprimir_informacoes(k3) :-
-    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
-            (medicamento(Doenca, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao),
-             doente(artrite, Doenca)),
-            Lista), nl,
-    write('Informacoes para o perfil '), write('k3'), write(':'), nl,
-    imprimir_lista(Lista).
-
-imprimir_informacoes(k4) :-
-    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
-            (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
-             doente(artrite, Doenca)),
-            Lista), nl,
-    write('Informacoes para o perfil '), write('k4'), write(':'), nl,
-    imprimir_lista(Lista).
-
-imprimir_informacoes(k5) :-
-    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
-            (medicamento(Doenca, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao),
-             doente(artrite, Doenca)),
-            Lista), nl,
-    write('Informacoes para o perfil '), write('k5'), write(':'), nl,
-    imprimir_lista(Lista).
-
-imprimir_informacoes(k6) :-
-    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
-            (medicamento(Doenca, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao),
-             doente(artrite, Doenca)),
-            Lista), nl,
-    write('Informacoes para o perfil '), write('k6'), write(':'), nl,
-    imprimir_lista(Lista).
-
-imprimir_informacoes(k7) :-
-    findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
-            (medicamento(Doenca, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao),
-             doente(artrite, Doenca)),
-            Lista), nl,
-    write('Informacoes para o perfil '), write('k7'), write(':'), nl,
-    imprimir_lista(Lista).
+    imprimir_lista(Lista).  
 
 imprimir_informacoes(l1) :-
     findall((Doenca, Tipo, Medicamento, Prescricao, Dose, Vezes, Condicao),
