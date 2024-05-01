@@ -1,13 +1,3 @@
-:- op( 800, fx, if).
-:- op( 700, xfx, then).
-:- op( 300, xfy, or).
-:- op( 200, xfy, and).
-:- dynamic (medicamento/10).
-:- dynamic (imprimir_informacoes/1).
-:- dynamic (imprimir_lista/1).
-:- dynamic (doente/2).
-
-
 if dificuldade_respirar and menos6kg then a1.
 if dificuldade_respirar and entre3a12meses then a2.
 if dificuldade_respirar and entre1a4anos then a3.

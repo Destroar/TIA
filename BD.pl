@@ -1,5 +1,3 @@
-:- dynamic (medicamento/10).
-
 % Legenda: 
 % Tratamento: Administração de analgésicos e anti-inflamatórios - 1
 %             Administração de antibióticos - 2

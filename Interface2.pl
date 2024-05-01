@@ -1,8 +1,15 @@
-:-dynamic(fact/1).
-:-dynamic (imprimir_informacoes/1).
-:-dynamic (imprimir_lista/1).
+:- op( 800, fx, if).
+:- op( 700, xfx, then).
+:- op( 300, xfy, or).
+:- op( 200, xfy, and).
+:- dynamic(fact/1).
+:- dynamic (medicamento/10).
+:- dynamic (imprimir_informacoes/1).
+:- dynamic (imprimir_lista/1).
+:- dynamic (doente/2).
+:- dynamic (escreverResultado/1).
 :- include('BD.pl').
-:- include('BC2.pl').
+:- include('BC.pl').
 :- include('BI.pl').
 
 
@@ -205,6 +212,6 @@ resultado:-
     write('|                                          RESULTADO OBTIDO                                                |'),nl,
     demo.
 
-escreverResultado(P) :- imprimir_informacoes(P).
+escreverResultado(P, Cert) :- imprimir_informacoes(P).
 
 
