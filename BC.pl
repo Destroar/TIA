@@ -183,7 +183,7 @@ imprimir_informacoes(a1, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, _, menos6kg, Prescricao, Dose, Vezes, Condicao),
              doente(pneumonia, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('a1 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('a1 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(a2, Cert) :-
@@ -191,7 +191,7 @@ imprimir_informacoes(a2, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
              doente(pneumonia, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('a2 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('a2 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(a3, Cert) :-
@@ -199,7 +199,7 @@ imprimir_informacoes(a3, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(pneumonia, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('a3 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('a3 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(a4, Cert) :-
@@ -207,7 +207,7 @@ imprimir_informacoes(a4, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(pneumonia, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('a4 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('a4 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(a5, Cert) :-
@@ -215,7 +215,7 @@ imprimir_informacoes(a5, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(pneumonia, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('a5 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('a5 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(a6, Cert) :-
@@ -223,7 +223,7 @@ imprimir_informacoes(a6, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(pneumonia, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('a6 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('a6 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(a7, Cert) :-
@@ -231,7 +231,7 @@ imprimir_informacoes(a7, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(pneumonia, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('a7 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('a7 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(a8, Cert) :-
@@ -239,7 +239,7 @@ imprimir_informacoes(a8, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, _, mais40kg, Prescricao, Dose, Vezes, Condicao),
              doente(pneumonia, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('a8 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('a8 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(c1, Cert) :-
@@ -247,7 +247,7 @@ imprimir_informacoes(c1, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, _, mais40kg, Prescricao, Dose, Vezes, Condicao),
              doente(amigdalite, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('c1 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('c1 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(c2, Cert) :-
@@ -255,7 +255,7 @@ imprimir_informacoes(c2, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, _, menos6kg, Prescricao, Dose, Vezes, Condicao),
              doente(amigdalite, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('c2 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('c2 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(c3, Cert) :-
@@ -263,7 +263,7 @@ imprimir_informacoes(c3, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, menos3meses, _, Prescricao, Dose, Vezes, Condicao),
              doente(amigdalite, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('c3 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('c3 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(c4, Cert) :-
@@ -271,7 +271,7 @@ imprimir_informacoes(c4, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
              doente(amigdalite, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('c4 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('c4 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(c5, Cert) :-
@@ -279,7 +279,7 @@ imprimir_informacoes(c5, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(amigdalite, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('c5 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('c5 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(c6, Cert) :-
@@ -287,7 +287,7 @@ imprimir_informacoes(c6, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(amigdalite, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('c6 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('c6 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(c7, Cert) :-
@@ -295,7 +295,7 @@ imprimir_informacoes(c7, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(amigdalite, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('c7 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('c7 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(c8, Cert) :-
@@ -303,7 +303,7 @@ imprimir_informacoes(c8, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(amigdalite, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('c8 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('c8 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(c9, Cert) :-
@@ -311,7 +311,7 @@ imprimir_informacoes(c9, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(amigdalite, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('c9 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('c9 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(d1, Cert) :-
@@ -319,7 +319,7 @@ imprimir_informacoes(d1, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, _, mais40kg, Prescricao, Dose, Vezes, Condicao),
              doente(otite, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('d1 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('d1 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(d2, Cert) :-
@@ -327,7 +327,7 @@ imprimir_informacoes(d2, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, _, menos6kg, Prescricao, Dose, Vezes, Condicao),
              doente(otite, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('d2 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('d2 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(d3, Cert) :-
@@ -335,7 +335,7 @@ imprimir_informacoes(d3, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, menos3meses, _, Prescricao, Dose, Vezes, Condicao),
              doente(otite, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('d3 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('d3 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(d4, Cert) :-
@@ -343,7 +343,7 @@ imprimir_informacoes(d4, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
              doente(otite, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('d4 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('d4 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(d5, Cert) :-
@@ -351,7 +351,7 @@ imprimir_informacoes(d5, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(otite, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('d5 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('d5 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(d6, Cert) :-
@@ -359,7 +359,7 @@ imprimir_informacoes(d6, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(otite, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('d6 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('d6 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(d7, Cert) :-
@@ -367,7 +367,7 @@ imprimir_informacoes(d7, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(otite, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('d7 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('d7 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(d8, Cert) :-
@@ -375,7 +375,7 @@ imprimir_informacoes(d8, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(otite, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('d8 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('d8 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(d9, Cert) :-
@@ -383,7 +383,7 @@ imprimir_informacoes(d9, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(otite, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('d9 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('d9 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(e1, Cert) :-
@@ -391,7 +391,7 @@ imprimir_informacoes(e1, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(zona, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('e1 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('e1 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(f1, Cert) :-
@@ -399,7 +399,7 @@ imprimir_informacoes(f1, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(alergiaAlimentar, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('f1 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('f1 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(f2, Cert) :-
@@ -407,7 +407,7 @@ imprimir_informacoes(f2, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(alergiaAlimentar, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('f2 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('f2 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(f3, Cert) :-
@@ -415,7 +415,7 @@ imprimir_informacoes(f3, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(alergiaAlimentar, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('f3 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('f3 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(f4, Cert) :-
@@ -423,7 +423,7 @@ imprimir_informacoes(f4, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(alergiaAlimentar, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('f4 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('f4 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(f5, Cert) :-
@@ -431,7 +431,7 @@ imprimir_informacoes(f5, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(alergiaAlimentar, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('f5 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('f5 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(g1, Cert) :-
@@ -439,7 +439,7 @@ imprimir_informacoes(g1, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(alergiaRespiratoria, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('g1 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('g1 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(g2, Cert) :-
@@ -447,7 +447,7 @@ imprimir_informacoes(g2, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(alergiaRespiratoria, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('g2 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('g2 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(g3, Cert) :-
@@ -455,7 +455,7 @@ imprimir_informacoes(g3, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(alergiaRespiratoria, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('g3 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('g3 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(g4, Cert) :-
@@ -463,7 +463,7 @@ imprimir_informacoes(g4, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(alergiaRespiratoria, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('g4 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('g4 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(g5, Cert) :-
@@ -471,7 +471,7 @@ imprimir_informacoes(g5, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(alergiaRespiratoria, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('g5 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('g5 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(h1, Cert) :-
@@ -479,7 +479,7 @@ imprimir_informacoes(h1, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, paragem, _, Prescricao, Dose, Vezes, Condicao),
              doente(bronquite, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('h1 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('h1 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(h2, Cert) :-
@@ -487,7 +487,7 @@ imprimir_informacoes(h2, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
              doente(bronquite, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('h2 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('h2 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(h3, Cert) :-
@@ -495,7 +495,7 @@ imprimir_informacoes(h3, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(bronquite, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('h3 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('h3 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(h4, Cert) :-
@@ -503,7 +503,7 @@ imprimir_informacoes(h4, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(bronquite, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('h4 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('h4 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(h5, Cert) :-
@@ -511,7 +511,7 @@ imprimir_informacoes(h5, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(bronquite, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('h5 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('h5 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(h6, Cert) :-
@@ -519,7 +519,7 @@ imprimir_informacoes(h6, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(bronquite, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('h6 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('h6 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(h7, Cert) :-
@@ -527,7 +527,7 @@ imprimir_informacoes(h7, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(bronquite, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('h7 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('h7 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(i1, Cert) :-
@@ -535,7 +535,7 @@ imprimir_informacoes(i1, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, paragem, _, Prescricao, Dose, Vezes, Condicao),
              doente(enxaqueca, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('i1 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('i1 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(i2, Cert) :-
@@ -543,7 +543,7 @@ imprimir_informacoes(i2, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(enxaqueca, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('i2 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('i2 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(i3, Cert) :-
@@ -551,7 +551,7 @@ imprimir_informacoes(i3, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(enxaqueca, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('i3 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('i3 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(i4, Cert) :-
@@ -559,7 +559,7 @@ imprimir_informacoes(i4, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(enxaqueca, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('i4 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('i4 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(i5, Cert) :-
@@ -567,7 +567,7 @@ imprimir_informacoes(i5, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
              doente(enxaqueca, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('i5 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('i5 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(i6, Cert) :-
@@ -575,7 +575,7 @@ imprimir_informacoes(i6, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(enxaqueca, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('i6 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('i6 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(i7, Cert) :-
@@ -583,7 +583,7 @@ imprimir_informacoes(i7, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(enxaqueca, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('i7 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('i7 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(j1, Cert) :-
@@ -591,7 +591,7 @@ imprimir_informacoes(j1, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(gripe, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('j1 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('j1 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(j2, Cert) :-
@@ -599,7 +599,7 @@ imprimir_informacoes(j2, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
              doente(gripe, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('j2 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('j2 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(j3, Cert) :-
@@ -607,7 +607,7 @@ imprimir_informacoes(j3, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(gripe, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('j3 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('j3 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(j4, Cert) :-
@@ -615,7 +615,7 @@ imprimir_informacoes(j4, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(gripe, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('j4 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('j4 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(j5, Cert) :-
@@ -623,7 +623,7 @@ imprimir_informacoes(j5, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao),
             doente(gripe, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('j5 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('j5 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(j6, Cert) :-
@@ -631,7 +631,7 @@ imprimir_informacoes(j6, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(gripe, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('j6 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('j6 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).  
 
 imprimir_informacoes(l1, Cert) :-
@@ -639,7 +639,7 @@ imprimir_informacoes(l1, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(sinusite, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('l1 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('l1 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(l2, Cert) :-
@@ -647,7 +647,7 @@ imprimir_informacoes(l2, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(sinusite, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('l2 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('l2 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(l3, Cert) :-
@@ -655,7 +655,7 @@ imprimir_informacoes(l3, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre14a17anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(sinusite, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('l3 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('l3 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(l4, Cert) :-
@@ -663,7 +663,7 @@ imprimir_informacoes(l4, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, mais18anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(sinusite, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('l4 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('l4 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(l5, Cert) :-
@@ -671,7 +671,7 @@ imprimir_informacoes(l5, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
              doente(sinusite, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('l5 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('l5 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(l6, Cert) :-
@@ -679,7 +679,7 @@ imprimir_informacoes(l6, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre1a4anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(sinusite, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('l6 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('l6 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(m1, Cert) :-
@@ -687,7 +687,7 @@ imprimir_informacoes(m1, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, X, _, Prescricao, Dose, Vezes, Condicao),
              doente(conjuntiviteBacteriana, Doenca), X \= menos3meses),
             Lista), nl,
-    write('Informacoes para o perfil '), write('m1 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('m1 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(n1, Cert) :-
@@ -695,7 +695,7 @@ imprimir_informacoes(n1, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, _, mais40kg, Prescricao, Dose, Vezes, Condicao),
              doente(infecaoUrinaria, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('n1 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('n1 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(n2, Cert) :-
@@ -703,7 +703,7 @@ imprimir_informacoes(n2, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre10a13anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(infecaoUrinaria, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('n2 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('n2 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(n3, Cert) :-
@@ -711,7 +711,7 @@ imprimir_informacoes(n3, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre5a9anos, _, Prescricao, Dose, Vezes, Condicao),
              doente(infecaoUrinaria, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('n3 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('n3 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(n4, Cert) :-
@@ -719,7 +719,7 @@ imprimir_informacoes(n4, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre1a4nos, _, Prescricao, Dose, Vezes, Condicao),
              doente(infecaoUrinaria, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('n4 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('n4 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(n5, Cert) :-
@@ -727,7 +727,7 @@ imprimir_informacoes(n5, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, entre3a12meses, _, Prescricao, Dose, Vezes, Condicao),
              doente(infecaoUrinaria, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('n5 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('n5 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(n6, Cert) :-
@@ -735,7 +735,7 @@ imprimir_informacoes(n6, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, menos3meses, _, Prescricao, Dose, Vezes, Condicao),
              doente(infecaoUrinaria, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('n6 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('n6 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 imprimir_informacoes(n7, Cert) :-
@@ -743,7 +743,7 @@ imprimir_informacoes(n7, Cert) :-
             (medicamento(Doenca, _, Tipo, Medicamento, _, menos6kg, Prescricao, Dose, Vezes, Condicao),
              doente(infecaoUrinaria, Doenca)),
             Lista), nl,
-    write('Informacoes para o perfil '), write('n7 ('), write(Cert*100), write('%) :'), nl,
+    write('Informacoes para o perfil '), write('n7 ('), Prob is Cert*100, write(Prob), write('%) :'), nl,
     imprimir_lista(Lista).
 
 
