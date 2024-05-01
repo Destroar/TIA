@@ -1,14 +1,7 @@
-:- op( 800, fx, if).
-:- op( 700, xfx, then).
-:- op( 300, xfy, or).
-:- op( 200, xfy, and).
-:- dynamic (fact/1).
-:- dynamic (escreverResultado/1).
-
 % Base de inferencia
 demo:- 
-    new_derived_fact( P), !,
     democ(P, Cert), !,
+    new_derived_fact( P), !,
     escreverResultado(P, Cert),nl,
     assert(fact(P)),
     demo. % Continuação
@@ -30,7 +23,7 @@ composed_fact( Cond1 or Cond2) :-
     composed_fact( Cond1);
     composed_fact( Cond2).
 
-demo(P, Cert) :- fact(P: Cert).
+democ(P, Cert) :- fact(P: Cert).
 democ(Cond1 and Cond2, Cert) :- 
   democ(Cond1, Cert1), 
     democ(Cond2, Cert2), 

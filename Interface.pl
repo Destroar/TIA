@@ -121,7 +121,7 @@ continuacao2:-
     write('|2-Nao                                                                                                     |'),nl,
     read(OPDR),
         ((OPDR == 1), assert(fact(dificuldade_respirar:0.7)),continuacao3;
-         (OPDR == 2), assert(fact(dificuldade_respirar:0.7)),continuacao3).
+         (OPDR == 2), assert(fact(dificuldade_respirar:0)),continuacao3).
 
 continuacao3:-
     write('|                                                                                                          |'),nl,
@@ -141,8 +141,8 @@ continuacao47:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPDP),
-        ((OPDP == 1), assert(fact(dor_peito)),continuacao5;
-         (OPDP == 2), continuacao5).
+        ((OPDP == 1), assert(fact(dor_peito:0.5)),continuacao5;
+         (OPDP == 2), assert(fact(dor_peito:0)),continuacao5).
 
 continuacao5:-
     write('|                                                                                                          |'),nl,
@@ -293,7 +293,7 @@ continuacao13:-
 
 continuacao15:-
     write('|                                                                                                          |'),nl,
-    write('|Sente fadiga?                                                                                               |'),nl,
+    write('|Sente fadiga?                                                                                             |'),nl,
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPFDG),
@@ -431,7 +431,7 @@ continuacao44:-
 
 continuacao48:-
     write('|                                                                                                          |'),nl,
-    write('|Sente formigamento em alguma parte do corpo?                                                                                |'),nl,
+    write('|Sente formigamento em alguma parte do corpo?                                                              |'),nl,
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPFC),
