@@ -1,19 +1,19 @@
 % Base de inferencia
 demo:- 
-    new_derived_fact(P: _), !,
+    new_derived_fact(P), !,
     democ(P, Cert), !,
     escreverResultado(P, Cert),nl,
     demo. % Continuação
 demo:- write("teste"), retractall(fact(_)).
 
 new_derived_fact( Concl) :-
-    if Cond then Concl,
+    if Cond then Concl:_,
     \+ fact( Concl),
-    assert(fact( Concl)),
-    composed_fact( Cond).
+    composed_fact( Cond),
+    assert(fact( Concl)).
 
 composed_fact(Cond) :-
-    fact(Cond : _).
+    fact(Cond: _).
 
 composed_fact(Cond1 and Cond2) :-
     composed_fact(Cond1),
