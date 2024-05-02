@@ -266,16 +266,7 @@ continuacao12:-
     write('|2-Nao                                                                                                     |'),nl,
     read(OPV),
         ((OPV == 1), assert(fact(vomitos:0.8)),continuacao13;
-         (OPV == 2), continuacao13).
-
-continuacao13:-
-    write('|                                                                                                          |'),nl,
-    write('|Tem falta de ar?                                                                                          |'),nl,
-    write('|1-Sim                                                                                                     |'),nl,
-    write('|2-Nao                                                                                                     |'),nl,
-    read(OPFA),
-        ((OPFA == 1), assert(fact(falta_ar:0.7)),continuacao15;
-         (OPFA == 2), continuacao15).
+         (OPV == 2), continuacao15).
 
 continuacao15:-
     write('|                                                                                                          |'),nl,
