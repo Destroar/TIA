@@ -29,7 +29,7 @@ menu2:-
 
 opcoes(1):- questoesIniciais.
 opcoes(2):-
-    write('|Obrigada.                                                                                                 |'),halt.
+    write('|Obrigada.                                                                                                 |').
 opcoes(_):-
     write('|Introduza uma opcao valida.                                                                               |'),nl,menu2.
 
@@ -67,7 +67,7 @@ confirmacaoPeso2:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(O6),
-        ((O6 == 1), questoesSintomas;
+        ((O6 == 1),assert(fact(mais40kg:1)), questoesSintomas;
         (O6 == 2), questoesSintomas).
 
 questoesSintomas:-
