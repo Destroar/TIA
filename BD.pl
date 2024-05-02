@@ -14,7 +14,7 @@
 
 % medicamento(nome, tratamento, tipomedicamento, medicamento, idadeTratamento, pesotratamento, prescricao, dose, VezesAoDIA, condicaoespecial)
 
-medicamento(pneumonia, 1, xarope, paracetamolBen-u-ron , entre10a13anos, null, entre1_9e2_5ml, '100mg por ml', entre4e6horas, [doencasfigado]).
+medicamento(pneumonia, 1, xarope, paracetamolBen-u-ron , entre10a13anos, null, 'entre 1.9 e 2.5ml', '100mg por ml', entre4e6horas, [doencasfigado]).
 medicamento(pneumonia, 1, xarope, paracetamolBen-u-ron , entre5a9anos, null, entre1_9e2_5ml, '100mg por ml', entre4e6horas, [doencasfigado]).
 medicamento(pneumonia, 1, xarope, paracetamolBen-u-ron , entre1a4anos, null, entre1_9e2_5ml, '100mg por ml', entre4e6horas, [doencasfigado]).
 medicamento(pneumonia, 1, xarope, paracetamolBen-u-ron , entre3a12meses, null, entre1_9e2_5ml, '100mg por ml', entre4e6horas, [doencasfigado]).
@@ -107,16 +107,3 @@ medicamento(infecaoUrinaria, 1, xarope, paracetamolBen-u-ron , entre10a13anos, n
 medicamento(infecaoUrinaria, 1, xarope, paracetamolBen-u-ron , entre5a9anos, null, entre1_9e2_5ml, '100mg por ml', entre4e6horas, [doencasfigado]).
 medicamento(infecaoUrinaria, 1, xarope, paracetamolBen-u-ron , entre1a4nos, null, entre1_9e2_5ml, '100mg por ml', entre4e6horas, [doencasfigado]).
 medicamento(infecaoUrinaria, 1, xarope, paracetamolBen-u-ron , entre3a12meses, null, entre1_9e2_5ml, '100mg por ml', entre4e6horas, [doencasfigado]).
-
-doente(pneumonia, pneumonia).
-doente(amigdalite, amigdalite).
-doente(otite, otite).
-doente(zona, zona).
-doente(alergiaAlimentar, alergiaAlimentar).
-doente(alergiaRespiratoria, alergiaRespiratoria).
-doente(bronquite, bronquite).
-doente(enxaqueca, enxaqueca).
-doente(gripe, gripe).
-doente(sinusite, sinusite).
-doente(conjuntiviteBacteriana, conjuntiviteBacteriana).
-doente(infecaoUrinaria, infecaoUrinaria).

@@ -1,9 +1,3 @@
-:- op( 800, fx, if).
-:- op( 700, xfx, then).
-:- op( 300, xfy, or).
-:- op( 200, xfy, and).
-
-
 if tosse_expetoracao and dificuldade_respirar and
 (febre or calafrios or dor_peito or dor_cabeca or dor_muscular) and menos6kg
 then a1:0.9.
