@@ -5,8 +5,7 @@
 :- dynamic(fact/1).
 :- dynamic (medicamento/10).
 :- dynamic (imprimir_informacoes/1).
-:- dynamic (imprimir_lista/1).
-:- dynamic (doente/2).
+:- dynamic (imprimir_lista/2).
 :- dynamic (escreverResultado/1).
 :- include('BD.pl').
 :- include('BC.pl').
@@ -490,5 +489,34 @@ resultado:-
 
 
 escreverResultado(P, Cert) :- imprimir_informacoes(P, Cert).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
