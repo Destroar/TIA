@@ -1,10 +1,3 @@
-:- op( 800, fx, if).
-:- op( 700, xfx, then).
-:- op( 300, xfy, or).
-:- op( 200, xfy, and).
-
-
-
 if dificuldade_respirar and menos6kg
 then a1:0.9.
 if dificuldade_respirar and entre3a12meses
