@@ -12,7 +12,7 @@
 
 
 
-% medicamento(nome, tratamento, tipomedicamento, medicamento, idadeTratamento, pesotratamento, prescricao, dose, VezesAoDIA, condicaoespecial)
+% medicamento(nome, tratamento, tipomedicamento, medicamento, idadeTratamento, pesotratamento, prescricao, dose, VezesAoDIA, contraIndicacoes)
 
 medicamento(pneumonia, 1, xarope, paracetamolBen-u-ron , entre10a13anos, null, 'entre 1.9 e 2.5ml', '100mg por ml', entre4e6horas, [doencasfigado]).
 medicamento(pneumonia, 1, xarope, paracetamolBen-u-ron , entre5a9anos, null, entre1_9e2_5ml, '100mg por ml', entre4e6horas, [doencasfigado]).

@@ -77,7 +77,7 @@ questoesSintomas:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPF),
-        ((OPF == 1), assert(fact(febre:0.7)),continuacao1;
+        ((OPF == 1), assert(fact(febre:0.55)),continuacao1;
          (OPF == 2), continuacao1).
 
 continuacao1:-
@@ -210,7 +210,7 @@ continuacao9:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPDO),
-        ((OPDO == 1), assert(fact(dor_ouvido:0.70)),continuacao24;
+        ((OPDO == 1), assert(fact(dor_ouvido:0.60)),continuacao24;
          (OPDO == 2), continuacao10).
 
 continuacao24:-
@@ -264,7 +264,7 @@ continuacao12:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPV),
-        ((OPV == 1), assert(fact(vomitos:0.40)),continuacao13;
+        ((OPV == 1), assert(fact(vomitos:0.40)),continuacao15;
          (OPV == 2), continuacao15).
 
 continuacao15:-
@@ -423,7 +423,7 @@ continuacao58:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPIP),
-        ((OPIP == 1), assert(fact(inchaco_palpebra:0.40)),continuacao56;
+        ((OPIP == 1), assert(fact(inchaco_palpebra:0.50)),continuacao56;
          (OPIP == 2), continuacao59).
 
 continuacao56:-
