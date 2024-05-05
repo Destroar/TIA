@@ -1,3 +1,9 @@
+:- op( 800, fx, if).
+:- op( 700, xfx, then).
+:- op( 300, xfy, or).
+:- op( 200, xfy, and).
+
+
 if tosse_expetoracao and dificuldade_respirar and
 (febre or calafrios or dor_peito or dor_cabeca or dor_muscular) and menos6kg
 then a1:0.9.
@@ -73,15 +79,15 @@ then d9:0.9.
 if dor_cabeca and febre and (erupcoes_cutaneas or calafrios or nauseas or diarreia or ardor_ou_dor_ao_urinar or formigamento_corpo) and mais18anos
 then e1:0.9.
 
-if coceira_na_boca and mal_estar_na_garganta and (comichao or dor_abdominal or diarreia or nauseas or dificuldade_respirar or rouquidao) and entre1a4anos
+if coceira_na_boca and (comichao or dor_abdominal or diarreia or nauseas or mal_estar_na_garganta or falta_ar or dificuldade_respirar or rouquidao) and entre1a4anos
 then f1:0.9.
-if coceira_na_boca and mal_estar_na_garganta and (comichao or dor_abdominal or diarreia or nauseas or dificuldade_respirar or rouquidao) and entre5a9anos
+if coceira_na_boca and (comichao or dor_abdominal or diarreia or nauseas or mal_estar_na_garganta or falta_ar or dificuldade_respirar or rouquidao) and entre5a9anos
 then f2:0.9.
-if coceira_na_boca and mal_estar_na_garganta and (comichao or dor_abdominal or diarreia or nauseas or dificuldade_respirar or rouquidao) and entre10a13anos
+if coceira_na_boca and (comichao or dor_abdominal or diarreia or nauseas or mal_estar_na_garganta or falta_ar or dificuldade_respirar or rouquidao) and entre10a13anos
 then f3:0.9.
-if coceira_na_boca and mal_estar_na_garganta and (comichao or dor_abdominal or diarreia or nauseas or dificuldade_respirar or rouquidao) and entre14a17anos
+if coceira_na_boca and (comichao or dor_abdominal or diarreia or nauseas or mal_estar_na_garganta or falta_ar or dificuldade_respirar or rouquidao) and entre14a17anos
 then f4:0.9.
-if coceira_na_boca and mal_estar_na_garganta and (comichao or dor_abdominal or diarreia or nauseas or dificuldade_respirar or rouquidao) and mais18anos
+if coceira_na_boca and (comichao or dor_abdominal or diarreia or nauseas or mal_estar_na_garganta or falta_ar or dificuldade_respirar or rouquidao) and mais18anos
 then f5:0.9.
 
 if congestao_nasal and espirros_constantes and (coceira_nariz_olhos_garganta or nariz_vermelho or tosse_seca or dificuldade_respirar or olhos_vermelhos or dor_cabeca) and entre1a4anos
@@ -95,19 +101,19 @@ then g4:0.9.
 if congestao_nasal and espirros_constantes and (coceira_nariz_olhos_garganta or nariz_vermelho or tosse_seca or dificuldade_respirar or olhos_vermelhos or dor_cabeca) and mais18anos
 then g5:0.9.
 
-if (tosse_seca or tosse_expetoracao) and dificuldade_respirar and (dor_peito or febre or fadiga)
+if (tosse_seca or tosse_expetoracao) and falta_ar and (dor_peito or febre or fadiga)
 then h1:0.9.
-if (tosse_seca or tosse_expetoracao) and dificuldade_respirar and (dor_peito or febre or fadiga) and entre3a12meses
+if (tosse_seca or tosse_expetoracao) and falta_ar and (dor_peito or febre or fadiga) and entre3a12meses
 then h2:0.9.
-if (tosse_seca or tosse_expetoracao) and dificuldade_respirar and (dor_peito or febre or fadiga) and entre1a4anos
+if (tosse_seca or tosse_expetoracao) and falta_ar and (dor_peito or febre or fadiga) and entre1a4anos
 then h3:0.9.
-if (tosse_seca or tosse_expetoracao) and dificuldade_respirar and (dor_peito or febre or fadiga) and entre5a9anos
+if (tosse_seca or tosse_expetoracao) and falta_ar and (dor_peito or febre or fadiga) and entre5a9anos
 then h4:0.9.
-if (tosse_seca or tosse_expetoracao) and dificuldade_respirar and (dor_peito or febre or fadiga) and entre10a13anos
+if (tosse_seca or tosse_expetoracao) and falta_ar and (dor_peito or febre or fadiga) and entre10a13anos
 then h5:0.9.
-if (tosse_seca or tosse_expetoracao) and dificuldade_respirar and (dor_peito or febre or fadiga) and entre14a17anos
+if (tosse_seca or tosse_expetoracao) and falta_ar and (dor_peito or febre or fadiga) and entre14a17anos
 then h6:0.9.
-if (tosse_seca or tosse_expetoracao) and dificuldade_respirar and (dor_peito or febre or fadiga) and mais18anos
+if (tosse_seca or tosse_expetoracao) and falta_ar and (dor_peito or febre or fadiga) and mais18anos
 then h7:0.9.
 
 if dor_cabeca and (sensibilidade_ruido or sensibilidade_luz) and mal_estar_geral and nauseas and (tonturas or formigamento_corpo)
@@ -172,6 +178,8 @@ then n5:0.9.
 if ardor_ou_dor_ao_urinar and vontade_urgente_e_frequente_de_urinar and (eliminacao_de_sangue_na_urina or
 febre or calafrios or dor_lombar and nauseas) and menos3meses
 then n6:0.9.
+
+
 if ardor_ou_dor_ao_urinar and vontade_urgente_e_frequente_de_urinar and (eliminacao_de_sangue_na_urina or
 febre or calafrios or dor_lombar and nauseas) and menos6kg
 then n7:0.9.
@@ -693,6 +701,6 @@ imprimir_lista([(Tipo, Medicamento, Prescricao, Dose, Vezes, indicacoes, Contra_
     write('Prescricao: '), write(Prescricao),nl,
     write('Dose: '), write(Dose),nl,
     write('Vezes: '), write(Vezes),nl,
-    write('Indicacoes: '), write(indicacoes),nl,
+    write('Indicacoes: '), write(Vezes),nl,
     write('Contra Indicacoes: '), write(Contra_indicacoes), nl,
     imprimir_lista(Resto, Doenca).

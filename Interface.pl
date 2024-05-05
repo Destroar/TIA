@@ -488,12 +488,10 @@ resultado:-
     write('|                                                                                                          |'),nl,
     write('|   Este teste serve ajudar e aconselhar todos os seus utilizadores a identificar uma possivel doenca e    |'),nl,
     write('|   orientar na toma de um possivel medicamento para ajudar nas dores e nos desconfortos sintomaticos      |'),nl,
-    write('|----------------------------------------------------------------------------------------------------------|'),nl,
-   demo.
+    demo.
 
 
 escreverResultado(P, Cert) :- imprimir_informacoes(P, Cert).
-
 
 
 
