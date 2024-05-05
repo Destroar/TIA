@@ -3,7 +3,7 @@
 :- op( 300, xfy, or).
 :- op( 200, xfy, and).
 :- dynamic(fact/1).
-:- dynamic (medicamento/10).
+:- dynamic (medicamento/11).
 :- dynamic (imprimir_informacoes/1).
 :- dynamic (imprimir_lista/2).
 :- dynamic (escreverResultado/1).
