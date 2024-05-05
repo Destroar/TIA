@@ -77,7 +77,7 @@ questoesSintomas:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPF),
-        ((OPF == 1), assert(fact(febre:0.5)),continuacao1;
+        ((OPF == 1), assert(fact(febre:0.7)),continuacao1;
          (OPF == 2), continuacao1).
 
 continuacao1:-
@@ -86,7 +86,7 @@ continuacao1:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPDC),
-        ((OPDC == 1), assert(fact(dor_cabeca:0.5)),continuacao29;
+        ((OPDC == 1), assert(fact(dor_cabeca:0.55)),continuacao29;
          (OPDC == 2), continuacao2).
 
 continuacao29:-
@@ -95,7 +95,7 @@ continuacao29:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPDU),
-        ((OPDU == 1), assert(fact(dificuldade_em_urinar:0.8)),continuacao2;
+        ((OPDU == 1), assert(fact(dificuldade_em_urinar:0.10)),continuacao2;
          (OPDU == 2), continuacao2).
 
 
@@ -105,7 +105,7 @@ continuacao2:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPDR),
-        ((OPDR == 1), assert(fact(dificuldade_respirar:0.7)),continuacao3;
+        ((OPDR == 1), assert(fact(dificuldade_respirar:0.4)),continuacao3;
          (OPDR == 2), continuacao3).
 
 continuacao3:-
@@ -115,8 +115,8 @@ continuacao3:-
     write('|2-Seca                                                                                                    |'),nl,
     write('|3-Nao                                                                                                     |'),nl,
     read(OPTE),
-        ((OPTE == 1), assert(fact(tosse_expetoracao:0.6)),continuacao47;
-         (OPTE == 2), assert(fact(tosse_seca:0.6)),continuacao5;
+        ((OPTE == 1), assert(fact(tosse_expetoracao:0.35)),continuacao47;
+         (OPTE == 2), assert(fact(tosse_seca:0.40)),continuacao5;
          (OPTE == 3), continuacao5).
 
 
@@ -126,7 +126,7 @@ continuacao47:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPDP),
-        ((OPDP == 1), assert(fact(dor_peito:0.5)),continuacao5;
+        ((OPDP == 1), assert(fact(dor_peito:0.20)),continuacao5;
          (OPDP == 2),continuacao5).
 
 continuacao5:-
@@ -135,7 +135,7 @@ continuacao5:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPMEG),
-        ((OPMEG == 1), assert(fact(mal_estar_geral:0.7)),continuacao54;
+        ((OPMEG == 1), assert(fact(mal_estar_geral:0.50)),continuacao54;
          (OPMEG == 2), continuacao54).
 
 continuacao54:-
@@ -144,7 +144,7 @@ continuacao54:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPCAO),
-        ((OPCAO == 1), assert(fact(comichao:0.4)),continuacao35;
+        ((OPCAO == 1), assert(fact(comichao:0.10)),continuacao35;
          (OPCAO == 2), continuacao6).
 
 
@@ -154,7 +154,7 @@ continuacao35:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPCB),
-        ((OPCB == 1), assert(fact(coceira_na_boca:0.7)),continuacao45;
+        ((OPCB == 1), assert(fact(coceira_na_boca:0.5)),continuacao45;
          (OPCB == 2), continuacao45).
 
 continuacao45:-
@@ -163,7 +163,7 @@ continuacao45:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPCNOG),
-        ((OPCNOG == 1), assert(fact(coceira_nariz_olhos_garganta:0.7)),continuacao28;
+        ((OPCNOG == 1), assert(fact(coceira_nariz_olhos_garganta:0.50)),continuacao28;
          (OPCNOG == 2), continuacao28
         ).
 
@@ -173,7 +173,7 @@ continuacao28:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPEC),
-        ((OPEC == 1), assert(fact(erupcoes_cutaneas:0.7)),continuacao6;
+        ((OPEC == 1), assert(fact(erupcoes_cutaneas:0.70)),continuacao6;
          (OPEC == 2), continuacao6).
 
 
@@ -183,7 +183,7 @@ continuacao6:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPN),
-        ((OPN == 1), assert(fact(nauseas:0.6)),continuacao7;
+        ((OPN == 1), assert(fact(nauseas:0.30)),continuacao7;
          (OPN == 2), continuacao7).
 
 continuacao7:-
@@ -192,7 +192,7 @@ continuacao7:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPM),
-        ((OPM == 1), assert(fact(dor_muscular:0.5)),continuacao8;
+        ((OPM == 1), assert(fact(dor_muscular:0.40)),continuacao8;
          (OPM == 2), continuacao8).
 
 continuacao8:-
@@ -201,7 +201,7 @@ continuacao8:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPDG),
-        ((OPDG == 1), assert(fact(dor_garganta:0.4)),continuacao9;
+        ((OPDG == 1), assert(fact(dor_garganta:0.25)),continuacao9;
          (OPDG == 2), continuacao9).
 
 continuacao9:-
@@ -210,7 +210,7 @@ continuacao9:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPDO),
-        ((OPDO == 1), assert(fact(dor_ouvido:0.5)),continuacao24;
+        ((OPDO == 1), assert(fact(dor_ouvido:0.70)),continuacao24;
          (OPDO == 2), continuacao10).
 
 continuacao24:-
@@ -219,7 +219,7 @@ continuacao24:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPDD),
-        ((OPDD == 1), assert(fact(dificuldade_em_dormir:0.6)),continuacao26;
+        ((OPDD == 1), assert(fact(dificuldade_em_dormir:0.15)),continuacao26;
          (OPDD == 2), continuacao26).
 
 continuacao26:-
@@ -228,7 +228,7 @@ continuacao26:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPDA),
-        ((OPDA == 1), assert(fact(dificuldades_audicao:0.7)),continuacao27;
+        ((OPDA == 1), assert(fact(dificuldades_audicao:0.45)),continuacao27;
          (OPDA == 2), continuacao27).
 
 continuacao27:-
@@ -237,7 +237,7 @@ continuacao27:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPFAT),
-        ((OPFAT == 1), assert(fact(falta_apetite:0.7)),continuacao10;
+        ((OPFAT == 1), assert(fact(falta_apetite:0.30)),continuacao10;
          (OPFAT == 2), continuacao10).
 
 continuacao10:-
@@ -246,7 +246,7 @@ continuacao10:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPC),
-        ((OPC == 1), assert(fact(calafrios:0.6)),continuacao11;
+        ((OPC == 1), assert(fact(calafrios:0.30)),continuacao11;
          (OPC == 2), continuacao11).
 
 continuacao11:-
@@ -255,7 +255,7 @@ continuacao11:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPD),
-        ((OPD == 1), assert(fact(diarreia:0.7)),continuacao12;
+        ((OPD == 1), assert(fact(diarreia:0.25)),continuacao12;
          (OPD == 2), continuacao12).
 
 continuacao12:-
@@ -264,7 +264,7 @@ continuacao12:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPV),
-        ((OPV == 1), assert(fact(vomitos:0.8)),continuacao13;
+        ((OPV == 1), assert(fact(vomitos:0.40)),continuacao13;
          (OPV == 2), continuacao15).
 
 continuacao15:-
@@ -273,7 +273,7 @@ continuacao15:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPFDG),
-        ((OPFDG == 1), assert(fact(fadiga:0.7)),continuacao16;
+        ((OPFDG == 1), assert(fact(fadiga:0.30)),continuacao16;
          (OPFDG == 2), continuacao16).
 
 continuacao16:-
@@ -282,7 +282,7 @@ continuacao16:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPOV),
-        ((OPOV == 1), assert(fact(olhos_vermelhos:0.6)),continuacao23;
+        ((OPOV == 1), assert(fact(olhos_vermelhos:0.40)),continuacao23;
          (OPOV == 2), continuacao23).
 
 continuacao23:-
@@ -291,7 +291,7 @@ continuacao23:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPDE),
-        ((OPDE == 1), assert(fact(dificuldade_engolir:0.8)),continuacao31;
+        ((OPDE == 1), assert(fact(dificuldade_engolir:0.7)),continuacao31;
          (OPDE == 2), continuacao31).
 
 
@@ -301,7 +301,7 @@ continuacao31:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPADU),
-        ((OPADU == 1), assert(fact(ardor_ou_dor_ao_urinar:0.9)),continuacao32;
+        ((OPADU == 1), assert(fact(ardor_ou_dor_ao_urinar:0.8)),continuacao32;
          (OPADU == 2), continuacao37).
 
 continuacao32:-
@@ -310,7 +310,7 @@ continuacao32:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPVUFU),
-        ((OPVUFU == 1), assert(fact(vontade_urgente_e_frequente_de_urinar:0.8)),continuacao33;
+        ((OPVUFU == 1), assert(fact(vontade_urgente_e_frequente_de_urinar:0.7)),continuacao33;
          (OPVUFU == 2), continuacao33).
 
 continuacao33:-
@@ -319,7 +319,7 @@ continuacao33:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPSA),
-        ((OPSA == 1), assert(fact(eliminacao_de_sangue_na_urina:0.9)),continuacao34;
+        ((OPSA == 1), assert(fact(eliminacao_de_sangue_na_urina:0.3)),continuacao34;
          (OPSA == 2), continuacao34).
 
 continuacao34:-
@@ -328,7 +328,7 @@ continuacao34:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPDL),
-        ((OPDL == 1), assert(fact(dor_lombar:0.6)),continuacao37;
+        ((OPDL == 1), assert(fact(dor_lombar:0.20)),continuacao37;
          (OPDL == 2), continuacao37).
 
 
@@ -338,7 +338,7 @@ continuacao37:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPDAL),
-        ((OPDAL == 1), assert(fact(dor_abdominal:0.6)),continuacao38;
+        ((OPDAL == 1), assert(fact(dor_abdominal:0.5)),continuacao38;
          (OPDAL == 2), continuacao38).
 
 continuacao38:-
@@ -347,7 +347,7 @@ continuacao38:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPMEGG),
-        ((OPMEGG == 1), assert(fact(mal_estar_na_garganta:0.7)),continuacao39;
+        ((OPMEGG == 1), assert(fact(mal_estar_na_garganta:0.50)),continuacao39;
          (OPMEGG == 2), continuacao39).
 
 continuacao39:-
@@ -356,7 +356,7 @@ continuacao39:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPR),
-        ((OPR == 1), assert(fact(rouquidao:0.6)),continuacao40;
+        ((OPR == 1), assert(fact(rouquidao:0.4)),continuacao40;
          (OPR == 2), continuacao40).
 
 continuacao40:-
@@ -374,7 +374,7 @@ continuacao41:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPECC),
-        ((OPECC == 1), assert(fact(espirros_constantes:0.5)),continuacao42;
+        ((OPECC == 1), assert(fact(espirros_constantes:0.20)),continuacao42;
          (OPECC == 2), continuacao42).
 
 continuacao42:-
@@ -383,7 +383,7 @@ continuacao42:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPSL),
-        ((OPSL == 1), assert(fact(sensibilidade_luz:0.8)),continuacao43;
+        ((OPSL == 1), assert(fact(sensibilidade_luz:0.20)),continuacao43;
          (OPSL == 2), continuacao43).
 
 continuacao43:-
@@ -392,7 +392,7 @@ continuacao43:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPSR),
-        ((OPSR == 1), assert(fact(sensibilidade_ruido:0.8)),continuacao44;
+        ((OPSR == 1), assert(fact(sensibilidade_ruido:0.20)),continuacao44;
          (OPSR == 2), continuacao44).
 
 continuacao44:-
@@ -401,7 +401,7 @@ continuacao44:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPT),
-        ((OPT == 1), assert(fact(tonturas:0.7)),continuacao48;
+        ((OPT == 1), assert(fact(tonturas:0.15)),continuacao48;
          (OPT == 2), continuacao48).
 
 
@@ -411,7 +411,7 @@ continuacao48:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPFC),
-        ((OPFC == 1), assert(fact(formigamento_corpo:0.6)),continuacao58;
+        ((OPFC == 1), assert(fact(formigamento_corpo:0.10)),continuacao58;
          (OPFC == 2), continuacao58).
 
 
@@ -423,7 +423,7 @@ continuacao58:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPIP),
-        ((OPIP == 1), assert(fact(inchaco_palpebra:0.8)),continuacao56;
+        ((OPIP == 1), assert(fact(inchaco_palpebra:0.40)),continuacao56;
          (OPIP == 2), continuacao59).
 
 continuacao56:-
@@ -432,7 +432,7 @@ continuacao56:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPSAO),
-        ((OPSAO == 1), assert(fact(sensacao_areia:0.7)),continuacao59;
+        ((OPSAO == 1), assert(fact(sensacao_areia:0.30)),continuacao59;
          (OPSAO == 2), continuacao59).
 
 
@@ -460,7 +460,7 @@ continuacao60:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPCRN),
-        ((OPCRN == 1), assert(fact(corrimento_nasal:0.3)),continuacao61;
+        ((OPCRN == 1), assert(fact(corrimento_nasal:0.40)),continuacao61;
          (OPCRN == 2), continuacao61).
 
 continuacao61:-
@@ -469,7 +469,7 @@ continuacao61:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPPRF),
-        ((OPPRF == 1), assert(fact(pressao_facial:0.6)),continuacao62;
+        ((OPPRF == 1), assert(fact(pressao_facial:0.2)),continuacao62;
          (OPPRF == 2), continuacao62).
 
 continuacao62:-
@@ -478,7 +478,7 @@ continuacao62:-
     write('|1-Sim                                                                                                     |'),nl,
     write('|2-Nao                                                                                                     |'),nl,
     read(OPPO),
-        ((OPPO == 1), assert(fact(perda_olfato:0.6)),resultado;
+        ((OPPO == 1), assert(fact(perda_olfato:0.15)),resultado;
          (OPPO == 2), resultado).
 
 
