@@ -685,9 +685,7 @@ imprimir_informacoes(n7, Cert) :-
 imprimir_lista([],_).
 imprimir_lista([(Tipo, Medicamento, Prescricao, Dose, Vezes, indicacoes, Contra_indicacoes) | Resto],Doenca) :-
     nl,
-    write('--------------------------------'),nl,
     write('Doenca: '), write(Doenca),nl,
-    write('--------------------------------'),nl,
     write('Tipo: '), write(Tipo),nl,
     write('Medicamento: '), write(Medicamento),nl,
     write('Prescricao: '), write(Prescricao),nl,
