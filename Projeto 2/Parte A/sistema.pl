@@ -1,38 +1,24 @@
 :- include('tratamento.pl').
 
-caminho(X,Z,C):- caminho(X,Z,[X],C), reverse(Y,C).
+caminho(X,Z,Caminho):- caminho(X,Z,[X],Y), reverse(Y,Caminho).
 caminho(X,X,Caminho,Caminho).
 caminho(X,Z,Visitado,Caminho):-
     arco(X,Y),
     \+ member(Y,Visitado),
     caminho(Y,Z,[Y | Visitado],Caminho).
 
-caminhomenorcusto(X,Y) :-
-    caminho(X,Y,P),
-    inverte(P,K),
-    menorcusto(X,Y,K),
-    custo_total(K,N),
-    resposta(K,N).
-    
-menorcusto(X,Y,P):-
-    custo_total(P,N),
-    !,
-    \+ menor(X,Y,N).
-    
-menor(X,Y,N):-
-    caminho(X,Y,P1),
-    custo_total(P1,N1),N1<N.
-    
-custo_total([_],0).
-    
-custo_total([X,Y|Z],Custo):-
-    custo(X,Y,N1),
-    custo_total([Y|Z],N2), Custo is N1+N2.
-    
-resposta(C,K):- nl,write(' Melhor Percuso :'),write(C),write( ', Custo : ') , write(K), nl .
-    
-concatenar([], L, L).
-concatenar([H|T], L, [H|D]) :- concatenar(T, L, D).
-inverte([], []).
-inverte([H|T], L) :- inverte(T, X), concatenar(X, [H], L).
-    
+
+
+comprimento([],0).
+comprimento([_],0).
+comprimento([X,Y|R],N):- custo(X,Y,C), tempo(X,Y,T),
+    comprimento([Y|R],N1), N is N1+C*T.  %dieta é zero rever esta parte
+
+
+menorcusto(X,Y,C):-caminho(X,Y,C), % gerar
+maiscurto(X,Y,C).% testar
+maiscurto(X,Y,C):- comprimento(C,NC),!,
+\+ menor(X,Y,NC).
+menor(X,Y,NC):- caminho(X,Y,C1),
+comprimento(C1,NC1),
+NC1<NC.
