@@ -33,6 +33,7 @@ arco(fisioterapia, ginastica).
 arco(fisioterapia, calmante).
 arco(fisioterapia, injecoes).
 arco(fisioterapia, ambulatorio).
+arco(fisioterapia,estado_final).
 arco(cine_terapia, calmante).
 arco(cine_terapia, estado_final).
 arco(desporto, dieta).
@@ -93,6 +94,7 @@ custo(fisioterapia, ginastica, 90).
 custo(fisioterapia, calmante, 80).
 custo(fisioterapia, injecoes, 75).
 custo(fisioterapia, ambulatorio, 800).
+custo(fisioterapia,estado_final,0).
 custo(cine_terapia, calmante, 80).
 custo(cine_terapia, estado_final, 0).
 custo(desporto, dieta, 0).
@@ -154,6 +156,7 @@ tempo(fisioterapia, ginastica, 15).
 tempo(fisioterapia, calmante, 90).
 tempo(fisioterapia, injecoes, 3).
 tempo(fisioterapia, ambulatorio, 20).
+tempo(fisioterapia,estado_final,0).
 tempo(cine_terapia, calmante, 90).
 tempo(cine_terapia, estado_final, 0).
 tempo(desporto, dieta, 30).
