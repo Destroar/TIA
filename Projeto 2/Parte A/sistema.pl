@@ -28,12 +28,6 @@ comprimento2([X,Y|R],N):- estado(X,Y,C,T,_), comprimento2([Y|R],N1), N is N1+C*T
 
 
 
-
-%Alterar o tipo de dados alterar zero por lista vazia
-%append([Tratamento],N1,N).
-
-
-
 menorCusto(X,Y,C):-caminho(X,Y,C), % gerar
 maiscurto(X,Y,C).% testar
 maiscurto(X,Y,C):- comprimento(C,NC,_),!,
