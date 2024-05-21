@@ -1,9 +1,6 @@
 
-
 :- include('sistema.pl').
 :- include('tratamento.pl').
-# :- include('BI.pl').
-
 
 menu:-
     write(' ----------------------------------------------------------------------------------------------------------'),nl,
@@ -11,33 +8,39 @@ menu:-
     write('|                                                                                                          |'),nl,
     write('|----------------------------------------------------------------------------------------------------------|'),nl,
     write('|                                                                                                          |'),nl,
-    menu2(XI),menu3(XF),metodo(M),objetivo(O).
+    menu2(XI),menu3(XF),metodo(M),objetivo(O),
+    ((O == 1), menortempo(XI, XF, Caminho);
+    (O == 2), menorcusto(XI, XF, Caminho) ;
+    (O == 3), menordois(XI, XF, Caminho)),
+    comprimento(Caminho, _, Tratamento),
+    write("Caminho: "), write(Caminho), nl,
+    write("Tratamento: "), write(Tratamento).
 
 menu2(XI):-
     write('|                                                                                                          |'),nl,
     write('|                                     Indique o estado incial?                                             |'),nl,
+    write('|                                                                                                          |'),nl,   
     write('|Indique apenas numeros.                                                                                   |'),nl,
-    write('|----------------------------------------------------------------------------------------------------------|'),nl,
+    write('|                                                                                                          |'),nl,
     read(XI).
 
 
     menu3(XF):-
-    write('|                                                                                                          |'),nl,
-    write('|                        Qual o destino que quer chegar?                                                   |'),nl,
-    write('|Indique apenas numeros.                                                                                   |'),nl,
     write('|----------------------------------------------------------------------------------------------------------|'),nl,
+    write('|                                    Qual o destino que quer chegar?                                       |'),nl,
+    write('|Indique apenas numeros.                                                                                   |'),nl,
     write('|                                                                                                          |'),nl,
     read(XF).
  
 
 metodo(M):-
     write('|----------------------------------------------------------------------------------------------------------|'),nl,
-    write('|                                        Indique o metodo que quer utilizar                                |'),nl,
+    write('|                                     Indique o metodo que quer utilizar                                   |'),nl,
     write('|                                                                                                          |'),nl,
     write('|1 - Hill Climbing                                                                                         |'),nl,
     write('|2 - Caminho em Grafos                                                                                     |'),nl,
-    write('|2 - Depthfirst                                                                                            |'),nl,
-    write('|3 - Breadthfirst                                                                                          |'),nl,
+    write('|3 - Depthfirst                                                                                            |'),nl,
+    write('|4 - Breadthfirst                                                                                          |'),nl,
     write('|                                                                                                          |'),nl,
     read(M).
 
