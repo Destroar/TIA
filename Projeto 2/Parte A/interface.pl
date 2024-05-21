@@ -1,7 +1,3 @@
-:- op( 800, fx, if).
-:- op( 700, xfx, then).
-:- op( 300, xfy, or).
-:- op( 200, xfy, and).
 
 
 :- include('sistema.pl').
