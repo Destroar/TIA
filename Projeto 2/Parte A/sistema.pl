@@ -8,6 +8,17 @@ caminho(X,Z,Visitado,Caminho):-
     \+ member(Y,Visitado),
     caminho(Y,Z,[Y | Visitado],Caminho).
 
+% Hill Climbing
+hill_climbing(S0,[Iter,Verbose,Prob,Opt],S1):-
+	comprimento(S0,E0,_),
+	hill_climbing(S0,E0,0,Iter,Verbose,Prob,Opt,S1).
+
+hill_climbing(S,_,Iter,Iter,_,_,_,S).
+hill_climbing(S1,E1,I,Iter,Verbose,Prob,Opt,SFinal):-
+	change(S1,SNew),
+	best(Prob,Opt,S1,E1,SNew,_,S2,E2),
+	I1 is I+1,
+	hill_climbing(S2,E2,I1,Iter,Verbose,Prob,Opt,SFinal).
 
 %calculo efetuado com o custo
 comprimento([],0,[]).

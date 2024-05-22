@@ -47,22 +47,22 @@ estado(4,20,15,8,'Soro').
 estado(10,20,15,8,'Soro').
 estado(11,20,15,8,'Soro').
 estado(16,20,15,8,'Soro').
-%estado(2,56,0,0,0).
+estado(2,56,0,0,0).
 estado(3,56,0,0,0).
 estado(4,56,0,0,0).
 estado(6,56,0,0,0).
 estado(56,0,500,1000,'Oculos').
-%estado(2,57,0,0,0).
+estado(2,57,0,0,0).
 estado(3,57,0,0,0).
 estado(4,57,0,0,0).
 estado(6,57,0,0,0).
 estado(57,0,300,200,'Lentes contacto').
 estado(6,58,0,0,0).
-estado(15,estado_clinico_final,800,20,'Ambulatorio').
-estado(7,estado_clinico_final,800,20,'Ambulatorio').
-estado(17,estado_clinico_final,800,20,'Ambulatorio').
+estado(15,0,800,20,'Ambulatorio').
+estado(7,0,800,20,'Ambulatorio').
+estado(17,0,800,20,'Ambulatorio').
 estado(18,58,0,0,0).
-estado(20,estado_clinico_final,800,20,'Ambulatorio').
+estado(20,0,800,20,'Ambulatorio').
 estado(58,0,800,20,'Ambulatorio').
 
 
