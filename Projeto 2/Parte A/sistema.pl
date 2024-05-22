@@ -23,18 +23,18 @@ hill_climbing(S1,E1,I,Iter,Verbose,Prob,Opt,SFinal):-
 %calculo efetuado com o custo
 comprimento([],0,[]).
 comprimento([_],0,[]).
-comprimento([X,Y|R],N,LT):- estado(X,Y,C,_,T), comprimento([Y|R],N1,LT1), N is N1+C,append([T],LT1,LT).
+comprimento([X,Y|R],N,LT):- estado(X,Y,C,_,T), comprimento([Y|R],N1,LT1), N is N1+C, (append([T],LT1,LT), Y < 50).
 
 
 %calculo efetuado com o tempo
-comprimento1([],0).
-comprimento1([_],0).
-comprimento1([X,Y|R],N, LT):- estado(X,Y,_,Tempo,T), comprimento1([Y|R],N1,LT1), N is N1+Tempo, append([T],LT1,LT).
+comprimento1([],0,[]).
+comprimento1([_],0,[]).
+comprimento1([X,Y|R],N, LT):- estado(X,Y,_,Tempo,T), comprimento1([Y|R],N1,LT1), N is N1+Tempo, (append([T],LT1,LT), Y < 50).
 
 %calculo efetuado com ambos
-comprimento2([],0).
-comprimento2([_],0).
-comprimento2([X,Y|R],N, LT):- estado(X,Y,C,Tempo,T), comprimento2([Y|R],N1,LT1), N is N1+C*Tempo, append([T],LT1,LT).
+comprimento2([],0,[]).
+comprimento2([_],0,[]).
+comprimento2([X,Y|R],N, LT):- estado(X,Y,C,Tempo,T), comprimento2([Y|R],N1,LT1), N is N1+C*Tempo, (append([T],LT1,LT), Y < 50).
 
 
 
