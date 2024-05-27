@@ -10,14 +10,24 @@ menu:-
     write('|                                                                                                          |'),nl,
     write('|----------------------------------------------------------------------------------------------------------|'),nl,
     write('|                                                                                                          |'),nl,
-    menu2(XI),menu3(XF),metodo(M), objetivo(O), write("teste"), assert(obj(O)), write("teste"),
-    ((M == 1), caminho(XI, XF, C), assert(origem(XI)), assert(destino(XF)), write("teste"), hill_climbing(C,[20,0,0,min],Caminho)),
-    ((M == 2), ((O == 1), menorcusto(XI, XF, Caminho);
-    (O == 2), menortempo(XI, XF, Caminho) ;
-    (O == 3), menordois(XI, XF, Caminho))),
+    menu2(XI), menu3(XF), metodo(M), objetivo(O), assert(obj(O)),
+    ((  M == 1 ->
+            caminho(XI, XF, C),
+            assert(origem(XI)),
+            assert(destino(XF)),
+            hill_climbing(C, [20, 0, 0, min], Caminho);
+        M == 2 ->
+            (O == 1 -> menorcusto(XI, XF, Caminho)
+            ; O == 2 -> menortempo(XI, XF, Caminho)
+            ; O == 3 -> menordois(XI, XF, Caminho))
+    )),
+    comprimento(Caminho, Custo, _),
+    comprimento1(Caminho, Tempo, _),
     comprimento(Caminho, _, Tratamento),
     write("Caminho: "), write(Caminho), nl,
-    write("Tratamento: "), write(Tratamento),
+    write("Tratamento: "), write(Tratamento), nl,
+    write("Custo: "), write(Custo), nl,
+    write("Tempo: "), write(Tempo), nl,
     retract_all_asserts.
     
 menu2(XI):-
@@ -60,9 +70,9 @@ objetivo(O):-
     read(O).
 
     retract_all_asserts :-
-        retract(obj(_)),
-        retract(origem(_)),
-        retract(destino(_)).
+        retractall(obj(_)),
+        retractall(origem(_)),
+        retractall(destino(_)).
         
         
         
