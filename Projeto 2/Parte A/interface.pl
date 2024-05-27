@@ -1,7 +1,7 @@
-
 :- include('sistema.pl').
 :- include('tratamento.pl').
 :- include('hill climbing.pl').
+:- include('breadthfirst.pl').
 :- use_module(library(lists)).
 
 menu:-
@@ -17,9 +17,13 @@ menu:-
             assert(destino(XF)),
             hill_climbing(C, [20, 0, 0, min], Caminho);
         M == 2 ->
-            (O == 1 -> menorcusto(XI, XF, Caminho)
-            ; O == 2 -> menortempo(XI, XF, Caminho)
-            ; O == 3 -> menordois(XI, XF, Caminho))
+            (O == 1 -> menorcusto(XI, XF, Caminho); 
+            O == 2 -> menortempo(XI, XF, Caminho); 
+            O == 3 -> menordois(XI, XF, Caminho));
+        M == 3 ->
+            (O == 1 -> menorcustobfs(XI, XF, Caminho); 
+            O == 2 -> menortempobfs(XI, XF, Caminho); 
+            O == 3 -> menordoisbfs(XI, XF, Caminho))
     )),
     comprimento(Caminho, Custo, _),
     comprimento1(Caminho, Tempo, _),
@@ -52,9 +56,8 @@ metodo(M):-
     write('|                                     Indique o metodo que quer utilizar                                   |'),nl,
     write('|                                                                                                          |'),nl,
     write('|1 - Hill Climbing                                                                                         |'),nl,
-    write('|2 - Caminho em Grafos                                                                                     |'),nl,
-    write('|3 - Depthfirst                                                                                            |'),nl,
-    write('|4 - Breadthfirst                                                                                          |'),nl,
+    write('|2 - Depthfirst                                                                                            |'),nl,
+    write('|3 - Breadthfirst                                                                                          |'),nl,
     write('|                                                                                                          |'),nl,
     read(M).
 
