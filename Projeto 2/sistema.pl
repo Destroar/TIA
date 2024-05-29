@@ -1,4 +1,3 @@
-
 arco(Origem,Destino) :- estado(Origem,Destino,_,_,_).
 
 caminho(X,Z,Caminho):- caminho(X,Z,[X],Y), reverse(Y,Caminho).

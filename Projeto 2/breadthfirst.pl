@@ -1,12 +1,37 @@
-menorcustobfs(X, Y, C) :-
+menorcustobfs(X,Y,C):-custobfs(X,Y,C),
+maiscurtobfs(X,Y,C).
+menortempobfs(X,Y,C):-tempobfs(X,Y,C),
+maiscurto2bfs(X,Y,C).
+menordoisbfs(X,Y,C):-doisbfs(X,Y,C),
+maiscurto3bfs(X,Y,C).
+
+maiscurtobfs(X,Y,C):- comprimento(C,NC,_),!,
+\+ menorbfs(X,Y,NC).
+maiscurto2bfs(X,Y,C):- comprimento1(C,NC,_),!,
+\+ menor2bfs(X,Y,NC).
+maiscurto3bfs(X,Y,C):- comprimento2(C,NC,_),!,
+\+ menor3bfs(X,Y,NC).
+
+menorbfs(X,Y,NC):- custobfs(X,Y,C1),
+comprimento(C1,NC1,_),
+NC1<NC.
+menor2bfs(X,Y,NC):- tempobfs(X,Y,C1),
+comprimento1(C1,NC1,_),
+NC1<NC.
+menor3bfs(X,Y,NC):- doisbfs(X,Y,C1),
+comprimento2(C1,NC1,_),
+NC1<NC.
+
+
+custobfs(X, Y, C) :-
     bfs_custo([[X]], Y, [], RevPath),
     reverse(RevPath, C).
 
-menortempobfs(X, Y, C) :-
+tempobfs(X, Y, C) :-
     bfs_tempo([[X]], Y, [], RevPath),
     reverse(RevPath, C).
 
-menordoisbfs(X, Y, C) :-
+doisbfs(X, Y, C) :-
     bfs_dois([[X]], Y, [], RevPath),
     reverse(RevPath, C).
 
