@@ -3,12 +3,12 @@
 :- op( 300, xfy, or).
 :- op( 200, xfy, and).
 :- dynamic(fact/1).
-:- dynamic (medicamento/10).
-:- dynamic (imprimir_informacoes/1).
+:- dynamic (medicamento/11).
+:- dynamic (imprimir_informacoes/2).
 :- dynamic (imprimir_lista/2).
-:- dynamic (escreverResultado/1).
+:- dynamic (escreverResultado/2).
 :- include('BD.pl').
-:- include('BC2.pl').
+:- include('BC.pl').
 :- include('BI.pl').
 
 
