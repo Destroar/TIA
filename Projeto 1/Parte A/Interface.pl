@@ -4,9 +4,9 @@
 :- op( 200, xfy, and).
 :- dynamic(fact/1).
 :- dynamic (medicamento/11).
-:- dynamic (imprimir_informacoes/1).
+:- dynamic (imprimir_informacoes/2).
 :- dynamic (imprimir_lista/2).
-:- dynamic (escreverResultado/1).
+:- dynamic (escreverResultado/2).
 :- include('BD.pl').
 :- include('BC.pl').
 :- include('BI.pl').

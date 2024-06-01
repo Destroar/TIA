@@ -1,4 +1,4 @@
-% Legenda: 
+% Legenda:
 % Tratamento: Administração de analgésicos e anti-inflamatórios - 1
 %             Administração de antibióticos - 2
 %             Administração de antifúngico - 3
@@ -7,8 +7,8 @@
 %             Administração de antiviral - 6 - Apenas alivia os sintomas não trata a doença
 %             Administracao de antihistaminicos - 7
 %             Tratamentos de suporte - 8
-              
-            
+
+
 
 
 
@@ -58,9 +58,9 @@ medicamento(alergiaRespiratoria, 7, xarope, cetirizina_aurobindo, entre10a13anos
 medicamento(alergiaRespiratoria, 7, xarope, cetirizina_aurobindo, entre5a9anos, '  ', '5ml' , '120ml', '12 em 12 horas', 'Tem de ser tomado depois de comer, nao deve ser tomado com a barriga vazia','  ').
 medicamento(alergiaRespiratoria, 7, xarope, cetirizina_aurobindo, entre1a4anos, '  ', '2.5ml' , '120ml', '12 em 12 horas','Tem de ser tomado depois de comer, nao deve ser tomado com a barriga vazia', '  ').
 
-medicamento(bronquite, 8, repouso, '  ', paragem, '  ', '  ', '  ', '  ', '  ').
-medicamento(bronquite, 8, ingestaoLiquidos, '  ', paragem, '  ', '  ', '  ', '  ', '  ').
-medicamento(bronquite, 1, comprimidoEferverescente, aspirinaC, entre10a13anos, '  ', '640mg', '  ', '4 a 8 horas', 'Pode ser tomado a qualquer hora',[gravidez, amamentacao]).
+medicamento(bronquite, 8, repouso, '  ',paragem, '  ', '  ', '  ', '  ', '  ',' ').
+medicamento(bronquite, 8, ingestaoLiquidos, '  ', paragem, '  ', '  ', '  ', '  ', '  ',' ').
+medicamento(bronquite, 1, comprimidoEferverescente, aspirinaC, entre10a13anos, '  ', '640mg', '  ', '4 a 8 horas', 'Pode ser tomado a qualquer hora',[gravidez,amamentacao]).
 medicamento(bronquite, 1, comprimidoEferverescente, aspirinaC, mais18anos, '  ', '2 comprimidos de 640mg', '  ', '4 a 8 horas',  'Pode ser tomado a qualquer hora', [gravidez, amamentacao]).
 medicamento(bronquite, 1, saqueta, aspirinaComplex, entre14a17anos, '  ', 'saqueta de 530mg', '  ', '4 a 8 horas',  'Pode ser tomado a qualquer hora',[alergias,asma,insuficienciaHepatica, insuficienciaRenal, insuficienciaCardiacaGrave,hipertensaoGrave, doencaArterialCoronaria]).
 medicamento(bronquite, 1, comprimidoEferverescente, paracetamolBen_u_ron, entre10a13anos, '  ','500mg', '  ', '3 a 4 vezes ao dia', 'Pode tomar com ou sem o acompanhamento de comida', [doencasfigado]).
@@ -69,7 +69,7 @@ medicamento(bronquite, 1, xarope, paracetamolBen-u-ron , entre3a12meses, '  ', '
 medicamento(bronquite, 1, xarope, paracetamolBen-u-ron , entre1a4anos, '  ', 'entre 1.9 e 2.5ml', '100mg por ml', 'entre 4 e 6 horas', 'Pode tomar com ou sem o acompanhamento de comida', [doencasfigado]).
 medicamento(bronquite, 1, xarope, paracetamolBen-u-ron , entre5a9anos, '  ', 'entre 1.9 e 2.5ml', '100mg por ml', 'entre 4 e 6 horas', 'Pode tomar com ou sem o acompanhamento de comida', [doencasfigado]).
 
-medicamento(enxaqueca, 8, repouso, '  ', paragem, '  ', '  ', '  ', '  ', '  ').
+medicamento(enxaqueca, 8, repouso, '  ',paragem, '  ', '  ', '  ', '  ', '  ',' ').
 medicamento(enxaqueca, 1, comprimidoEferverescente, paracetamolBen_u_ron, entre5a9anos, '  ', '500mg', '  ', '3 a 4 vezes ao dia', 'Pode tomar com ou sem o acompanhamento de comida', [doencasfigado]).
 medicamento(enxaqueca, 1, comprimidoEferverescente, paracetamolBen_u_ron, entre10a13anos, '  ', '500mg', '  ', '3a4vezes ao dia', 'Pode tomar com ou sem o acompanhamento de comida', [doencasfigado]).
 medicamento(enxaqueca, 1, comprimidoEferverescente, paracetamolBen_u_ron, entre14a17anos, '  ', '500mg', '  ', '3a4vezes ao dia', 'Pode tomar com ou sem o acompanhamento de comida', [doencasfigado]).
